@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "QSAR_fish_toxicity",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361621,
+    "name": "task_361621_QSAR_fish_toxicity",
+    "n_times_p": 6356.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 1.1661994491958727,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 1.1661994491958727,
+  "max_test_rmse": 1.1661994491958727,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.00010894353213340127,
+        "decay": 0.8104989030334956,
+        "epochs": 2,
+        "min_interval_samples": 4,
+        "n_iter": 40,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.22758238420842475,
+        "update_clamp": 5.938972779183364,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 16,
+        "colsample_bytree": 0.9831750502366127
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.7920062616219594,
+      "test_mse": 1.3600211553047568,
+      "test_rmse": 1.1661994491958727,
+      "fit_time": 445.0188546180725,
+      "dataset": "QSAR_fish_toxicity"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:15:50.894278",
+  "end_timestamp": "2026-01-16T16:23:17.495037",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/QSAR_fish_toxicity/TSLRegressor/QSAR_fish_toxicity_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/QSAR_fish_toxicity/TSLRegressor/QSAR_fish_toxicity_TSLRegressor_best.sqlite"
+}

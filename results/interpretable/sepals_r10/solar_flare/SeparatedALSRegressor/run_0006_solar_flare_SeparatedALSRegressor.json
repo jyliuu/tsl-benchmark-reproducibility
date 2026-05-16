@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "solar_flare",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361244,
+    "name": "task_361244_solar_flare",
+    "n_times_p": 11726.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.7975187744383171,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.7975187744383171,
+  "max_test_rmse": 0.7975187744383171,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 1,
+        "degree": 8,
+        "basis": "tent",
+        "ridge": 1.649700329260988e-11,
+        "smoothness": 9.877694539890975,
+        "max_sweeps": 69,
+        "tol": 2.734515775796879e-09,
+        "n_init": 3,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.5980845588067986,
+      "test_mse": 0.6360361955815953,
+      "test_rmse": 0.7975187744383171,
+      "fit_time": 81944.68487334251,
+      "dataset": "solar_flare"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:51.053127",
+  "end_timestamp": "2026-05-03T10:00:37.295898",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/solar_flare/SeparatedALSRegressor/solar_flare_SeparatedALSRegressor_best.pkl"
+}

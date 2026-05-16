@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "california_housing",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361255,
+    "name": "task_361255_california_housing",
+    "n_times_p": 185760.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 54495.489665335,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 54495.489665335,
+  "max_test_rmse": 54495.489665335,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.28097742572864476,
+        "num_leaves": 32,
+        "max_depth": 2,
+        "min_child_samples": 29,
+        "subsample": 0.4244950425899099,
+        "reg_alpha": 0.04959988412401604,
+        "reg_lambda": 0.1543310315937299
+      },
+      "fixed_params": {},
+      "best_cv_score": -2884086170.2527456,
+      "test_mse": 2969758393.8646336,
+      "test_rmse": 54495.489665335,
+      "fit_time": 53.828619718551636,
+      "dataset": "california_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-16T22:08:51.264733",
+  "end_timestamp": "2026-01-16T22:09:45.274485",
+  "fitted_model_path": "data/cluster_results/interpretable/others/california_housing/LGBMRegressor/california_housing_LGBMRegressor_best.txt"
+}

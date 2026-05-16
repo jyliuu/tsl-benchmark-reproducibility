@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "geographical_origin_of_music",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361243,
+    "name": "task_361243_geographical_origin_of_music",
+    "n_times_p": 123903.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 14.756122604172088,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 14.756122604172088,
+  "max_test_rmse": 14.756122604172088,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 256,
+        "learning_rate": 0.04416881442049438,
+        "num_leaves": 81,
+        "max_depth": 7,
+        "min_child_samples": 7,
+        "subsample": 0.8137886478329891,
+        "reg_alpha": 9.387445415076455,
+        "reg_lambda": 8.96432654246383
+      },
+      "fixed_params": {},
+      "best_cv_score": -251.82688823753614,
+      "test_mse": 217.74315430935846,
+      "test_rmse": 14.756122604172088,
+      "fit_time": 868.7082145214081,
+      "dataset": "geographical_origin_of_music"
+    }
+  ],
+  "start_timestamp": "2026-01-16T20:02:21.954673",
+  "end_timestamp": "2026-01-16T20:16:52.023823",
+  "fitted_model_path": "data/cluster_results/blackbox/others/geographical_origin_of_music/LGBMRegressor/geographical_origin_of_music_LGBMRegressor_best.txt"
+}

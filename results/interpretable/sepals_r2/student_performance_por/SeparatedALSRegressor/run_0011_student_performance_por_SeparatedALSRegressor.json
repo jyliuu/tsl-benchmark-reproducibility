@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "student_performance_por",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361619,
+    "name": "task_361619_student_performance_por",
+    "n_times_p": 20119.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.767123607415998,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.767123607415998,
+  "max_test_rmse": 2.767123607415998,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 1,
+        "degree": 2,
+        "basis": "monomial",
+        "ridge": 3.165480024181304e-10,
+        "smoothness": 6.632553737624171,
+        "max_sweeps": 58,
+        "tol": 1.5869337402696053e-05,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree2"
+      },
+      "fixed_params": {},
+      "best_cv_score": -7.535600619367673,
+      "test_mse": 7.656973058718927,
+      "test_rmse": 2.767123607415998,
+      "fit_time": 2733.6340358257294,
+      "dataset": "student_performance_por"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:45.210042",
+  "end_timestamp": "2026-05-02T12:00:19.447703",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/student_performance_por/SeparatedALSRegressor/student_performance_por_SeparatedALSRegressor_best.pkl"
+}

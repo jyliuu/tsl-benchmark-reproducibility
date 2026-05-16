@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "QSAR_fish_toxicity",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361621,
+    "name": "task_361621_QSAR_fish_toxicity",
+    "n_times_p": 6356.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.9704157989773704,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.9704157989773704,
+  "max_test_rmse": 0.9704157989773704,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 3,
+        "degree": 2,
+        "basis": "monomial",
+        "ridge": 1.8221990675340174e-06,
+        "smoothness": 0.00145649589256681,
+        "max_sweeps": 76,
+        "tol": 1.7150770968909777e-08,
+        "n_init": 1,
+        "refit_scales": true,
+        "fit_intercept": true,
+        "penalty_kind": "tent_level"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.8117461595309585,
+      "test_mse": 0.9417068229048882,
+      "test_rmse": 0.9704157989773704,
+      "fit_time": 5602.366206169128,
+      "dataset": "QSAR_fish_toxicity"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:48.975594",
+  "end_timestamp": "2026-05-02T12:48:11.557878",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/QSAR_fish_toxicity/SeparatedALSRegressor/QSAR_fish_toxicity_SeparatedALSRegressor_best.pkl"
+}

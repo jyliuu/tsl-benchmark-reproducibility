@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "california_housing",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361255
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 49376.09325329234,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 49376.09325329234,
+  "max_test_rmse": 49376.09325329234,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.07599557031340677,
+        "decay": 0.8396031697337328,
+        "epochs": 10,
+        "min_interval_samples": 32,
+        "n_iter": 185,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.1419561413195561,
+        "update_clamp": 33.21984450140248,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 11,
+        "colsample_bytree": 0.8083876836336532
+      },
+      "fixed_params": {},
+      "best_cv_score": -2510090723.6929502,
+      "test_mse": 2437998584.9578214,
+      "test_rmse": 49376.09325329234,
+      "fit_time": 240.41320085525513,
+      "dataset": "california_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-28T09:16:38.807719",
+  "end_timestamp": "2026-01-28T09:20:39.663856",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/california_housing/TSLRegressor/california_housing_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/california_housing/TSLRegressor/california_housing_TSLRegressor_best.sqlite"
+}

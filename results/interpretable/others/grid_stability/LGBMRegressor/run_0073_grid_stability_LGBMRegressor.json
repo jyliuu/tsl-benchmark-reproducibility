@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "grid_stability",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361251,
+    "name": "task_361251_grid_stability",
+    "n_times_p": 130000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.011886100960915354,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.011886100960915354,
+  "max_test_rmse": 0.011886100960915354,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.27686646314201796,
+        "num_leaves": 43,
+        "max_depth": 2,
+        "min_child_samples": 11,
+        "subsample": 0.32143914932715734,
+        "reg_alpha": 0.06546107220806831,
+        "reg_lambda": 0.14288813919123716
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.00013054682537093863,
+      "test_mse": 0.00014127939605307292,
+      "test_rmse": 0.011886100960915354,
+      "fit_time": 51.792174339294434,
+      "dataset": "grid_stability"
+    }
+  ],
+  "start_timestamp": "2026-01-16T22:00:51.368462",
+  "end_timestamp": "2026-01-16T22:01:43.312437",
+  "fitted_model_path": "data/cluster_results/interpretable/others/grid_stability/LGBMRegressor/grid_stability_LGBMRegressor_best.txt"
+}

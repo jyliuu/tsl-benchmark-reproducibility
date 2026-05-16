@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "cpu_activity",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361256,
+    "name": "task_361256_cpu_activity",
+    "n_times_p": 180224.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.530250582155826,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.530250582155826,
+  "max_test_rmse": 2.530250582155826,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 2,
+        "degree": 2,
+        "basis": "tent",
+        "ridge": 6.272373296072574e-10,
+        "smoothness": 9.03552059339027,
+        "max_sweeps": 100,
+        "tol": 9.707901871986095e-07,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree2"
+      },
+      "fixed_params": {},
+      "best_cv_score": -5.626791123235675,
+      "test_mse": 6.402168008499896,
+      "test_rmse": 2.530250582155826,
+      "fit_time": 10821.189011335373,
+      "dataset": "cpu_activity"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:44.891946",
+  "end_timestamp": "2026-05-02T14:15:18.893736",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/cpu_activity/SeparatedALSRegressor/cpu_activity_SeparatedALSRegressor_best.pkl"
+}

@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "QSAR_fish_toxicity",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361621,
+    "name": "task_361621_QSAR_fish_toxicity",
+    "n_times_p": 6356.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 1.0834937567315157,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 1.0834937567315157,
+  "max_test_rmse": 1.0834937567315157,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.03794589460592217,
+        "decay": 0.2186504303093704,
+        "epochs": 3,
+        "min_interval_samples": 10,
+        "n_iter": 49,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.4131432982936999,
+        "update_clamp": 5.517062138620055,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 18,
+        "colsample_bytree": 0.4985742287620048
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.8321541709449682,
+      "test_mse": 1.173958720876173,
+      "test_rmse": 1.0834937567315157,
+      "fit_time": 603.4211423397064,
+      "dataset": "QSAR_fish_toxicity"
+    }
+  ],
+  "start_timestamp": "2026-05-04T11:53:57.124205",
+  "end_timestamp": "2026-05-04T12:04:00.814174",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/QSAR_fish_toxicity/TSLRegressorOneTensor/QSAR_fish_toxicity_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/QSAR_fish_toxicity/TSLRegressorOneTensor/QSAR_fish_toxicity_TSLRegressorOneTensor_best.sqlite"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "white_wine",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361249,
+    "name": "task_361249_white_wine",
+    "n_times_p": 58776.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.6789068720730791,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.6789068720730791,
+  "max_test_rmse": 0.6789068720730791,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 95,
+        "learning_rate": 0.22783622283272573,
+        "max_depth": 2,
+        "subsample": 0.9862810095652973,
+        "colsample_bylevel": 0.655121617708781,
+        "gamma": 0.025464149287309577,
+        "reg_alpha": 1.2133816804458404,
+        "reg_lambda": 0.08139788586424954
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.4875182040472337,
+      "test_mse": 0.4609145409480522,
+      "test_rmse": 0.6789068720730791,
+      "fit_time": 59.79243016242981,
+      "dataset": "white_wine"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:42:23.364828",
+  "end_timestamp": "2026-01-16T21:43:23.313808",
+  "fitted_model_path": "data/cluster_results/interpretable/others/white_wine/XGBRegressor/white_wine_XGBRegressor_best.json"
+}

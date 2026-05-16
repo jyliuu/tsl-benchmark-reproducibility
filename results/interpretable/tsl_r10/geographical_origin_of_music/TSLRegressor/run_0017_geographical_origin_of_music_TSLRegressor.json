@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "geographical_origin_of_music",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361243,
+    "name": "task_361243_geographical_origin_of_music",
+    "n_times_p": 123903.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 15.556902002369588,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 15.556902002369588,
+  "max_test_rmse": 15.556902002369588,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.002125851037442958,
+        "decay": 0.3245513616549441,
+        "epochs": 2,
+        "min_interval_samples": 83,
+        "n_iter": 43,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.012414262003627136,
+        "update_clamp": 12.959299656188998,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 4,
+        "colsample_bytree": 0.43180545067477244
+      },
+      "fixed_params": {},
+      "best_cv_score": -272.0676987450152,
+      "test_mse": 242.01719991133092,
+      "test_rmse": 15.556902002369588,
+      "fit_time": 83760.8806385994,
+      "dataset": "geographical_origin_of_music"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:47:21.131841",
+  "end_timestamp": "2026-01-17T16:03:43.511733",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/geographical_origin_of_music/TSLRegressor/geographical_origin_of_music_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/geographical_origin_of_music/TSLRegressor/geographical_origin_of_music_TSLRegressor_best.sqlite"
+}

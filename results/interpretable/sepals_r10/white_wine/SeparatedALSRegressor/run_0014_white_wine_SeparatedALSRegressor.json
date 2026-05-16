@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "white_wine",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361249,
+    "name": "task_361249_white_wine",
+    "n_times_p": 58776.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.6964723463335233,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.6964723463335233,
+  "max_test_rmse": 0.6964723463335233,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 5,
+        "degree": 4,
+        "basis": "tent",
+        "ridge": 3.1923221362996203e-12,
+        "smoothness": 5.063881417159926,
+        "max_sweeps": 25,
+        "tol": 3.873806137516952e-06,
+        "n_init": 1,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree2"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.48724516702418896,
+      "test_mse": 0.48507372920732317,
+      "test_rmse": 0.6964723463335233,
+      "fit_time": 482.4820091724396,
+      "dataset": "white_wine"
+    }
+  ],
+  "start_timestamp": "2026-05-02T17:26:08.414808",
+  "end_timestamp": "2026-05-02T17:34:12.666222",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/white_wine/SeparatedALSRegressor/white_wine_SeparatedALSRegressor_best.pkl"
+}

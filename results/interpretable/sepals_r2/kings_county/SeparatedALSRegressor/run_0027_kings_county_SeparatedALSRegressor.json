@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "kings_county",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361266,
+    "name": "task_361266_kings_county",
+    "n_times_p": 475486.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 134776.7032216834,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 134776.7032216834,
+  "max_test_rmse": 134776.7032216834,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 1,
+        "degree": 2,
+        "basis": "tent",
+        "ridge": 0.008156714603332662,
+        "smoothness": 8.206279227989875e-09,
+        "max_sweeps": 100,
+        "tol": 1.3261289112977659e-09,
+        "n_init": 3,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "tent_level"
+      },
+      "fixed_params": {},
+      "best_cv_score": -16860504772.371563,
+      "test_mse": 18164759731.30572,
+      "test_rmse": 134776.7032216834,
+      "fit_time": 15180.430817127228,
+      "dataset": "kings_county"
+    }
+  ],
+  "start_timestamp": "2026-05-04T22:55:36.396059",
+  "end_timestamp": "2026-05-05T03:08:42.894757",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/kings_county/SeparatedALSRegressor/kings_county_SeparatedALSRegressor_best.pkl"
+}

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "brazilian_houses",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361267,
+    "name": "task_361267_brazilian_houses",
+    "n_times_p": 106920.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2302.7169543259506,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2302.7169543259506,
+  "max_test_rmse": 2302.7169543259506,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 544,
+        "max_depth": 13,
+        "min_samples_split": 3,
+        "min_samples_leaf": 1,
+        "max_features": 0.7915711830204117
+      },
+      "fixed_params": {},
+      "best_cv_score": -46998327.00669009,
+      "test_mse": 5302505.371740182,
+      "test_rmse": 2302.7169543259506,
+      "fit_time": 2677.8080031871796,
+      "dataset": "brazilian_houses"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:58:52.656246",
+  "end_timestamp": "2026-01-16T20:43:31.856551",
+  "fitted_model_path": "data/cluster_results/blackbox/others/brazilian_houses/RandomForestRegressor/brazilian_houses_RandomForestRegressor_best.pkl"
+}

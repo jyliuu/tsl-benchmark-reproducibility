@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "sarcos",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361254,
+    "name": "task_361254_sarcos",
+    "n_times_p": 1076526.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.807080812341916,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.807080812341916,
+  "max_test_rmse": 2.807080812341916,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 998,
+        "max_depth": 19,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.5198935177581606
+      },
+      "fixed_params": {},
+      "best_cv_score": -8.76804179936049,
+      "test_mse": 7.879702687018151,
+      "test_rmse": 2.807080812341916,
+      "fit_time": 92614.77828240395,
+      "dataset": "sarcos"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:43:24.920275",
+  "end_timestamp": "2026-01-18T14:28:21.669841",
+  "fitted_model_path": "data/cluster_results/blackbox/others/sarcos/RandomForestRegressor/sarcos_RandomForestRegressor_best.pkl"
+}

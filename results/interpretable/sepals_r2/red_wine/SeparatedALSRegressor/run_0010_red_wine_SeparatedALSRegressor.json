@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "red_wine",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361250,
+    "name": "task_361250_red_wine",
+    "n_times_p": 19188.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.6134613389955479,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.6134613389955479,
+  "max_test_rmse": 0.6134613389955479,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 1,
+        "degree": 4,
+        "basis": "monomial",
+        "ridge": 0.00021499683441858548,
+        "smoothness": 0.5526033361057954,
+        "max_sweeps": 31,
+        "tol": 6.197537391202179e-09,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "tent_level"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.4207451402906939,
+      "test_mse": 0.3763348144422105,
+      "test_rmse": 0.6134613389955479,
+      "fit_time": 1792.587844133377,
+      "dataset": "red_wine"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:45.210079",
+  "end_timestamp": "2026-05-02T11:44:38.355979",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/red_wine/SeparatedALSRegressor/red_wine_SeparatedALSRegressor_best.pkl"
+}

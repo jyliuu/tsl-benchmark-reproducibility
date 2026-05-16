@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "physiochemical_protein",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361241,
+    "name": "task_361241_physiochemical_protein",
+    "n_times_p": 457300.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 4.716799263462674,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 4.716799263462674,
+  "max_test_rmse": 4.716799263462674,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.28720672895273763,
+        "max_depth": 2,
+        "subsample": 0.6927499240725759,
+        "colsample_bylevel": 0.8912531282257161,
+        "gamma": 6.2328685866928355,
+        "reg_alpha": 0.02054180554394072,
+        "reg_lambda": 0.17906502409088898
+      },
+      "fixed_params": {},
+      "best_cv_score": -21.812798244801662,
+      "test_mse": 22.24819529180202,
+      "test_rmse": 4.716799263462674,
+      "fit_time": 131.25442004203796,
+      "dataset": "physiochemical_protein"
+    }
+  ],
+  "start_timestamp": "2026-01-17T14:01:30.538523",
+  "end_timestamp": "2026-01-17T14:03:42.181095",
+  "fitted_model_path": "data/cluster_results/interpretable/others/physiochemical_protein/XGBRegressor/physiochemical_protein_XGBRegressor_best.json"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "grid_stability",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361251,
+    "name": "task_361251_grid_stability",
+    "n_times_p": 130000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.00941352615582982,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.00941352615582982,
+  "max_test_rmse": 0.00941352615582982,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04805804060193026,
+        "max_bins": 76,
+        "min_samples_leaf": 178,
+        "max_rounds": 460,
+        "outer_bags": 10,
+        "smoothing_rounds": 353,
+        "interactions": 20,
+        "max_interaction_bins": 43
+      },
+      "fixed_params": {},
+      "best_cv_score": -8.273104499332386e-05,
+      "test_mse": 8.861447468649216e-05,
+      "test_rmse": 0.00941352615582982,
+      "fit_time": 35718.56448197365,
+      "dataset": "grid_stability"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:41.884506",
+  "end_timestamp": "2026-01-19T20:34:16.911031",
+  "fitted_model_path": "data/cluster_results/interpretable/others/grid_stability/ExplainableBoostingRegressor/grid_stability_ExplainableBoostingRegressor_best.pkl"
+}

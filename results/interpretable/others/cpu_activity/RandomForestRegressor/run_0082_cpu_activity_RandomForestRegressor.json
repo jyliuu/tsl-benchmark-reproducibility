@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "cpu_activity",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361256,
+    "name": "task_361256_cpu_activity",
+    "n_times_p": 180224.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 5.3932520519103795,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 5.3932520519103795,
+  "max_test_rmse": 5.3932520519103795,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 114,
+        "max_depth": 2,
+        "min_samples_split": 8,
+        "min_samples_leaf": 6,
+        "max_features": 0.4354637719156289
+      },
+      "fixed_params": {},
+      "best_cv_score": -29.766803002723282,
+      "test_mse": 29.08716769543552,
+      "test_rmse": 5.3932520519103795,
+      "fit_time": 1320.6043496131897,
+      "dataset": "cpu_activity"
+    }
+  ],
+  "start_timestamp": "2026-01-16T22:06:21.445984",
+  "end_timestamp": "2026-01-16T22:28:22.393348",
+  "fitted_model_path": "data/cluster_results/interpretable/others/cpu_activity/RandomForestRegressor/cpu_activity_RandomForestRegressor_best.pkl"
+}

@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "airfoil_self_noise",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361235,
+    "name": "task_361235_airfoil_self_noise",
+    "n_times_p": 9018.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.9889988706308026,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.9889988706308026,
+  "max_test_rmse": 2.9889988706308026,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 1.6846173202542398e-06,
+        "decay": 0.6586266355113599,
+        "epochs": 4,
+        "min_interval_samples": 16,
+        "n_iter": 38,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.8734144030213786,
+        "update_clamp": 29.26036900058387,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 16,
+        "colsample_bytree": 0.608299284386477
+      },
+      "fixed_params": {},
+      "best_cv_score": -7.6391184887616514,
+      "test_mse": 8.934114248632213,
+      "test_rmse": 2.9889988706308026,
+      "fit_time": 963.1600093841553,
+      "dataset": "airfoil_self_noise"
+    }
+  ],
+  "start_timestamp": "2026-05-04T12:03:55.501974",
+  "end_timestamp": "2026-05-04T12:19:59.399097",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/airfoil_self_noise/TSLRegressorOneTensor/airfoil_self_noise_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/airfoil_self_noise/TSLRegressorOneTensor/airfoil_self_noise_TSLRegressorOneTensor_best.sqlite"
+}

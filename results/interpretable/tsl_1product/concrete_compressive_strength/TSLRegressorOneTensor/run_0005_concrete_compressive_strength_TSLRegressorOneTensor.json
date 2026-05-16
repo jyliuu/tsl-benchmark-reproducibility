@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "concrete_compressive_strength",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361237,
+    "name": "task_361237_concrete_compressive_strength",
+    "n_times_p": 9270.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 4.734756654690707,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 4.734756654690707,
+  "max_test_rmse": 4.734756654690707,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.0010728927486496386,
+        "decay": 0.20023214151188418,
+        "epochs": 3,
+        "min_interval_samples": 15,
+        "n_iter": 135,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.7322465083393022,
+        "update_clamp": 16.23516046152364,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 3,
+        "colsample_bytree": 0.4012566085043734
+      },
+      "fixed_params": {},
+      "best_cv_score": -20.171638391020025,
+      "test_mse": 22.417920579137938,
+      "test_rmse": 4.734756654690707,
+      "fit_time": 454.6023950576782,
+      "dataset": "concrete_compressive_strength"
+    }
+  ],
+  "start_timestamp": "2026-05-12T13:07:18.748765",
+  "end_timestamp": "2026-05-12T13:14:54.335245",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/concrete_compressive_strength/TSLRegressorOneTensor/concrete_compressive_strength_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/concrete_compressive_strength/TSLRegressorOneTensor/concrete_compressive_strength_TSLRegressorOneTensor_best.sqlite"
+}

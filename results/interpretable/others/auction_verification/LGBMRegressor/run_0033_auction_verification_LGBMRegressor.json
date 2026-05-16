@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "auction_verification",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361236,
+    "name": "task_361236_auction_verification",
+    "n_times_p": 16344.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2155.104310296603,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2155.104310296603,
+  "max_test_rmse": 2155.104310296603,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 97,
+        "learning_rate": 0.2991569205941238,
+        "num_leaves": 34,
+        "max_depth": 2,
+        "min_child_samples": 10,
+        "subsample": 0.6251941267018887,
+        "reg_alpha": 0.24493916988760295,
+        "reg_lambda": 0.11044996991622559
+      },
+      "fixed_params": {},
+      "best_cv_score": -6165861.74271382,
+      "test_mse": 4644474.5882589985,
+      "test_rmse": 2155.104310296603,
+      "fit_time": 44.266714096069336,
+      "dataset": "auction_verification"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:20:51.491823",
+  "end_timestamp": "2026-01-16T21:21:35.876989",
+  "fitted_model_path": "data/cluster_results/interpretable/others/auction_verification/LGBMRegressor/auction_verification_LGBMRegressor_best.txt"
+}

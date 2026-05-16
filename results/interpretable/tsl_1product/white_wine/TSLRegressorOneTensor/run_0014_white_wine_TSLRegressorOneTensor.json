@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "white_wine",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361249,
+    "name": "task_361249_white_wine",
+    "n_times_p": 58776.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.6893695237610427,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.6893695237610427,
+  "max_test_rmse": 0.6893695237610427,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.25836668272196794,
+        "decay": 0.42127964351608005,
+        "epochs": 1,
+        "min_interval_samples": 59,
+        "n_iter": 149,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.14558675992338527,
+        "update_clamp": 6.23602350339437,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 17,
+        "colsample_bytree": 0.5462374414783573
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.4937817158248305,
+      "test_mse": 0.4752303402905268,
+      "test_rmse": 0.6893695237610427,
+      "fit_time": 4667.747410535812,
+      "dataset": "white_wine"
+    }
+  ],
+  "start_timestamp": "2026-05-04T12:43:24.421862",
+  "end_timestamp": "2026-05-04T14:01:13.882777",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/white_wine/TSLRegressorOneTensor/white_wine_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/white_wine/TSLRegressorOneTensor/white_wine_TSLRegressorOneTensor_best.sqlite"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "fifa",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361272,
+    "name": "task_361272_fifa",
+    "n_times_p": 556162.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 9149.128217254722,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 9149.128217254722,
+  "max_test_rmse": 9149.128217254722,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 572,
+        "learning_rate": 0.02165800984728486,
+        "num_leaves": 115,
+        "max_depth": 3,
+        "min_child_samples": 17,
+        "subsample": 0.874504258915558,
+        "reg_alpha": 8.47246653861419,
+        "reg_lambda": 3.5497557031709452
+      },
+      "fixed_params": {},
+      "best_cv_score": -78629699.04911943,
+      "test_mse": 83706547.13576655,
+      "test_rmse": 9149.128217254722,
+      "fit_time": 682.6953322887421,
+      "dataset": "fifa"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:25.228508",
+  "end_timestamp": "2026-01-17T12:46:50.091778",
+  "fitted_model_path": "data/cluster_results/blackbox/others/fifa/LGBMRegressor/fifa_LGBMRegressor_best.txt"
+}

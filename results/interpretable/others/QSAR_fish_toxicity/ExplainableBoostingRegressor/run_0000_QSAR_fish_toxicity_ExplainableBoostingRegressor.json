@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "QSAR_fish_toxicity",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361621,
+    "name": "task_361621_QSAR_fish_toxicity",
+    "n_times_p": 6356.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.9466191240771662,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.9466191240771662,
+  "max_test_rmse": 0.9466191240771662,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.03733769294415559,
+        "max_bins": 256,
+        "min_samples_leaf": 16,
+        "max_rounds": 496,
+        "outer_bags": 20,
+        "smoothing_rounds": 13,
+        "interactions": 11,
+        "max_interaction_bins": 17
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.7725733398757038,
+      "test_mse": 0.8960877660686213,
+      "test_rmse": 0.9466191240771662,
+      "fit_time": 23625.823671340942,
+      "dataset": "QSAR_fish_toxicity"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:43.294024",
+  "end_timestamp": "2026-01-19T17:12:38.583378",
+  "fitted_model_path": "data/cluster_results/interpretable/others/QSAR_fish_toxicity/ExplainableBoostingRegressor/QSAR_fish_toxicity_ExplainableBoostingRegressor_best.pkl"
+}

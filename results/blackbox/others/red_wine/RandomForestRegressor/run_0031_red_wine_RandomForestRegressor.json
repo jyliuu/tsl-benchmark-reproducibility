@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "red_wine",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361250,
+    "name": "task_361250_red_wine",
+    "n_times_p": 19188.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.5410491028116902,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.5410491028116902,
+  "max_test_rmse": 0.5410491028116902,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 747,
+        "max_depth": 19,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.32898052541011163
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.34697374679408843,
+      "test_mse": 0.29273413165333484,
+      "test_rmse": 0.5410491028116902,
+      "fit_time": 3190.151073694229,
+      "dataset": "red_wine"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:05:19.577566",
+  "end_timestamp": "2026-01-16T19:58:31.278652",
+  "fitted_model_path": "data/cluster_results/blackbox/others/red_wine/RandomForestRegressor/red_wine_RandomForestRegressor_best.pkl"
+}

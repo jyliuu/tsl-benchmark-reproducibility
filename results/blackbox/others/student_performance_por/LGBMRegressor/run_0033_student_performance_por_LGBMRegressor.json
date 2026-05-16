@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "student_performance_por",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361619,
+    "name": "task_361619_student_performance_por",
+    "n_times_p": 20119.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.7584613810170486,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.7584613810170486,
+  "max_test_rmse": 2.7584613810170486,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 276,
+        "learning_rate": 0.014755869423395818,
+        "num_leaves": 99,
+        "max_depth": 3,
+        "min_child_samples": 15,
+        "subsample": 0.8799866415652731,
+        "reg_alpha": 7.369914668126888,
+        "reg_lambda": 4.164901484233133
+      },
+      "fixed_params": {},
+      "best_cv_score": -7.06713274556666,
+      "test_mse": 7.609109190562484,
+      "test_rmse": 2.7584613810170486,
+      "fit_time": 113.09866523742676,
+      "dataset": "student_performance_por"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:09:21.642995",
+  "end_timestamp": "2026-01-16T19:11:15.063566",
+  "fitted_model_path": "data/cluster_results/blackbox/others/student_performance_por/LGBMRegressor/student_performance_por_LGBMRegressor_best.txt"
+}

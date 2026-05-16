@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "geographical_origin_of_music",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361243,
+    "name": "task_361243_geographical_origin_of_music",
+    "n_times_p": 123903.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 15.027224515223095,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 15.027224515223095,
+  "max_test_rmse": 15.027224515223095,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 631,
+        "max_depth": 16,
+        "min_samples_split": 2,
+        "min_samples_leaf": 2,
+        "max_features": 0.30111209821351
+      },
+      "fixed_params": {},
+      "best_cv_score": -249.7813784485962,
+      "test_mse": 225.817476630922,
+      "test_rmse": 15.027224515223095,
+      "fit_time": 2986.8225836753845,
+      "dataset": "geographical_origin_of_music"
+    }
+  ],
+  "start_timestamp": "2026-01-16T20:04:22.933379",
+  "end_timestamp": "2026-01-16T20:54:11.410644",
+  "fitted_model_path": "data/cluster_results/blackbox/others/geographical_origin_of_music/RandomForestRegressor/geographical_origin_of_music_RandomForestRegressor_best.pkl"
+}

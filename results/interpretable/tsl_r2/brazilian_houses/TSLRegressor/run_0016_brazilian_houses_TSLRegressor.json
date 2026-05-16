@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "brazilian_houses",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361267,
+    "name": "task_361267_brazilian_houses",
+    "n_times_p": 106920.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2473.9835611007034,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2473.9835611007034,
+  "max_test_rmse": 2473.9835611007034,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.00395029066560977,
+        "decay": 0.9775647922760624,
+        "epochs": 1,
+        "min_interval_samples": 1,
+        "n_iter": 239,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.7429844097597019,
+        "update_clamp": 21.653401679599753,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 9,
+        "colsample_bytree": 0.39620005943730163
+      },
+      "fixed_params": {},
+      "best_cv_score": -19479445.87463474,
+      "test_mse": 6120594.660596517,
+      "test_rmse": 2473.9835611007034,
+      "fit_time": 45526.90364575386,
+      "dataset": "brazilian_houses"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:15:49.862739",
+  "end_timestamp": "2026-01-17T04:55:11.112031",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/brazilian_houses/TSLRegressor/brazilian_houses_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/brazilian_houses/TSLRegressor/brazilian_houses_TSLRegressor_best.sqlite"
+}

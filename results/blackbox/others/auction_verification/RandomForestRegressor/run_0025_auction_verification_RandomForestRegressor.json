@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "auction_verification",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361236,
+    "name": "task_361236_auction_verification",
+    "n_times_p": 16344.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 1223.569739734055,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 1223.569739734055,
+  "max_test_rmse": 1223.569739734055,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 691,
+        "max_depth": 14,
+        "min_samples_split": 3,
+        "min_samples_leaf": 1,
+        "max_features": 0.7622088315974075
+      },
+      "fixed_params": {},
+      "best_cv_score": -2000166.8658000056,
+      "test_mse": 1497122.9079928633,
+      "test_rmse": 1223.569739734055,
+      "fit_time": 2357.2737255096436,
+      "dataset": "auction_verification"
+    }
+  ],
+  "start_timestamp": "2026-01-16T18:57:49.689129",
+  "end_timestamp": "2026-01-16T19:37:08.387595",
+  "fitted_model_path": "data/cluster_results/blackbox/others/auction_verification/RandomForestRegressor/auction_verification_RandomForestRegressor_best.pkl"
+}

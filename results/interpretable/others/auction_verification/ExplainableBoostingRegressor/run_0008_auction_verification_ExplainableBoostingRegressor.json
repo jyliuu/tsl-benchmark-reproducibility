@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "auction_verification",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361236,
+    "name": "task_361236_auction_verification",
+    "n_times_p": 16344.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 1738.1678356374055,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 1738.1678356374055,
+  "max_test_rmse": 1738.1678356374055,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.047577213518527256,
+        "max_bins": 192,
+        "min_samples_leaf": 13,
+        "max_rounds": 496,
+        "outer_bags": 12,
+        "smoothing_rounds": 330,
+        "interactions": 20,
+        "max_interaction_bins": 31
+      },
+      "fixed_params": {},
+      "best_cv_score": -3844023.4768992863,
+      "test_mse": 3021227.424844423,
+      "test_rmse": 1738.1678356374055,
+      "fit_time": 18440.029915571213,
+      "dataset": "auction_verification"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:47.149909",
+  "end_timestamp": "2026-01-19T15:46:18.430196",
+  "fitted_model_path": "data/cluster_results/interpretable/others/auction_verification/ExplainableBoostingRegressor/auction_verification_ExplainableBoostingRegressor_best.pkl"
+}

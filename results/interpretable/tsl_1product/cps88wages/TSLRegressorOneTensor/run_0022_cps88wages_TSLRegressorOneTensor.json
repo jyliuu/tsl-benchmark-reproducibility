@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "cps88wages",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361261,
+    "name": "task_361261_cps88wages",
+    "n_times_p": 197085.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 365.6308169827611,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 365.6308169827611,
+  "max_test_rmse": 365.6308169827611,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.0005632625452660463,
+        "decay": 0.8013900381190392,
+        "epochs": 1,
+        "min_interval_samples": 90,
+        "n_iter": 25,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.4159210669120758,
+        "update_clamp": 32.771108587244704,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 2,
+        "colsample_bytree": 0.9752195568557159
+      },
+      "fixed_params": {},
+      "best_cv_score": -150553.141525895,
+      "test_mse": 133685.89432748134,
+      "test_rmse": 365.6308169827611,
+      "fit_time": 16540.765074968338,
+      "dataset": "cps88wages"
+    }
+  ],
+  "start_timestamp": "2026-05-12T13:59:56.569511",
+  "end_timestamp": "2026-05-12T18:35:38.452486",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/cps88wages/TSLRegressorOneTensor/cps88wages_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/cps88wages/TSLRegressorOneTensor/cps88wages_TSLRegressorOneTensor_best.sqlite"
+}

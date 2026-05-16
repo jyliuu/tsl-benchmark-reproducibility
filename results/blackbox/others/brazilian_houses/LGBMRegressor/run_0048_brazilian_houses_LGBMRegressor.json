@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "brazilian_houses",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361267,
+    "name": "task_361267_brazilian_houses",
+    "n_times_p": 106920.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 3200.3609232842264,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 3200.3609232842264,
+  "max_test_rmse": 3200.3609232842264,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 836,
+        "learning_rate": 0.09959718028459394,
+        "num_leaves": 98,
+        "max_depth": 3,
+        "min_child_samples": 5,
+        "subsample": 0.5087885242488771,
+        "reg_alpha": 5.738342754200985,
+        "reg_lambda": 4.114520622833007
+      },
+      "fixed_params": {},
+      "best_cv_score": -85545519.71914421,
+      "test_mse": 10242310.039284667,
+      "test_rmse": 3200.3609232842264,
+      "fit_time": 564.0487172603607,
+      "dataset": "brazilian_houses"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:54:22.001688",
+  "end_timestamp": "2026-01-16T20:03:46.560815",
+  "fitted_model_path": "data/cluster_results/blackbox/others/brazilian_houses/LGBMRegressor/brazilian_houses_LGBMRegressor_best.txt"
+}

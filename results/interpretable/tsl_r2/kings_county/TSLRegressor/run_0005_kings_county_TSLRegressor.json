@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "kings_county",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361266,
+    "name": "task_361266_kings_county",
+    "n_times_p": 475486.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 131817.14239522527,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 131817.14239522527,
+  "max_test_rmse": 131817.14239522527,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.00028236587021234535,
+        "decay": 0.31968517971320837,
+        "epochs": 2,
+        "min_interval_samples": 12,
+        "n_iter": 249,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.4953831813297297,
+        "update_clamp": 21.008202944470753,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 3,
+        "colsample_bytree": 0.4866199660107251
+      },
+      "fixed_params": {},
+      "best_cv_score": -12982656034.259007,
+      "test_mse": 17375759029.24309,
+      "test_rmse": 131817.14239522527,
+      "fit_time": 103994.86228561401,
+      "dataset": "kings_county"
+    }
+  ],
+  "start_timestamp": "2026-01-17T17:25:58.509040",
+  "end_timestamp": "2026-01-18T22:20:21.503972",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/kings_county/TSLRegressor/kings_county_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/kings_county/TSLRegressor/kings_county_TSLRegressor_best.sqlite"
+}

@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "forest_fires",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361618,
+    "name": "task_361618_forest_fires",
+    "n_times_p": 6721.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 109.03602918425148,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 109.03602918425148,
+  "max_test_rmse": 109.03602918425148,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.0010267650894240478,
+        "decay": 0.26021379841205783,
+        "epochs": 4,
+        "min_interval_samples": 44,
+        "n_iter": 52,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.10117046910946126,
+        "update_clamp": 27.589837969924204,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 7,
+        "colsample_bytree": 0.7330870088537511
+      },
+      "fixed_params": {},
+      "best_cv_score": -2076.0715917473085,
+      "test_mse": 11888.855660268939,
+      "test_rmse": 109.03602918425148,
+      "fit_time": 1167.5506711006165,
+      "dataset": "forest_fires"
+    }
+  ],
+  "start_timestamp": "2026-05-14T20:26:06.649709",
+  "end_timestamp": "2026-05-14T20:45:37.782763",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/forest_fires/TSLRegressorOneTensor/forest_fires_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/forest_fires/TSLRegressorOneTensor/forest_fires_TSLRegressorOneTensor_best.sqlite"
+}

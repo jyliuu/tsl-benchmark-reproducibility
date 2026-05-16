@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "concrete_compressive_strength",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361237,
+    "name": "task_361237_concrete_compressive_strength",
+    "n_times_p": 9270.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 5.0343212349769635,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 5.0343212349769635,
+  "max_test_rmse": 5.0343212349769635,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.2971917510844912,
+        "num_leaves": 40,
+        "max_depth": 2,
+        "min_child_samples": 14,
+        "subsample": 0.4895604351819324,
+        "reg_alpha": 0.13897342858870818,
+        "reg_lambda": 0.1793917994774798
+      },
+      "fixed_params": {},
+      "best_cv_score": -25.501813098005172,
+      "test_mse": 25.34439029693998,
+      "test_rmse": 5.0343212349769635,
+      "fit_time": 47.552356481552124,
+      "dataset": "concrete_compressive_strength"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:06:21.944410",
+  "end_timestamp": "2026-01-16T21:07:09.601372",
+  "fitted_model_path": "data/cluster_results/interpretable/others/concrete_compressive_strength/LGBMRegressor/concrete_compressive_strength_LGBMRegressor_best.txt"
+}

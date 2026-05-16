@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "miami_housing",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361260,
+    "name": "task_361260_miami_housing",
+    "n_times_p": 222912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 89215.72302079105,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 89215.72302079105,
+  "max_test_rmse": 89215.72302079105,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 903,
+        "max_depth": 17,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.3850246630151521
+      },
+      "fixed_params": {},
+      "best_cv_score": -9101198132.234913,
+      "test_mse": 7959445234.122506,
+      "test_rmse": 89215.72302079105,
+      "fit_time": 16332.46373963356,
+      "dataset": "miami_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:24.264340",
+  "end_timestamp": "2026-01-17T17:07:45.666469",
+  "fitted_model_path": "data/cluster_results/blackbox/others/miami_housing/RandomForestRegressor/miami_housing_RandomForestRegressor_best.pkl"
+}

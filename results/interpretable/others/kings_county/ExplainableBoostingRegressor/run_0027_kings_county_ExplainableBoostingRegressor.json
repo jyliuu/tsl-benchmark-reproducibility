@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "kings_county",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361266,
+    "name": "task_361266_kings_county",
+    "n_times_p": 475486.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 139137.3649706473,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 139137.3649706473,
+  "max_test_rmse": 139137.3649706473,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04015324714817295,
+        "max_bins": 254,
+        "min_samples_leaf": 44,
+        "max_rounds": 460,
+        "outer_bags": 16,
+        "smoothing_rounds": 493,
+        "interactions": 19,
+        "max_interaction_bins": 63
+      },
+      "fixed_params": {},
+      "best_cv_score": -13770109976.601685,
+      "test_mse": 19359206330.975105,
+      "test_rmse": 139137.3649706473,
+      "fit_time": 51721.36435890198,
+      "dataset": "kings_county"
+    }
+  ],
+  "start_timestamp": "2026-01-17T15:51:58.627336",
+  "end_timestamp": "2026-01-18T06:14:31.117754",
+  "fitted_model_path": "data/cluster_results/interpretable/others/kings_county/ExplainableBoostingRegressor/kings_county_ExplainableBoostingRegressor_best.pkl"
+}

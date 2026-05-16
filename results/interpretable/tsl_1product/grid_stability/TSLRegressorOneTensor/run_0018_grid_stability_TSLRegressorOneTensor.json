@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "grid_stability",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361251,
+    "name": "task_361251_grid_stability",
+    "n_times_p": 130000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.016796988977022306,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.016796988977022306,
+  "max_test_rmse": 0.016796988977022306,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 1.692949530760373e-06,
+        "decay": 0.9531166372991287,
+        "epochs": 4,
+        "min_interval_samples": 6,
+        "n_iter": 40,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.7011955102733489,
+        "update_clamp": 23.51796425701738,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 2,
+        "colsample_bytree": 0.8806994997039228
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.00028730239780776163,
+      "test_mse": 0.0002821388386942089,
+      "test_rmse": 0.016796988977022306,
+      "fit_time": 25961.28839969635,
+      "dataset": "grid_stability"
+    }
+  ],
+  "start_timestamp": "2026-05-04T13:31:01.492956",
+  "end_timestamp": "2026-05-04T20:43:55.422079",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/grid_stability/TSLRegressorOneTensor/grid_stability_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/grid_stability/TSLRegressorOneTensor/grid_stability_TSLRegressorOneTensor_best.sqlite"
+}

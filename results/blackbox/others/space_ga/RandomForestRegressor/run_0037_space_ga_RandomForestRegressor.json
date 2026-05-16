@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "space_ga",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361623,
+    "name": "task_361623_space_ga",
+    "n_times_p": 21749.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.11982168948527297,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.11982168948527297,
+  "max_test_rmse": 0.11982168948527297,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 533,
+        "max_depth": 16,
+        "min_samples_split": 3,
+        "min_samples_leaf": 2,
+        "max_features": 0.7879830400739917
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.013667795472927378,
+      "test_mse": 0.014357237271105175,
+      "test_rmse": 0.11982168948527297,
+      "fit_time": 2478.889994621277,
+      "dataset": "space_ga"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:19:19.847855",
+  "end_timestamp": "2026-01-16T20:00:39.881584",
+  "fitted_model_path": "data/cluster_results/blackbox/others/space_ga/RandomForestRegressor/space_ga_RandomForestRegressor_best.pkl"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "miami_housing",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361260,
+    "name": "task_361260_miami_housing",
+    "n_times_p": 222912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 91777.24995183774,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 91777.24995183774,
+  "max_test_rmse": 91777.24995183774,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04160823752393325,
+        "max_bins": 153,
+        "min_samples_leaf": 16,
+        "max_rounds": 454,
+        "outer_bags": 9,
+        "smoothing_rounds": 267,
+        "interactions": 19,
+        "max_interaction_bins": 61
+      },
+      "fixed_params": {},
+      "best_cv_score": -9355196458.931889,
+      "test_mse": 8423063608.7221,
+      "test_rmse": 91777.24995183774,
+      "fit_time": 40149.602051734924,
+      "dataset": "miami_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-17T15:17:58.072331",
+  "end_timestamp": "2026-01-18T02:27:34.721580",
+  "fitted_model_path": "data/cluster_results/interpretable/others/miami_housing/ExplainableBoostingRegressor/miami_housing_ExplainableBoostingRegressor_best.pkl"
+}

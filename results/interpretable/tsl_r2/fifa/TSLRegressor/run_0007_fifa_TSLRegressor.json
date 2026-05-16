@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "fifa",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361272,
+    "name": "task_361272_fifa",
+    "n_times_p": 556162.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 9343.720133939247,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 9343.720133939247,
+  "max_test_rmse": 9343.720133939247,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.00012545490089391713,
+        "decay": 0.20176922034069572,
+        "epochs": 1,
+        "min_interval_samples": 19,
+        "n_iter": 53,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.11771316156627065,
+        "update_clamp": 32.87855710319587,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 3,
+        "colsample_bytree": 0.7101384062448826
+      },
+      "fixed_params": {},
+      "best_cv_score": -77791870.32804725,
+      "test_mse": 87305105.94138165,
+      "test_rmse": 9343.720133939247,
+      "fit_time": 46418.11374282837,
+      "dataset": "fifa"
+    }
+  ],
+  "start_timestamp": "2026-01-17T22:32:29.829579",
+  "end_timestamp": "2026-01-18T11:26:25.452563",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/fifa/TSLRegressor/fifa_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/fifa/TSLRegressor/fifa_TSLRegressor_best.sqlite"
+}

@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "student_performance_por",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361619,
+    "name": "task_361619_student_performance_por",
+    "n_times_p": 20119.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.8478671337710186,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.8478671337710186,
+  "max_test_rmse": 2.8478671337710186,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 2.747664912232269e-06,
+        "decay": 0.6080384977245811,
+        "epochs": 1,
+        "min_interval_samples": 1,
+        "n_iter": 11,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.8123270139578312,
+        "update_clamp": 20.92299326744331,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 13,
+        "colsample_bytree": 0.6976273971644091
+      },
+      "fixed_params": {},
+      "best_cv_score": -6.961981682383538,
+      "test_mse": 8.110347211613158,
+      "test_rmse": 2.8478671337710186,
+      "fit_time": 2411.76469373703,
+      "dataset": "student_performance_por"
+    }
+  ],
+  "start_timestamp": "2026-05-04T12:20:07.526966",
+  "end_timestamp": "2026-05-04T13:00:19.589009",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/student_performance_por/TSLRegressorOneTensor/student_performance_por_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/student_performance_por/TSLRegressorOneTensor/student_performance_por_TSLRegressorOneTensor_best.sqlite"
+}

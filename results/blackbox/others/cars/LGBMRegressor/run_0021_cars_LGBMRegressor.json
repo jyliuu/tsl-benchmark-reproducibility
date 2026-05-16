@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "cars",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361622,
+    "name": "task_361622_cars",
+    "n_times_p": 14472.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2160.719565633795,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2160.719565633795,
+  "max_test_rmse": 2160.719565633795,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 364,
+        "learning_rate": 0.14031072557590915,
+        "num_leaves": 121,
+        "max_depth": 4,
+        "min_child_samples": 17,
+        "subsample": 0.6227362967428696,
+        "reg_alpha": 6.543307127594553,
+        "reg_lambda": 8.442255265738574
+      },
+      "fixed_params": {},
+      "best_cv_score": -5112392.679184814,
+      "test_mse": 4668709.041312695,
+      "test_rmse": 2160.719565633795,
+      "fit_time": 186.1655342578888,
+      "dataset": "cars"
+    }
+  ],
+  "start_timestamp": "2026-01-16T18:43:21.310118",
+  "end_timestamp": "2026-01-16T18:46:27.680797",
+  "fitted_model_path": "data/cluster_results/blackbox/others/cars/LGBMRegressor/cars_LGBMRegressor_best.txt"
+}

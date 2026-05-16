@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "health_insurance",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361269,
+    "name": "task_361269_health_insurance",
+    "n_times_p": 267264.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 15.36652621421542,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 15.36652621421542,
+  "max_test_rmse": 15.36652621421542,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 440,
+        "max_depth": 2,
+        "min_samples_split": 7,
+        "min_samples_leaf": 6,
+        "max_features": 0.7981577232686855
+      },
+      "fixed_params": {},
+      "best_cv_score": -233.778755735189,
+      "test_mse": 236.13012789216972,
+      "test_rmse": 15.36652621421542,
+      "fit_time": 2319.6196327209473,
+      "dataset": "health_insurance"
+    }
+  ],
+  "start_timestamp": "2026-01-17T13:53:27.599955",
+  "end_timestamp": "2026-01-17T14:32:08.529382",
+  "fitted_model_path": "data/cluster_results/interpretable/others/health_insurance/RandomForestRegressor/health_insurance_RandomForestRegressor_best.pkl"
+}

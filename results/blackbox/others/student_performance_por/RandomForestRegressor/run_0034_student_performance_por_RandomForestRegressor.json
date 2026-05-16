@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "student_performance_por",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361619,
+    "name": "task_361619_student_performance_por",
+    "n_times_p": 20119.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.7624137862488087,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.7624137862488087,
+  "max_test_rmse": 2.7624137862488087,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 434,
+        "max_depth": 11,
+        "min_samples_split": 19,
+        "min_samples_leaf": 4,
+        "max_features": 0.47857795976158396
+      },
+      "fixed_params": {},
+      "best_cv_score": -6.88545517652109,
+      "test_mse": 7.63092992645748,
+      "test_rmse": 2.7624137862488087,
+      "fit_time": 2063.8195724487305,
+      "dataset": "student_performance_por"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:11:51.567552",
+  "end_timestamp": "2026-01-16T19:46:16.440143",
+  "fitted_model_path": "data/cluster_results/blackbox/others/student_performance_por/RandomForestRegressor/student_performance_por_RandomForestRegressor_best.pkl"
+}

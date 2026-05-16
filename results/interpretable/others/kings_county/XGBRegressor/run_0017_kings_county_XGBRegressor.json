@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "kings_county",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361266,
+    "name": "task_361266_kings_county",
+    "n_times_p": 475486.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 161757.39711376408,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 161757.39711376408,
+  "max_test_rmse": 161757.39711376408,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.27152297700710065,
+        "max_depth": 2,
+        "subsample": 0.8034522408982974,
+        "colsample_bylevel": 0.3710241903841691,
+        "gamma": 0.1725350827773003,
+        "reg_alpha": 0.5466169929171243,
+        "reg_lambda": 0.5673975286420326
+      },
+      "fixed_params": {},
+      "best_cv_score": -15736332661.78246,
+      "test_mse": 26165455521.019974,
+      "test_rmse": 161757.39711376408,
+      "fit_time": 98.31190085411072,
+      "dataset": "kings_county"
+    }
+  ],
+  "start_timestamp": "2026-01-17T14:14:27.764577",
+  "end_timestamp": "2026-01-17T14:16:06.597849",
+  "fitted_model_path": "data/cluster_results/interpretable/others/kings_county/XGBRegressor/kings_county_XGBRegressor_best.json"
+}

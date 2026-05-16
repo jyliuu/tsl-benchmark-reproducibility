@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "kin8nm",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361258,
+    "name": "task_361258_kin8nm",
+    "n_times_p": 73728.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.13776946777447938,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.13776946777447938,
+  "max_test_rmse": 0.13776946777447938,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.0004450269877742421,
+        "decay": 0.9219010317290215,
+        "epochs": 10,
+        "min_interval_samples": 6,
+        "n_iter": 37,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.5401473274910179,
+        "update_clamp": 13.549328264239577,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 4,
+        "colsample_bytree": 0.4809809071304639
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.01626965538458238,
+      "test_mse": 0.018980426250863314,
+      "test_rmse": 0.13776946777447938,
+      "fit_time": 108729.37187767029,
+      "dataset": "kin8nm"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:41:51.687555",
+  "end_timestamp": "2026-01-17T22:55:03.348107",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/kin8nm/TSLRegressor/kin8nm_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/kin8nm/TSLRegressor/kin8nm_TSLRegressor_best.sqlite"
+}

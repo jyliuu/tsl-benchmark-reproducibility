@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "kin8nm",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361258,
+    "name": "task_361258_kin8nm",
+    "n_times_p": 73728.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.10660660688384727,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.10660660688384727,
+  "max_test_rmse": 0.10660660688384727,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 709,
+        "learning_rate": 0.061677221443040706,
+        "max_depth": 7,
+        "subsample": 0.5830664731528442,
+        "colsample_bylevel": 0.946264865427898,
+        "gamma": 0.0011917237416254535,
+        "reg_alpha": 0.704211083868936,
+        "reg_lambda": 5.076252163379918
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.010982797581041235,
+      "test_mse": 0.011364968631287152,
+      "test_rmse": 0.10660660688384727,
+      "fit_time": 459.85801911354065,
+      "dataset": "kin8nm"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:54:20.917824",
+  "end_timestamp": "2026-01-16T20:02:02.850802",
+  "fitted_model_path": "data/cluster_results/blackbox/others/kin8nm/XGBRegressor/kin8nm_XGBRegressor_best.json"
+}

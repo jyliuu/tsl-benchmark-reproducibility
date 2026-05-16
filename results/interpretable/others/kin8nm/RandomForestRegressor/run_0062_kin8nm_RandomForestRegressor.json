@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "kin8nm",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361258,
+    "name": "task_361258_kin8nm",
+    "n_times_p": 73728.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.22044301766627009,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.22044301766627009,
+  "max_test_rmse": 0.22044301766627009,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 289,
+        "max_depth": 2,
+        "min_samples_split": 5,
+        "min_samples_leaf": 2,
+        "max_features": 0.7832160137542572
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.0473788991069161,
+      "test_mse": 0.048595124037811466,
+      "test_rmse": 0.22044301766627009,
+      "fit_time": 1879.8893988132477,
+      "dataset": "kin8nm"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:45:22.941813",
+  "end_timestamp": "2026-01-16T22:16:43.528659",
+  "fitted_model_path": "data/cluster_results/interpretable/others/kin8nm/RandomForestRegressor/kin8nm_RandomForestRegressor_best.pkl"
+}

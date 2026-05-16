@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "forest_fires",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361618,
+    "name": "task_361618_forest_fires",
+    "n_times_p": 6721.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 108.07043907685959,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 108.07043907685959,
+  "max_test_rmse": 108.07043907685959,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 117,
+        "learning_rate": 0.012024832326506285,
+        "num_leaves": 94,
+        "max_depth": 4,
+        "min_child_samples": 29,
+        "subsample": 0.750509305744321,
+        "reg_alpha": 3.7911781926495864,
+        "reg_lambda": 9.901156904855725
+      },
+      "fixed_params": {},
+      "best_cv_score": -2101.567575087115,
+      "test_mse": 11679.21980226522,
+      "test_rmse": 108.07043907685959,
+      "fit_time": 102.00454473495483,
+      "dataset": "forest_fires"
+    }
+  ],
+  "start_timestamp": "2026-01-16T17:46:50.842724",
+  "end_timestamp": "2026-01-16T17:48:32.995404",
+  "fitted_model_path": "data/cluster_results/blackbox/others/forest_fires/LGBMRegressor/forest_fires_LGBMRegressor_best.txt"
+}

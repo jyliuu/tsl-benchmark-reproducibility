@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "red_wine",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361250,
+    "name": "task_361250_red_wine",
+    "n_times_p": 19188.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.6209538990148522,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.6209538990148522,
+  "max_test_rmse": 0.6209538990148522,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 2.7251225043453166e-06,
+        "decay": 0.33644475374899324,
+        "epochs": 1,
+        "min_interval_samples": 20,
+        "n_iter": 58,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.06998406165377283,
+        "update_clamp": 24.834065493203312,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 2,
+        "colsample_bytree": 0.786262699456606
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.40416328676420027,
+      "test_mse": 0.38558374470174733,
+      "test_rmse": 0.6209538990148522,
+      "fit_time": 1076.8199059963226,
+      "dataset": "red_wine"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:15:49.894516",
+  "end_timestamp": "2026-01-16T16:33:48.684232",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/red_wine/TSLRegressor/red_wine_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/red_wine/TSLRegressor/red_wine_TSLRegressor_best.sqlite"
+}

@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "space_ga",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361623,
+    "name": "task_361623_space_ga",
+    "n_times_p": 21749.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.10841340226341564,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.10841340226341564,
+  "max_test_rmse": 0.10841340226341564,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 4,
+        "degree": 5,
+        "basis": "tent",
+        "ridge": 3.5237650204390223e-09,
+        "smoothness": 0.6580028501540558,
+        "max_sweeps": 96,
+        "tol": 9.253235697794607e-05,
+        "n_init": 1,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "tent_level"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.010138436719436867,
+      "test_mse": 0.011753465790329177,
+      "test_rmse": 0.10841340226341564,
+      "fit_time": 14349.644534349442,
+      "dataset": "space_ga"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:21:57.542948",
+  "end_timestamp": "2026-05-02T15:21:09.067752",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/space_ga/SeparatedALSRegressor/space_ga_SeparatedALSRegressor_best.pkl"
+}

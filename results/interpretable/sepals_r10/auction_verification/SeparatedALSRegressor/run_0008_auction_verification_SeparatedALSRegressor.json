@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "auction_verification",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361236,
+    "name": "task_361236_auction_verification",
+    "n_times_p": 16344.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 682.2039131693907,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 682.2039131693907,
+  "max_test_rmse": 682.2039131693907,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 5,
+        "degree": 9,
+        "basis": "tent",
+        "ridge": 1.046523547609204e-10,
+        "smoothness": 2.824712931283914e-09,
+        "max_sweeps": 34,
+        "tol": 3.9614262315200215e-10,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree"
+      },
+      "fixed_params": {},
+      "best_cv_score": -465251.6758395031,
+      "test_mse": 465402.1791436296,
+      "test_rmse": 682.2039131693907,
+      "fit_time": 10574.949904441833,
+      "dataset": "auction_verification"
+    }
+  ],
+  "start_timestamp": "2026-05-04T23:54:08.482618",
+  "end_timestamp": "2026-05-05T03:04:12.181213",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/auction_verification/SeparatedALSRegressor/auction_verification_SeparatedALSRegressor_best.pkl"
+}

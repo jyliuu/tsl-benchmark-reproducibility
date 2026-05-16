@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "kings_county",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361266,
+    "name": "task_361266_kings_county",
+    "n_times_p": 475486.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 135532.52110879053,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 135532.52110879053,
+  "max_test_rmse": 135532.52110879053,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 895,
+        "max_depth": 19,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.5033143885910961
+      },
+      "fixed_params": {},
+      "best_cv_score": -14531676479.513575,
+      "test_mse": 18369064278.104748,
+      "test_rmse": 135532.52110879053,
+      "fit_time": 20269.518394231796,
+      "dataset": "kings_county"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:25.433740",
+  "end_timestamp": "2026-01-17T18:13:32.922412",
+  "fitted_model_path": "data/cluster_results/blackbox/others/kings_county/RandomForestRegressor/kings_county_RandomForestRegressor_best.pkl"
+}

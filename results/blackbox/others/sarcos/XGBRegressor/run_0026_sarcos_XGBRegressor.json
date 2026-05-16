@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "sarcos",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361254,
+    "name": "task_361254_sarcos",
+    "n_times_p": 1076526.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.2197892303041358,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.2197892303041358,
+  "max_test_rmse": 2.2197892303041358,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 964,
+        "learning_rate": 0.0405012429438428,
+        "max_depth": 9,
+        "subsample": 0.573426164436047,
+        "colsample_bylevel": 0.5527174577015174,
+        "gamma": 0.11770842499676007,
+        "reg_alpha": 0.5253137632234294,
+        "reg_lambda": 2.5738766871726377
+      },
+      "fixed_params": {},
+      "best_cv_score": -5.4279364783187045,
+      "test_mse": 4.9274642269742275,
+      "test_rmse": 2.2197892303041358,
+      "fit_time": 9090.39899969101,
+      "dataset": "sarcos"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:45:27.032854",
+  "end_timestamp": "2026-01-17T15:17:16.521377",
+  "fitted_model_path": "data/cluster_results/blackbox/others/sarcos/XGBRegressor/sarcos_XGBRegressor_best.json"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "video_transcoding",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361252,
+    "name": "task_361252_video_transcoding",
+    "n_times_p": 1306896.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.8871581528727492,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.8871581528727492,
+  "max_test_rmse": 0.8871581528727492,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 976,
+        "learning_rate": 0.15984435955994092,
+        "num_leaves": 43,
+        "max_depth": 9,
+        "min_child_samples": 5,
+        "subsample": 0.8062240630494907,
+        "reg_alpha": 1.5396527736575534,
+        "reg_lambda": 1.7224069889149853
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.9297288577188121,
+      "test_mse": 0.7870495882085883,
+      "test_rmse": 0.8871581528727492,
+      "fit_time": 5131.399414539337,
+      "dataset": "video_transcoding"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:48:26.512425",
+  "end_timestamp": "2026-01-17T14:14:02.436164",
+  "fitted_model_path": "data/cluster_results/blackbox/others/video_transcoding/LGBMRegressor/video_transcoding_LGBMRegressor_best.txt"
+}

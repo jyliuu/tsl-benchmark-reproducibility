@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "naval_propulsion_plant",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361247,
+    "name": "task_361247_naval_propulsion_plant",
+    "n_times_p": 179010.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.003170311062258881,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.003170311062258881,
+  "max_test_rmse": 0.003170311062258881,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.2973721528458859,
+        "num_leaves": 36,
+        "max_depth": 2,
+        "min_child_samples": 19,
+        "subsample": 0.6144253665528498,
+        "reg_alpha": 0.035900412182675805,
+        "reg_lambda": 0.21608977740215518
+      },
+      "fixed_params": {},
+      "best_cv_score": -1.0100245249205585e-05,
+      "test_mse": 1.0050872231481035e-05,
+      "test_rmse": 0.003170311062258881,
+      "fit_time": 54.16384482383728,
+      "dataset": "naval_propulsion_plant"
+    }
+  ],
+  "start_timestamp": "2026-01-16T22:03:51.208794",
+  "end_timestamp": "2026-01-16T22:04:45.542885",
+  "fitted_model_path": "data/cluster_results/interpretable/others/naval_propulsion_plant/LGBMRegressor/naval_propulsion_plant_LGBMRegressor_best.txt"
+}

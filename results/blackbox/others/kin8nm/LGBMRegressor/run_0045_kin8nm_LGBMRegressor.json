@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "kin8nm",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361258,
+    "name": "task_361258_kin8nm",
+    "n_times_p": 73728.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.10694603296894975,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.10694603296894975,
+  "max_test_rmse": 0.10694603296894975,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 605,
+        "learning_rate": 0.12661486719755533,
+        "num_leaves": 32,
+        "max_depth": 9,
+        "min_child_samples": 20,
+        "subsample": 0.7752126091571289,
+        "reg_alpha": 0.22410645779843613,
+        "reg_lambda": 9.162060148204164
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.010942427160924981,
+      "test_mse": 0.011437453967795688,
+      "test_rmse": 0.10694603296894975,
+      "fit_time": 415.21618604660034,
+      "dataset": "kin8nm"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:46:52.323591",
+  "end_timestamp": "2026-01-16T19:53:48.672737",
+  "fitted_model_path": "data/cluster_results/blackbox/others/kin8nm/LGBMRegressor/kin8nm_LGBMRegressor_best.txt"
+}

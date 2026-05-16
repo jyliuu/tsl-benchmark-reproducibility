@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "forest_fires",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361618,
+    "name": "task_361618_forest_fires",
+    "n_times_p": 6721.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 108.25689010311577,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 108.25689010311577,
+  "max_test_rmse": 108.25689010311577,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 830,
+        "max_depth": 5,
+        "min_samples_split": 10,
+        "min_samples_leaf": 9,
+        "max_features": 0.3124589820184761
+      },
+      "fixed_params": {},
+      "best_cv_score": -2106.298841949991,
+      "test_mse": 11719.554254798084,
+      "test_rmse": 108.25689010311577,
+      "fit_time": 2698.8358347415924,
+      "dataset": "forest_fires"
+    }
+  ],
+  "start_timestamp": "2026-01-16T17:47:49.487659",
+  "end_timestamp": "2026-01-16T18:32:49.903705",
+  "fitted_model_path": "data/cluster_results/blackbox/others/forest_fires/RandomForestRegressor/forest_fires_RandomForestRegressor_best.pkl"
+}

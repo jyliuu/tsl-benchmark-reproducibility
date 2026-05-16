@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "concrete_compressive_strength",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361237,
+    "name": "task_361237_concrete_compressive_strength",
+    "n_times_p": 9270.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 4.141304596840664,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 4.141304596840664,
+  "max_test_rmse": 4.141304596840664,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04883245944117894,
+        "max_bins": 112,
+        "min_samples_leaf": 10,
+        "max_rounds": 438,
+        "outer_bags": 11,
+        "smoothing_rounds": 446,
+        "interactions": 19,
+        "max_interaction_bins": 64
+      },
+      "fixed_params": {},
+      "best_cv_score": -18.391357989504325,
+      "test_mse": 17.15040376381361,
+      "test_rmse": 4.141304596840664,
+      "fit_time": 27854.91502571106,
+      "dataset": "concrete_compressive_strength"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:47.399435",
+  "end_timestamp": "2026-01-19T18:23:26.822781",
+  "fitted_model_path": "data/cluster_results/interpretable/others/concrete_compressive_strength/ExplainableBoostingRegressor/concrete_compressive_strength_ExplainableBoostingRegressor_best.pkl"
+}

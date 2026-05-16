@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "auction_verification",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361236,
+    "name": "task_361236_auction_verification",
+    "n_times_p": 16344.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 1135.7978794577514,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 1135.7978794577514,
+  "max_test_rmse": 1135.7978794577514,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.0010201911843753994,
+        "decay": 0.47392269949065136,
+        "epochs": 2,
+        "min_interval_samples": 1,
+        "n_iter": 75,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.5833703506114175,
+        "update_clamp": 7.527129215429445,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 19,
+        "colsample_bytree": 0.3310288322325157
+      },
+      "fixed_params": {},
+      "best_cv_score": -1392219.0996632027,
+      "test_mse": 1290036.8229807245,
+      "test_rmse": 1135.7978794577514,
+      "fit_time": 1862.907722234726,
+      "dataset": "auction_verification"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:15:49.927317",
+  "end_timestamp": "2026-01-16T16:46:56.737151",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/auction_verification/TSLRegressor/auction_verification_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/auction_verification/TSLRegressor/auction_verification_TSLRegressor_best.sqlite"
+}

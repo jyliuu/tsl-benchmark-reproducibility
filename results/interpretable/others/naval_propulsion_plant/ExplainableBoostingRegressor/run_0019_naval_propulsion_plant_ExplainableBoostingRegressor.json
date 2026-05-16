@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "naval_propulsion_plant",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361247,
+    "name": "task_361247_naval_propulsion_plant",
+    "n_times_p": 179010.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.0015087759160111924,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.0015087759160111924,
+  "max_test_rmse": 0.0015087759160111924,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.047943484927154084,
+        "max_bins": 207,
+        "min_samples_leaf": 18,
+        "max_rounds": 482,
+        "outer_bags": 7,
+        "smoothing_rounds": 294,
+        "interactions": 18,
+        "max_interaction_bins": 64
+      },
+      "fixed_params": {},
+      "best_cv_score": -2.2432879438922456e-06,
+      "test_mse": 2.276404764735413e-06,
+      "test_rmse": 0.0015087759160111924,
+      "fit_time": 38943.47119426727,
+      "dataset": "naval_propulsion_plant"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:41.884350",
+  "end_timestamp": "2026-01-19T21:28:01.485278",
+  "fitted_model_path": "data/cluster_results/interpretable/others/naval_propulsion_plant/ExplainableBoostingRegressor/naval_propulsion_plant_ExplainableBoostingRegressor_best.pkl"
+}

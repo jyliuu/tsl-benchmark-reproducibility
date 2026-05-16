@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "student_performance_por",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361619,
+    "name": "task_361619_student_performance_por",
+    "n_times_p": 20119.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.743806641425897,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.743806641425897,
+  "max_test_rmse": 2.743806641425897,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.007388044319975855,
+        "max_bins": 185,
+        "min_samples_leaf": 22,
+        "max_rounds": 447,
+        "outer_bags": 19,
+        "smoothing_rounds": 380,
+        "interactions": 3,
+        "max_interaction_bins": 40
+      },
+      "fixed_params": {},
+      "best_cv_score": -6.951201243830665,
+      "test_mse": 7.528474885532862,
+      "test_rmse": 2.743806641425897,
+      "fit_time": 32508.356117486954,
+      "dataset": "student_performance_por"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:41.942646",
+  "end_timestamp": "2026-01-19T19:40:39.931873",
+  "fitted_model_path": "data/cluster_results/interpretable/others/student_performance_por/ExplainableBoostingRegressor/student_performance_por_ExplainableBoostingRegressor_best.pkl"
+}

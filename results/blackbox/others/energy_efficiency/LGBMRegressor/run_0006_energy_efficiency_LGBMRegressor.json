@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "energy_efficiency",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361617,
+    "name": "task_361617_energy_efficiency",
+    "n_times_p": 6912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.3546731683885835,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.3546731683885835,
+  "max_test_rmse": 0.3546731683885835,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 818,
+        "learning_rate": 0.28480094504494147,
+        "num_leaves": 100,
+        "max_depth": 5,
+        "min_child_samples": 5,
+        "subsample": 0.7929430189179238,
+        "reg_alpha": 0.04558670068851434,
+        "reg_lambda": 8.728633255401554
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.13114299608735966,
+      "test_mse": 0.12579305637479649,
+      "test_rmse": 0.3546731683885835,
+      "fit_time": 166.94403791427612,
+      "dataset": "energy_efficiency"
+    }
+  ],
+  "start_timestamp": "2026-01-16T17:51:21.116130",
+  "end_timestamp": "2026-01-16T17:54:08.400393",
+  "fitted_model_path": "data/cluster_results/blackbox/others/energy_efficiency/LGBMRegressor/energy_efficiency_LGBMRegressor_best.txt"
+}

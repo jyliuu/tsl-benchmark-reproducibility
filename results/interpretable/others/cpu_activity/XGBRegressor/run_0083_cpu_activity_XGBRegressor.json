@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "cpu_activity",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361256,
+    "name": "task_361256_cpu_activity",
+    "n_times_p": 180224.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.5281380612242335,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.5281380612242335,
+  "max_test_rmse": 2.5281380612242335,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.2933121681559891,
+        "max_depth": 2,
+        "subsample": 0.8019055867475587,
+        "colsample_bylevel": 0.863239309258291,
+        "gamma": 0.10611702336563282,
+        "reg_alpha": 1.9667123313025685,
+        "reg_lambda": 0.6314394955111373
+      },
+      "fixed_params": {},
+      "best_cv_score": -6.145718704575364,
+      "test_mse": 6.391482056610626,
+      "test_rmse": 2.5281380612242335,
+      "fit_time": 58.892077922821045,
+      "dataset": "cpu_activity"
+    }
+  ],
+  "start_timestamp": "2026-01-16T22:06:51.380372",
+  "end_timestamp": "2026-01-16T22:07:50.442009",
+  "fitted_model_path": "data/cluster_results/interpretable/others/cpu_activity/XGBRegressor/cpu_activity_XGBRegressor_best.json"
+}

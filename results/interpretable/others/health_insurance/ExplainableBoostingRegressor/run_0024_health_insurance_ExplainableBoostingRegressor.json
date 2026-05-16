@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "health_insurance",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361269,
+    "name": "task_361269_health_insurance",
+    "n_times_p": 267264.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 14.49116724889376,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 14.49116724889376,
+  "max_test_rmse": 14.49116724889376,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.045325364854501914,
+        "max_bins": 248,
+        "min_samples_leaf": 96,
+        "max_rounds": 355,
+        "outer_bags": 18,
+        "smoothing_rounds": 486,
+        "interactions": 11,
+        "max_interaction_bins": 52
+      },
+      "fixed_params": {},
+      "best_cv_score": -208.31970176655622,
+      "test_mse": 209.99392823541112,
+      "test_rmse": 14.49116724889376,
+      "fit_time": 22225.46687912941,
+      "dataset": "health_insurance"
+    }
+  ],
+  "start_timestamp": "2026-01-17T15:17:56.999582",
+  "end_timestamp": "2026-01-17T21:28:34.621525",
+  "fitted_model_path": "data/cluster_results/interpretable/others/health_insurance/ExplainableBoostingRegressor/health_insurance_ExplainableBoostingRegressor_best.pkl"
+}

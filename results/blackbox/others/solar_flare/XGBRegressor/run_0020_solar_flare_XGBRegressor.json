@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "solar_flare",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361244,
+    "name": "task_361244_solar_flare",
+    "n_times_p": 11726.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.7956501986138579,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.7956501986138579,
+  "max_test_rmse": 0.7956501986138579,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 245,
+        "learning_rate": 0.15677488094706254,
+        "max_depth": 9,
+        "subsample": 0.5356206748953365,
+        "colsample_bylevel": 0.5432001730549629,
+        "gamma": 3.0470408274384284,
+        "reg_alpha": 5.590856746672841,
+        "reg_lambda": 9.663394006980937
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.5785771965071121,
+      "test_mse": 0.6330592385542715,
+      "test_rmse": 0.7956501986138579,
+      "fit_time": 124.07710909843445,
+      "dataset": "solar_flare"
+    }
+  ],
+  "start_timestamp": "2026-01-16T18:40:50.165524",
+  "end_timestamp": "2026-01-16T18:42:54.440388",
+  "fitted_model_path": "data/cluster_results/blackbox/others/solar_flare/XGBRegressor/solar_flare_XGBRegressor_best.json"
+}

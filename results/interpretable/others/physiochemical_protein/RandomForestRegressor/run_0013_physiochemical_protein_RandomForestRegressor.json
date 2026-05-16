@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "physiochemical_protein",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361241,
+    "name": "task_361241_physiochemical_protein",
+    "n_times_p": 457300.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 5.540264255841796,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 5.540264255841796,
+  "max_test_rmse": 5.540264255841796,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 475,
+        "max_depth": 2,
+        "min_samples_split": 6,
+        "min_samples_leaf": 3,
+        "max_features": 0.6174386122302569
+      },
+      "fixed_params": {},
+      "best_cv_score": -30.30662116654965,
+      "test_mse": 30.694528024558252,
+      "test_rmse": 5.540264255841796,
+      "fit_time": 5735.5280821323395,
+      "dataset": "physiochemical_protein"
+    }
+  ],
+  "start_timestamp": "2026-01-17T13:59:57.349928",
+  "end_timestamp": "2026-01-17T15:35:36.431903",
+  "fitted_model_path": "data/cluster_results/interpretable/others/physiochemical_protein/RandomForestRegressor/physiochemical_protein_RandomForestRegressor_best.pkl"
+}

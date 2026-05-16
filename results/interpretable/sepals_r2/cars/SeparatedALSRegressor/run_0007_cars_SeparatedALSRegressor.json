@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "cars",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361622,
+    "name": "task_361622_cars",
+    "n_times_p": 14472.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2045.8892370789733,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2045.8892370789733,
+  "max_test_rmse": 2045.8892370789733,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 2,
+        "degree": 2,
+        "basis": "monomial",
+        "ridge": 0.008301111334242123,
+        "smoothness": 0.0001859988585502054,
+        "max_sweeps": 100,
+        "tol": 1.0189469765903881e-07,
+        "n_init": 1,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "tent_level"
+      },
+      "fixed_params": {},
+      "best_cv_score": -4299161.330180632,
+      "test_mse": 4185662.770395584,
+      "test_rmse": 2045.8892370789733,
+      "fit_time": 3186.003552675247,
+      "dataset": "cars"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:49.926951",
+  "end_timestamp": "2026-05-02T12:07:56.611259",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/cars/SeparatedALSRegressor/cars_SeparatedALSRegressor_best.pkl"
+}

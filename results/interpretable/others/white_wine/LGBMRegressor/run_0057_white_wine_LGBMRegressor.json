@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "white_wine",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361249,
+    "name": "task_361249_white_wine",
+    "n_times_p": 58776.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.6784380445735071,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.6784380445735071,
+  "max_test_rmse": 0.6784380445735071,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.2562564235303364,
+        "num_leaves": 38,
+        "max_depth": 2,
+        "min_child_samples": 29,
+        "subsample": 0.3002785339867013,
+        "reg_alpha": 0.490459384038274,
+        "reg_lambda": 0.31690568687922643
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.4874298676244452,
+      "test_mse": 0.46027818032472395,
+      "test_rmse": 0.6784380445735071,
+      "fit_time": 49.24872636795044,
+      "dataset": "white_wine"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:41:23.599354",
+  "end_timestamp": "2026-01-16T21:42:12.993864",
+  "fitted_model_path": "data/cluster_results/interpretable/others/white_wine/LGBMRegressor/white_wine_LGBMRegressor_best.txt"
+}

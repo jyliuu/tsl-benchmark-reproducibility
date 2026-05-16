@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "pumadyn32nh",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361259,
+    "name": "task_361259_pumadyn32nh",
+    "n_times_p": 270336.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.021087497219231227,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.021087497219231227,
+  "max_test_rmse": 0.021087497219231227,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.00040705001845501096,
+        "decay": 0.6894403817993627,
+        "epochs": 2,
+        "min_interval_samples": 55,
+        "n_iter": 21,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.7089373226738868,
+        "update_clamp": 5.525500901604549,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 4,
+        "colsample_bytree": 0.36269201095776965
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.00044516420919071803,
+      "test_mse": 0.0004446825389710848,
+      "test_rmse": 0.021087497219231227,
+      "fit_time": 8063.192335128784,
+      "dataset": "pumadyn32nh"
+    }
+  ],
+  "start_timestamp": "2026-01-21T14:41:57.946770",
+  "end_timestamp": "2026-01-21T16:56:34.420660",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/pumadyn32nh/TSLRegressor/pumadyn32nh_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/pumadyn32nh/TSLRegressor/pumadyn32nh_TSLRegressor_best.sqlite"
+}

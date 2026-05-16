@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "cps88wages",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361261,
+    "name": "task_361261_cps88wages",
+    "n_times_p": 197085.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 364.30191895320075,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 364.30191895320075,
+  "max_test_rmse": 364.30191895320075,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.033504859239841,
+        "max_bins": 248,
+        "min_samples_leaf": 52,
+        "max_rounds": 191,
+        "outer_bags": 6,
+        "smoothing_rounds": 154,
+        "interactions": 20,
+        "max_interaction_bins": 17
+      },
+      "fixed_params": {},
+      "best_cv_score": -149889.98704362116,
+      "test_mse": 132715.88815298447,
+      "test_rmse": 364.30191895320075,
+      "fit_time": 8184.8034324646,
+      "dataset": "cps88wages"
+    }
+  ],
+  "start_timestamp": "2026-01-17T15:17:25.539971",
+  "end_timestamp": "2026-01-17T17:33:55.787986",
+  "fitted_model_path": "data/cluster_results/interpretable/others/cps88wages/ExplainableBoostingRegressor/cps88wages_ExplainableBoostingRegressor_best.pkl"
+}

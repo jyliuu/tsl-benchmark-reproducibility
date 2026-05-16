@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "solar_flare",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361244,
+    "name": "task_361244_solar_flare",
+    "n_times_p": 11726.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.797973116325705,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.797973116325705,
+  "max_test_rmse": 0.797973116325705,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 34,
+        "learning_rate": 0.1318071522085909,
+        "num_leaves": 27,
+        "max_depth": 1,
+        "min_child_samples": 29,
+        "subsample": 0.6142113086753507,
+        "reg_alpha": 0.16412889810717116,
+        "reg_lambda": 0.25165484237448793
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.5784452380368571,
+      "test_mse": 0.6367610943785572,
+      "test_rmse": 0.797973116325705,
+      "fit_time": 35.92697334289551,
+      "dataset": "solar_flare"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:08:21.165566",
+  "end_timestamp": "2026-01-16T21:08:57.238726",
+  "fitted_model_path": "data/cluster_results/interpretable/others/solar_flare/LGBMRegressor/solar_flare_LGBMRegressor_best.txt"
+}

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "pumadyn32nh",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361259,
+    "name": "task_361259_pumadyn32nh",
+    "n_times_p": 270336.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.021290079288466837,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.021290079288466837,
+  "max_test_rmse": 0.021290079288466837,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 449,
+        "max_depth": 11,
+        "min_samples_split": 2,
+        "min_samples_leaf": 9,
+        "max_features": 0.7809962339005238
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.00045854738393581696,
+      "test_mse": 0.0004532674761092046,
+      "test_rmse": 0.021290079288466837,
+      "fit_time": 18861.20737886429,
+      "dataset": "pumadyn32nh"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:24.943897",
+  "end_timestamp": "2026-01-17T17:49:54.064144",
+  "fitted_model_path": "data/cluster_results/blackbox/others/pumadyn32nh/RandomForestRegressor/pumadyn32nh_RandomForestRegressor_best.pkl"
+}

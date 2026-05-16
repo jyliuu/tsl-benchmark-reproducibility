@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "geographical_origin_of_music",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361243,
+    "name": "task_361243_geographical_origin_of_music",
+    "n_times_p": 123903.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 15.716975344009203,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 15.716975344009203,
+  "max_test_rmse": 15.716975344009203,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 1.2266317451433179e-06,
+        "decay": 0.28286605978074886,
+        "epochs": 2,
+        "min_interval_samples": 13,
+        "n_iter": 25,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.4994657260524424,
+        "update_clamp": 9.46002603408455,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 15,
+        "colsample_bytree": 0.7196035295901704
+      },
+      "fixed_params": {},
+      "best_cv_score": -264.37271531427825,
+      "test_mse": 247.02331396419322,
+      "test_rmse": 15.716975344009203,
+      "fit_time": 21059.56423854828,
+      "dataset": "geographical_origin_of_music"
+    }
+  ],
+  "start_timestamp": "2026-05-04T13:00:46.476166",
+  "end_timestamp": "2026-05-04T18:51:53.263517",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/geographical_origin_of_music/TSLRegressorOneTensor/geographical_origin_of_music_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/geographical_origin_of_music/TSLRegressorOneTensor/geographical_origin_of_music_TSLRegressorOneTensor_best.sqlite"
+}

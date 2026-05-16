@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "socmob",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361264,
+    "name": "task_361264_socmob",
+    "n_times_p": 6936.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 10.584549527171625,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 10.584549527171625,
+  "max_test_rmse": 10.584549527171625,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.5996625084894446,
+        "decay": 0.24505828520001843,
+        "epochs": 1,
+        "min_interval_samples": 4,
+        "n_iter": 80,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.891304172652815,
+        "update_clamp": 11.726154191937013,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 2,
+        "colsample_bytree": 0.5759016072022919
+      },
+      "fixed_params": {},
+      "best_cv_score": -84.27629523454344,
+      "test_mse": 112.03268869314905,
+      "test_rmse": 10.584549527171625,
+      "fit_time": 1223.753604888916,
+      "dataset": "socmob"
+    }
+  ],
+  "start_timestamp": "2026-05-04T11:53:57.173598",
+  "end_timestamp": "2026-05-04T12:14:21.187855",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/socmob/TSLRegressorOneTensor/socmob_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/socmob/TSLRegressorOneTensor/socmob_TSLRegressorOneTensor_best.sqlite"
+}

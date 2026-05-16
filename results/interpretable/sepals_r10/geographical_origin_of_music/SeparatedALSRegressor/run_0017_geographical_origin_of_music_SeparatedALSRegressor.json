@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "geographical_origin_of_music",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361243,
+    "name": "task_361243_geographical_origin_of_music",
+    "n_times_p": 123903.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 19.959347991916403,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 19.959347991916403,
+  "max_test_rmse": 19.959347991916403,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 1,
+        "degree": 4,
+        "basis": "monomial",
+        "ridge": 1.300400657760705e-09,
+        "smoothness": 9.002218114670752,
+        "max_sweeps": 15,
+        "tol": 5.535862390593177e-06,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree2"
+      },
+      "fixed_params": {},
+      "best_cv_score": -324.2221211725097,
+      "test_mse": 398.3755722624174,
+      "test_rmse": 19.959347991916403,
+      "fit_time": 106897.85215187073,
+      "dataset": "geographical_origin_of_music"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:34:25.598175",
+  "end_timestamp": "2026-05-03T17:16:08.054232",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/geographical_origin_of_music/SeparatedALSRegressor/geographical_origin_of_music_SeparatedALSRegressor_best.pkl"
+}

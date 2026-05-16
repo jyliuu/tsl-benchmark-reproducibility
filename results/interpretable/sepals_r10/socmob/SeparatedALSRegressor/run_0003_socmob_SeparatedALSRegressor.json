@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "socmob",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361264,
+    "name": "task_361264_socmob",
+    "n_times_p": 6936.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 22.8795448495491,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 22.8795448495491,
+  "max_test_rmse": 22.8795448495491,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 3,
+        "degree": 2,
+        "basis": "monomial",
+        "ridge": 2.669937508530571e-10,
+        "smoothness": 7.865785686681954e-09,
+        "max_sweeps": 43,
+        "tol": 1.6254576079031552e-08,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree"
+      },
+      "fixed_params": {},
+      "best_cv_score": -183.5104609014475,
+      "test_mse": 523.4735725225287,
+      "test_rmse": 22.8795448495491,
+      "fit_time": 2041.0235242843628,
+      "dataset": "socmob"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:50.149891",
+  "end_timestamp": "2026-05-02T11:48:51.706333",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/socmob/SeparatedALSRegressor/socmob_SeparatedALSRegressor_best.pkl"
+}

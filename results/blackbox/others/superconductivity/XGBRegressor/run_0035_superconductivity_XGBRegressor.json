@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "superconductivity",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361242,
+    "name": "task_361242_superconductivity",
+    "n_times_p": 1743566.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 8.643201166122132,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 8.643201166122132,
+  "max_test_rmse": 8.643201166122132,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 884,
+        "learning_rate": 0.023114574229065453,
+        "max_depth": 9,
+        "subsample": 0.8292004256978303,
+        "colsample_bylevel": 0.5004597168933399,
+        "gamma": 0.3515362879581859,
+        "reg_alpha": 0.05449393675956271,
+        "reg_lambda": 8.24904953661259
+      },
+      "fixed_params": {},
+      "best_cv_score": -86.54031030621367,
+      "test_mse": 74.704926398055,
+      "test_rmse": 8.643201166122132,
+      "fit_time": 18065.169545650482,
+      "dataset": "superconductivity"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:54:25.344035",
+  "end_timestamp": "2026-01-17T17:56:00.889323",
+  "fitted_model_path": "data/cluster_results/blackbox/others/superconductivity/XGBRegressor/superconductivity_XGBRegressor_best.json"
+}

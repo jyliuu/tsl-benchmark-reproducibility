@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "energy_efficiency",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361617,
+    "name": "task_361617_energy_efficiency",
+    "n_times_p": 6912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.4590030379816675,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.4590030379816675,
+  "max_test_rmse": 0.4590030379816675,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.046946785805033496,
+        "max_bins": 88,
+        "min_samples_leaf": 67,
+        "max_rounds": 475,
+        "outer_bags": 11,
+        "smoothing_rounds": 480,
+        "interactions": 20,
+        "max_interaction_bins": 41
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.19307650261132045,
+      "test_mse": 0.21068378887640013,
+      "test_rmse": 0.4590030379816675,
+      "fit_time": 24965.549867630005,
+      "dataset": "energy_efficiency"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:47.573715",
+  "end_timestamp": "2026-01-19T17:34:58.899067",
+  "fitted_model_path": "data/cluster_results/interpretable/others/energy_efficiency/ExplainableBoostingRegressor/energy_efficiency_ExplainableBoostingRegressor_best.pkl"
+}

@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "kin8nm",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361258,
+    "name": "task_361258_kin8nm",
+    "n_times_p": 73728.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.1559539009313003,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.1559539009313003,
+  "max_test_rmse": 0.1559539009313003,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.0001571181941791306,
+        "decay": 0.8643200560942088,
+        "epochs": 4,
+        "min_interval_samples": 18,
+        "n_iter": 62,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.9210045254844892,
+        "update_clamp": 27.048580837126643,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 2,
+        "colsample_bytree": 0.7787739782255706
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.022971774819841452,
+      "test_mse": 0.024321619215689826,
+      "test_rmse": 0.1559539009313003,
+      "fit_time": 14870.775540828705,
+      "dataset": "kin8nm"
+    }
+  ],
+  "start_timestamp": "2026-05-04T12:57:48.395874",
+  "end_timestamp": "2026-05-04T17:05:48.119881",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/kin8nm/TSLRegressorOneTensor/kin8nm_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/kin8nm/TSLRegressorOneTensor/kin8nm_TSLRegressorOneTensor_best.sqlite"
+}

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "energy_efficiency",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361617,
+    "name": "task_361617_energy_efficiency",
+    "n_times_p": 6912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 3.1797256298743557,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 3.1797256298743557,
+  "max_test_rmse": 3.1797256298743557,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 101,
+        "max_depth": 2,
+        "min_samples_split": 4,
+        "min_samples_leaf": 6,
+        "max_features": 0.4166880106853815
+      },
+      "fixed_params": {},
+      "best_cv_score": -9.937714438333995,
+      "test_mse": 10.110655081279868,
+      "test_rmse": 3.1797256298743557,
+      "fit_time": 1134.822351694107,
+      "dataset": "energy_efficiency"
+    }
+  ],
+  "start_timestamp": "2026-01-16T20:59:51.414400",
+  "end_timestamp": "2026-01-16T21:18:46.519495",
+  "fitted_model_path": "data/cluster_results/interpretable/others/energy_efficiency/RandomForestRegressor/energy_efficiency_RandomForestRegressor_best.pkl"
+}

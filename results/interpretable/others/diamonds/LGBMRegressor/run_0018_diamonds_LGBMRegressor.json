@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "diamonds",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361257,
+    "name": "task_361257_diamonds",
+    "n_times_p": 539400.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 722.7263881080545,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 722.7263881080545,
+  "max_test_rmse": 722.7263881080545,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.2958139882530738,
+        "num_leaves": 48,
+        "max_depth": 2,
+        "min_child_samples": 16,
+        "subsample": 0.706502465820905,
+        "reg_alpha": 0.22267698450746812,
+        "reg_lambda": 0.4645516608019511
+      },
+      "fixed_params": {},
+      "best_cv_score": -538021.1608551862,
+      "test_mse": 522333.4320677143,
+      "test_rmse": 722.7263881080545,
+      "fit_time": 134.27847385406494,
+      "dataset": "diamonds"
+    }
+  ],
+  "start_timestamp": "2026-01-17T14:16:27.397221",
+  "end_timestamp": "2026-01-17T14:18:42.116391",
+  "fitted_model_path": "data/cluster_results/interpretable/others/diamonds/LGBMRegressor/diamonds_LGBMRegressor_best.txt"
+}

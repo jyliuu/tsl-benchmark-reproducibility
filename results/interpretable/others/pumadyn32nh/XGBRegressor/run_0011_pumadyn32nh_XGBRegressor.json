@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "pumadyn32nh",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361259,
+    "name": "task_361259_pumadyn32nh",
+    "n_times_p": 270336.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.025655073172310902,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.025655073172310902,
+  "max_test_rmse": 0.025655073172310902,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 62,
+        "learning_rate": 0.2695208067545559,
+        "max_depth": 2,
+        "subsample": 0.601558278189114,
+        "colsample_bylevel": 0.8996139055929664,
+        "gamma": 0.011503994456648608,
+        "reg_alpha": 0.02258393251527806,
+        "reg_lambda": 0.7355304814997499
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.0006721448845526375,
+      "test_mse": 0.0006581827794766266,
+      "test_rmse": 0.025655073172310902,
+      "fit_time": 78.69834280014038,
+      "dataset": "pumadyn32nh"
+    }
+  ],
+  "start_timestamp": "2026-01-17T13:58:27.511925",
+  "end_timestamp": "2026-01-17T13:59:46.425614",
+  "fitted_model_path": "data/cluster_results/interpretable/others/pumadyn32nh/XGBRegressor/pumadyn32nh_XGBRegressor_best.json"
+}

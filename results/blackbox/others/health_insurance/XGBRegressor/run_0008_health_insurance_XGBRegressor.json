@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "health_insurance",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361269,
+    "name": "task_361269_health_insurance",
+    "n_times_p": 267264.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 14.402633771981822,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 14.402633771981822,
+  "max_test_rmse": 14.402633771981822,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 460,
+        "learning_rate": 0.014812035467740186,
+        "max_depth": 5,
+        "subsample": 0.569691127556766,
+        "colsample_bylevel": 0.7664033833829811,
+        "gamma": 0.19490522996625484,
+        "reg_alpha": 0.05821602105788935,
+        "reg_lambda": 8.503464090118495
+      },
+      "fixed_params": {},
+      "best_cv_score": -207.5118920773212,
+      "test_mse": 207.43585956983134,
+      "test_rmse": 14.402633771981822,
+      "fit_time": 472.4575593471527,
+      "dataset": "health_insurance"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:24.272766",
+  "end_timestamp": "2026-01-17T12:43:17.534334",
+  "fitted_model_path": "data/cluster_results/blackbox/others/health_insurance/XGBRegressor/health_insurance_XGBRegressor_best.json"
+}

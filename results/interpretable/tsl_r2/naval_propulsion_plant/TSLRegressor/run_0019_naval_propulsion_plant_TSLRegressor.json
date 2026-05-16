@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "naval_propulsion_plant",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361247,
+    "name": "task_361247_naval_propulsion_plant",
+    "n_times_p": 179010.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.0012657672641053566,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.0012657672641053566,
+  "max_test_rmse": 0.0012657672641053566,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.00033596474663447333,
+        "decay": 0.9374340942035874,
+        "epochs": 2,
+        "min_interval_samples": 5,
+        "n_iter": 248,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.2605266516523008,
+        "update_clamp": 12.10478181593394,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 15,
+        "colsample_bytree": 0.5859535539821484
+      },
+      "fixed_params": {},
+      "best_cv_score": -1.9038713699768832e-06,
+      "test_mse": 1.6021667668807595e-06,
+      "test_rmse": 0.0012657672641053566,
+      "fit_time": 87449.08187794685,
+      "dataset": "naval_propulsion_plant"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:16:20.486725",
+  "end_timestamp": "2026-01-17T16:34:50.170322",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/naval_propulsion_plant/TSLRegressor/naval_propulsion_plant_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/naval_propulsion_plant/TSLRegressor/naval_propulsion_plant_TSLRegressor_best.sqlite"
+}

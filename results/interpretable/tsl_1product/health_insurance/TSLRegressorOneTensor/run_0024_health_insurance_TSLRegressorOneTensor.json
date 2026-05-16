@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "health_insurance",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361269,
+    "name": "task_361269_health_insurance",
+    "n_times_p": 267264.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 14.590933188104703,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 14.590933188104703,
+  "max_test_rmse": 14.590933188104703,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.0016484487058338613,
+        "decay": 0.7424181295944555,
+        "epochs": 4,
+        "min_interval_samples": 60,
+        "n_iter": 26,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.5996250303228017,
+        "update_clamp": 7.694541132463563,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 17,
+        "colsample_bytree": 0.7444368011806289
+      },
+      "fixed_params": {},
+      "best_cv_score": -211.76966690129456,
+      "test_mse": 212.8953312997353,
+      "test_rmse": 14.590933188104703,
+      "fit_time": 14692.555439710617,
+      "dataset": "health_insurance"
+    }
+  ],
+  "start_timestamp": "2026-05-12T13:59:55.598346",
+  "end_timestamp": "2026-05-12T18:04:55.853335",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/health_insurance/TSLRegressorOneTensor/health_insurance_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/health_insurance/TSLRegressorOneTensor/health_insurance_TSLRegressorOneTensor_best.sqlite"
+}

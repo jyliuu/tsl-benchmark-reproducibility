@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "miami_housing",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361260,
+    "name": "task_361260_miami_housing",
+    "n_times_p": 222912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 94382.52370749028,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 94382.52370749028,
+  "max_test_rmse": 94382.52370749028,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 0.23768197989094453,
+        "decay": 0.783342441891778,
+        "epochs": 1,
+        "min_interval_samples": 52,
+        "n_iter": 246,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.018046986603203058,
+        "update_clamp": 6.647693101863377,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 2,
+        "colsample_bytree": 0.904006297246288
+      },
+      "fixed_params": {},
+      "best_cv_score": -9422705767.524586,
+      "test_mse": 8908060781.394964,
+      "test_rmse": 94382.52370749028,
+      "fit_time": 64741.41738605499,
+      "dataset": "miami_housing"
+    }
+  ],
+  "start_timestamp": "2026-05-14T20:26:06.649710",
+  "end_timestamp": "2026-05-15T14:25:17.816635",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/miami_housing/TSLRegressorOneTensor/miami_housing_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/miami_housing/TSLRegressorOneTensor/miami_housing_TSLRegressorOneTensor_best.sqlite"
+}

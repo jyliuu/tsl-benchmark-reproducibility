@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "socmob",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361264,
+    "name": "task_361264_socmob",
+    "n_times_p": 6936.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 9.870890970133708,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 9.870890970133708,
+  "max_test_rmse": 9.870890970133708,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.0807507925208512,
+        "decay": 0.37319939995934137,
+        "epochs": 2,
+        "min_interval_samples": 3,
+        "n_iter": 235,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.7643294910814025,
+        "update_clamp": 19.36559370682,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 2,
+        "colsample_bytree": 0.7653017236510261
+      },
+      "fixed_params": {},
+      "best_cv_score": -87.3024000112587,
+      "test_mse": 97.43448854426715,
+      "test_rmse": 9.870890970133708,
+      "fit_time": 435.714421749115,
+      "dataset": "socmob"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:15:49.891963",
+  "end_timestamp": "2026-01-16T16:23:07.347989",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/socmob/TSLRegressor/socmob_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/socmob/TSLRegressor/socmob_TSLRegressor_best.sqlite"
+}

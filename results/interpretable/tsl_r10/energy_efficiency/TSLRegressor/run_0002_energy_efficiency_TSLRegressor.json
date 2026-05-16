@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "energy_efficiency",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361617,
+    "name": "task_361617_energy_efficiency",
+    "n_times_p": 6912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.4293143717106503,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.4293143717106503,
+  "max_test_rmse": 0.4293143717106503,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.4482825247484702,
+        "decay": 0.9455883541577943,
+        "epochs": 9,
+        "min_interval_samples": 31,
+        "n_iter": 14,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.2803244434940715,
+        "update_clamp": 8.222336201607838,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 2,
+        "colsample_bytree": 0.9328101074418685
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.17853422620878728,
+      "test_mse": 0.1843108297573104,
+      "test_rmse": 0.4293143717106503,
+      "fit_time": 2922.331553220749,
+      "dataset": "energy_efficiency"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:20:19.381879",
+  "end_timestamp": "2026-01-16T17:09:02.598601",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/energy_efficiency/TSLRegressor/energy_efficiency_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/energy_efficiency/TSLRegressor/energy_efficiency_TSLRegressor_best.sqlite"
+}

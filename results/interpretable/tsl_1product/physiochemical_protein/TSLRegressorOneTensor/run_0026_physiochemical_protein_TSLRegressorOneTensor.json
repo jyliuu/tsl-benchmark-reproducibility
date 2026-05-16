@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "physiochemical_protein",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361241,
+    "name": "task_361241_physiochemical_protein",
+    "n_times_p": 457300.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 4.695628728648809,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 4.695628728648809,
+  "max_test_rmse": 4.695628728648809,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 5.588339909979353e-06,
+        "decay": 0.6722838797331455,
+        "epochs": 4,
+        "min_interval_samples": 72,
+        "n_iter": 216,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.9517414694706328,
+        "update_clamp": 28.054167358552643,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 15,
+        "colsample_bytree": 0.8975151213712098
+      },
+      "fixed_params": {},
+      "best_cv_score": -22.013429702029285,
+      "test_mse": 22.048929157312028,
+      "test_rmse": 4.695628728648809,
+      "fit_time": 114315.35677886009,
+      "dataset": "physiochemical_protein"
+    }
+  ],
+  "start_timestamp": "2026-05-12T13:59:55.604558",
+  "end_timestamp": "2026-05-13T21:46:29.603274",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/physiochemical_protein/TSLRegressorOneTensor/physiochemical_protein_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/physiochemical_protein/TSLRegressorOneTensor/physiochemical_protein_TSLRegressorOneTensor_best.sqlite"
+}

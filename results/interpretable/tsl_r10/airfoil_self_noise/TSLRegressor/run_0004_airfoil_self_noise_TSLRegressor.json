@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "airfoil_self_noise",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361235,
+    "name": "task_361235_airfoil_self_noise",
+    "n_times_p": 9018.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.069412627678849,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.069412627678849,
+  "max_test_rmse": 2.069412627678849,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.8077211856182959,
+        "decay": 0.9760890918969113,
+        "epochs": 10,
+        "min_interval_samples": 10,
+        "n_iter": 45,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.7841019373172565,
+        "update_clamp": 8.62136436970923,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 4,
+        "colsample_bytree": 0.7215615838764596
+      },
+      "fixed_params": {},
+      "best_cv_score": -3.5381082385787628,
+      "test_mse": 4.282468623596679,
+      "test_rmse": 2.069412627678849,
+      "fit_time": 4898.508259057999,
+      "dataset": "airfoil_self_noise"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:21:18.892522",
+  "end_timestamp": "2026-01-16T17:43:00.089887",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/airfoil_self_noise/TSLRegressor/airfoil_self_noise_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/airfoil_self_noise/TSLRegressor/airfoil_self_noise_TSLRegressor_best.sqlite"
+}

@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "forest_fires",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361618,
+    "name": "task_361618_forest_fires",
+    "n_times_p": 6721.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 107.54143565817091,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 107.54143565817091,
+  "max_test_rmse": 107.54143565817091,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.012784066101443845,
+        "decay": 0.49962942682302813,
+        "epochs": 3,
+        "min_interval_samples": 53,
+        "n_iter": 16,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.8174617872711477,
+        "update_clamp": 9.081198319244415,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 5,
+        "colsample_bytree": 0.6196011314101681
+      },
+      "fixed_params": {},
+      "best_cv_score": -2077.8008748583584,
+      "test_mse": 11565.160383420513,
+      "test_rmse": 107.54143565817091,
+      "fit_time": 1154.2961492538452,
+      "dataset": "forest_fires"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:20:19.378173",
+  "end_timestamp": "2026-01-16T16:39:34.143713",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/forest_fires/TSLRegressor/forest_fires_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/forest_fires/TSLRegressor/forest_fires_TSLRegressor_best.sqlite"
+}

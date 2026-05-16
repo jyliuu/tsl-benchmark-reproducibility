@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "pumadyn32nh",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361259,
+    "name": "task_361259_pumadyn32nh",
+    "n_times_p": 270336.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.02102604426487191,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.02102604426487191,
+  "max_test_rmse": 0.02102604426487191,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 1,
+        "degree": 6,
+        "basis": "monomial",
+        "ridge": 0.00012302719962162302,
+        "smoothness": 2.3980613721288855e-08,
+        "max_sweeps": 71,
+        "tol": 2.8977974407221686e-05,
+        "n_init": 4,
+        "refit_scales": true,
+        "fit_intercept": true,
+        "penalty_kind": "degree"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.00044492374090295916,
+      "test_mse": 0.00044209453742835293,
+      "test_rmse": 0.02102604426487191,
+      "fit_time": 6663.975769519806,
+      "dataset": "pumadyn32nh"
+    }
+  ],
+  "start_timestamp": "2026-05-04T21:37:49.552399",
+  "end_timestamp": "2026-05-04T23:28:55.146938",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/pumadyn32nh/SeparatedALSRegressor/pumadyn32nh_SeparatedALSRegressor_best.pkl"
+}

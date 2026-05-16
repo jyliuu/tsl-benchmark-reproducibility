@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "wave_energy",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361253,
+    "name": "task_361253_wave_energy",
+    "n_times_p": 3528000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2265.3258401882836,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2265.3258401882836,
+  "max_test_rmse": 2265.3258401882836,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.049390944246764296,
+        "max_bins": 248,
+        "min_samples_leaf": 136,
+        "max_rounds": 492,
+        "outer_bags": 19,
+        "smoothing_rounds": 108,
+        "interactions": 19,
+        "max_interaction_bins": 54
+      },
+      "fixed_params": {},
+      "best_cv_score": -5449237.35546676,
+      "test_mse": 5131701.162224753,
+      "test_rmse": 2265.3258401882836,
+      "fit_time": 139584.5659172535,
+      "dataset": "wave_energy"
+    }
+  ],
+  "start_timestamp": "2026-01-17T16:36:27.343779",
+  "end_timestamp": "2026-01-19T07:24:19.488053",
+  "fitted_model_path": "data/cluster_results/interpretable/others/wave_energy/ExplainableBoostingRegressor/wave_energy_ExplainableBoostingRegressor_best.pkl"
+}

@@ -1,0 +1,21 @@
+# Pip-installable dependencies for the standalone benchmark scripts.
+#
+# Note: the TSL (1-product) ablation package is not publicly released at this
+# time and is excluded from the runnable tuning set.
+
+# Core
+numpy>=1.24
+pandas>=2.0
+
+# Tuning
+optuna>=3.4
+scikit-learn>=1.3
+category_encoders>=2.6
+openml>=0.14
+
+# Models
+xgboost>=2.0
+lightgbm>=4.0
+interpret>=0.5
+sepals @ git+https://github.com/jyliuu/sepals
+tsl_py @ git+https://github.com/jyliuu/TSL#subdirectory=tsl-py

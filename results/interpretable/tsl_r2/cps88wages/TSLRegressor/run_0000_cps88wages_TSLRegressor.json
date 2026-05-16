@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "cps88wages",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361261,
+    "name": "task_361261_cps88wages",
+    "n_times_p": 197085.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 364.7153938626761,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 364.7153938626761,
+  "max_test_rmse": 364.7153938626761,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 1.923793567317874e-06,
+        "decay": 0.6974750310513251,
+        "epochs": 2,
+        "min_interval_samples": 89,
+        "n_iter": 18,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.18312198811919322,
+        "update_clamp": 8.308343997629242,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 2,
+        "colsample_bytree": 0.7137233016786052
+      },
+      "fixed_params": {},
+      "best_cv_score": -150133.08974297228,
+      "test_mse": 133017.31852040696,
+      "test_rmse": 364.7153938626761,
+      "fit_time": 21262.172953605652,
+      "dataset": "cps88wages"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:34:54.861336",
+  "end_timestamp": "2026-01-17T18:29:23.451923",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/cps88wages/TSLRegressor/cps88wages_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/cps88wages/TSLRegressor/cps88wages_TSLRegressor_best.sqlite"
+}

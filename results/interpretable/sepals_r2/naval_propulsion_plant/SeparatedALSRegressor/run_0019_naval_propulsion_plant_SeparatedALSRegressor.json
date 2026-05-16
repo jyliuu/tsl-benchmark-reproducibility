@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "naval_propulsion_plant",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361247,
+    "name": "task_361247_naval_propulsion_plant",
+    "n_times_p": 179010.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.000390976963479569,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.000390976963479569,
+  "max_test_rmse": 0.000390976963479569,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 2,
+        "degree": 10,
+        "basis": "monomial",
+        "ridge": 3.413122824631876e-08,
+        "smoothness": 6.849510187206214e-09,
+        "max_sweeps": 99,
+        "tol": 1.8576616343556863e-06,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree"
+      },
+      "fixed_params": {},
+      "best_cv_score": -1.5838389420174166e-07,
+      "test_mse": 1.5286298597170422e-07,
+      "test_rmse": 0.000390976963479569,
+      "fit_time": 48774.257501363754,
+      "dataset": "naval_propulsion_plant"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:49.797846",
+  "end_timestamp": "2026-05-03T00:48:09.143453",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/naval_propulsion_plant/SeparatedALSRegressor/naval_propulsion_plant_SeparatedALSRegressor_best.pkl"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "cpu_activity",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361256,
+    "name": "task_361256_cpu_activity",
+    "n_times_p": 180224.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.210216634218109,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.210216634218109,
+  "max_test_rmse": 2.210216634218109,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 821,
+        "learning_rate": 0.04231958948244681,
+        "num_leaves": 35,
+        "max_depth": 8,
+        "min_child_samples": 5,
+        "subsample": 0.8067781704287407,
+        "reg_alpha": 0.5614918147390826,
+        "reg_lambda": 5.997679932093022
+      },
+      "fixed_params": {},
+      "best_cv_score": -5.398703024898283,
+      "test_mse": 4.885057570174427,
+      "test_rmse": 2.210216634218109,
+      "fit_time": 1078.1082093715668,
+      "dataset": "cpu_activity"
+    }
+  ],
+  "start_timestamp": "2026-01-16T20:23:51.482399",
+  "end_timestamp": "2026-01-16T20:41:51.577103",
+  "fitted_model_path": "data/cluster_results/blackbox/others/cpu_activity/LGBMRegressor/cpu_activity_LGBMRegressor_best.txt"
+}

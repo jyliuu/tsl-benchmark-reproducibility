@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "energy_efficiency",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361617,
+    "name": "task_361617_energy_efficiency",
+    "n_times_p": 6912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.4888266439665485,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.4888266439665485,
+  "max_test_rmse": 0.4888266439665485,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 98,
+        "learning_rate": 0.2891440242719215,
+        "max_depth": 2,
+        "subsample": 0.7022117549926433,
+        "colsample_bylevel": 0.5521766863545541,
+        "gamma": 0.013473438644110032,
+        "reg_alpha": 0.061879196403456384,
+        "reg_lambda": 0.31689667542846545
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.219387253867415,
+      "test_mse": 0.23895148785159878,
+      "test_rmse": 0.4888266439665485,
+      "fit_time": 55.69299387931824,
+      "dataset": "energy_efficiency"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:00:21.941491",
+  "end_timestamp": "2026-01-16T21:01:17.739276",
+  "fitted_model_path": "data/cluster_results/interpretable/others/energy_efficiency/XGBRegressor/energy_efficiency_XGBRegressor_best.json"
+}

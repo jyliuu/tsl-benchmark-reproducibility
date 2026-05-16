@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "dataset": "pumadyn32nh",
+  "model": "TSLRegressorOneTensor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361259,
+    "name": "task_361259_pumadyn32nh",
+    "n_times_p": 270336.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.021083414268266654,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.021083414268266654,
+  "max_test_rmse": 0.021083414268266654,
+  "results": [
+    {
+      "model": "TSLRegressorOneTensor",
+      "best_params": {
+        "alpha": 2.3522463419508605e-06,
+        "decay": 0.8640143914569831,
+        "epochs": 2,
+        "min_interval_samples": 58,
+        "n_iter": 26,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.14229312062176974,
+        "update_clamp": 0.5354150132448537,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "split_try": 6,
+        "colsample_bytree": 0.973687553390213
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.0004411510624180771,
+      "test_mse": 0.0004445103572073499,
+      "test_rmse": 0.021083414268266654,
+      "fit_time": 20252.852662086487,
+      "dataset": "pumadyn32nh"
+    }
+  ],
+  "start_timestamp": "2026-05-12T13:59:55.668622",
+  "end_timestamp": "2026-05-12T19:37:35.805281",
+  "fitted_model_path": "data/cluster_results/interpretable/onetensor_ctr23_epochs5/pumadyn32nh/TSLRegressorOneTensor/pumadyn32nh_TSLRegressorOneTensor_best.bin; data/cluster_results/interpretable/onetensor_ctr23_epochs5/pumadyn32nh/TSLRegressorOneTensor/pumadyn32nh_TSLRegressorOneTensor_best.sqlite"
+}

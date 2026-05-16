@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "sarcos",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361254,
+    "name": "task_361254_sarcos",
+    "n_times_p": 1076526.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 3.8138831963094186,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 3.8138831963094186,
+  "max_test_rmse": 3.8138831963094186,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04913102282526799,
+        "max_bins": 252,
+        "min_samples_leaf": 19,
+        "max_rounds": 478,
+        "outer_bags": 12,
+        "smoothing_rounds": 254,
+        "interactions": 20,
+        "max_interaction_bins": 61
+      },
+      "fixed_params": {},
+      "best_cv_score": -14.970980507308317,
+      "test_mse": 14.545705035091348,
+      "test_rmse": 3.8138831963094186,
+      "fit_time": 57159.6208357811,
+      "dataset": "sarcos"
+    }
+  ],
+  "start_timestamp": "2026-01-17T16:05:28.962096",
+  "end_timestamp": "2026-01-18T07:58:49.252113",
+  "fitted_model_path": "data/cluster_results/interpretable/others/sarcos/ExplainableBoostingRegressor/sarcos_ExplainableBoostingRegressor_best.pkl"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "abalone",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361234,
+    "name": "task_361234_abalone",
+    "n_times_p": 37593.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.239965105549765,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.239965105549765,
+  "max_test_rmse": 2.239965105549765,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 300,
+        "learning_rate": 0.031243154237238165,
+        "num_leaves": 43,
+        "max_depth": 4,
+        "min_child_samples": 5,
+        "subsample": 0.6888915274898426,
+        "reg_alpha": 2.276238788458592,
+        "reg_lambda": 0.8150931524061316
+      },
+      "fixed_params": {},
+      "best_cv_score": -4.436712068641415,
+      "test_mse": 5.017443674080571,
+      "test_rmse": 2.239965105549765,
+      "fit_time": 286.83397245407104,
+      "dataset": "abalone"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:24:20.774192",
+  "end_timestamp": "2026-01-16T19:29:07.887432",
+  "fitted_model_path": "data/cluster_results/blackbox/others/abalone/LGBMRegressor/abalone_LGBMRegressor_best.txt"
+}

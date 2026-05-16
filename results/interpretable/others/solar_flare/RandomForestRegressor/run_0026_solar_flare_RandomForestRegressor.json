@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "solar_flare",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361244,
+    "name": "task_361244_solar_flare",
+    "n_times_p": 11726.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.8042271971683024,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.8042271971683024,
+  "max_test_rmse": 0.8042271971683024,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 174,
+        "max_depth": 2,
+        "min_samples_split": 5,
+        "min_samples_leaf": 4,
+        "max_features": 0.6550163588750234
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.579894396759316,
+      "test_mse": 0.6467813846651834,
+      "test_rmse": 0.8042271971683024,
+      "fit_time": 1297.3566315174103,
+      "dataset": "solar_flare"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:08:52.071594",
+  "end_timestamp": "2026-01-16T21:30:29.950467",
+  "fitted_model_path": "data/cluster_results/interpretable/others/solar_flare/RandomForestRegressor/solar_flare_RandomForestRegressor_best.pkl"
+}

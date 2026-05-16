@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "red_wine",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361250,
+    "name": "task_361250_red_wine",
+    "n_times_p": 19188.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.6068389671461663,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.6068389671461663,
+  "max_test_rmse": 0.6068389671461663,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 83,
+        "learning_rate": 0.23182660742327765,
+        "max_depth": 2,
+        "subsample": 0.9947039699975112,
+        "colsample_bylevel": 0.8561701486825797,
+        "gamma": 0.09538699101670563,
+        "reg_alpha": 2.584723788029157,
+        "reg_lambda": 0.331623925995662
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.39290799289584555,
+      "test_mse": 0.3682535320470258,
+      "test_rmse": 0.6068389671461663,
+      "fit_time": 57.43980097770691,
+      "dataset": "red_wine"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:30:52.044090",
+  "end_timestamp": "2026-01-16T21:31:49.591362",
+  "fitted_model_path": "data/cluster_results/interpretable/others/red_wine/XGBRegressor/red_wine_XGBRegressor_best.json"
+}

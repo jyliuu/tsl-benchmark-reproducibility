@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "airfoil_self_noise",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361235,
+    "name": "task_361235_airfoil_self_noise",
+    "n_times_p": 9018.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.922538590073479,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.922538590073479,
+  "max_test_rmse": 2.922538590073479,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 97,
+        "learning_rate": 0.29837758267986614,
+        "max_depth": 2,
+        "subsample": 0.8004712091630788,
+        "colsample_bylevel": 0.692188581614555,
+        "gamma": 0.013305402130224435,
+        "reg_alpha": 0.0420727818861354,
+        "reg_lambda": 0.39806989858990516
+      },
+      "fixed_params": {},
+      "best_cv_score": -7.439020206377437,
+      "test_mse": 8.541231810468679,
+      "test_rmse": 2.922538590073479,
+      "fit_time": 57.48792362213135,
+      "dataset": "airfoil_self_noise"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:06:21.861435",
+  "end_timestamp": "2026-01-16T21:07:19.446205",
+  "fitted_model_path": "data/cluster_results/interpretable/others/airfoil_self_noise/XGBRegressor/airfoil_self_noise_XGBRegressor_best.json"
+}

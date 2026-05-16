@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "pumadyn32nh",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361259,
+    "name": "task_361259_pumadyn32nh",
+    "n_times_p": 270336.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.021186011453687627,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.021186011453687627,
+  "max_test_rmse": 0.021186011453687627,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04523132215098896,
+        "max_bins": 169,
+        "min_samples_leaf": 183,
+        "max_rounds": 499,
+        "outer_bags": 13,
+        "smoothing_rounds": 33,
+        "interactions": 2,
+        "max_interaction_bins": 49
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.00045381459187745853,
+      "test_mse": 0.00044884708131578326,
+      "test_rmse": 0.021186011453687627,
+      "fit_time": 34062.7365128994,
+      "dataset": "pumadyn32nh"
+    }
+  ],
+  "start_timestamp": "2026-01-17T15:35:57.530044",
+  "end_timestamp": "2026-01-18T01:03:51.644651",
+  "fitted_model_path": "data/cluster_results/interpretable/others/pumadyn32nh/ExplainableBoostingRegressor/pumadyn32nh_ExplainableBoostingRegressor_best.pkl"
+}

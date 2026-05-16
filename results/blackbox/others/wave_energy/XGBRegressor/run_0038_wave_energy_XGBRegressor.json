@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "wave_energy",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361253,
+    "name": "task_361253_wave_energy",
+    "n_times_p": 3528000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 9889.041893662961,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 9889.041893662961,
+  "max_test_rmse": 9889.041893662961,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 981,
+        "learning_rate": 0.18386771665321824,
+        "max_depth": 3,
+        "subsample": 0.9248637571209944,
+        "colsample_bylevel": 0.9761126740415408,
+        "gamma": 1.744780293664047,
+        "reg_alpha": 0.19959228054345382,
+        "reg_lambda": 6.62844839990373
+      },
+      "fixed_params": {},
+      "best_cv_score": -99323215.81784542,
+      "test_mse": 97793149.57462111,
+      "test_rmse": 9889.041893662961,
+      "fit_time": 7243.592910051346,
+      "dataset": "wave_energy"
+    }
+  ],
+  "start_timestamp": "2026-01-17T13:10:00.079155",
+  "end_timestamp": "2026-01-17T15:10:54.517643",
+  "fitted_model_path": "data/cluster_results/blackbox/others/wave_energy/XGBRegressor/wave_energy_XGBRegressor_best.json"
+}

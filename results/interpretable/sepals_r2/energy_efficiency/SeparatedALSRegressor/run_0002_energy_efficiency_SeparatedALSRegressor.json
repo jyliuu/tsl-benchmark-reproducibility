@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "energy_efficiency",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361617,
+    "name": "task_361617_energy_efficiency",
+    "n_times_p": 6912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.4875186314382925,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.4875186314382925,
+  "max_test_rmse": 0.4875186314382925,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 2,
+        "degree": 8,
+        "basis": "tent",
+        "ridge": 0.0003433975718468868,
+        "smoothness": 7.408452541956729e-09,
+        "max_sweeps": 90,
+        "tol": 2.2412560030399555e-08,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": true,
+        "penalty_kind": "tent_level"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.21907931337105904,
+      "test_mse": 0.23767441599946568,
+      "test_rmse": 0.4875186314382925,
+      "fit_time": 20777.109842300415,
+      "dataset": "energy_efficiency"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:44.892581",
+  "end_timestamp": "2026-05-02T17:01:35.359671",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/energy_efficiency/SeparatedALSRegressor/energy_efficiency_SeparatedALSRegressor_best.pkl"
+}

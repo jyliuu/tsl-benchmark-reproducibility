@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "cps88wages",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361261,
+    "name": "task_361261_cps88wages",
+    "n_times_p": 197085.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 364.0613233039959,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 364.0613233039959,
+  "max_test_rmse": 364.0613233039959,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 2,
+        "degree": 3,
+        "basis": "monomial",
+        "ridge": 2.3067193324106805e-07,
+        "smoothness": 3.413645409733846e-09,
+        "max_sweeps": 41,
+        "tol": 3.0562312328728133e-10,
+        "n_init": 4,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "tent_level"
+      },
+      "fixed_params": {},
+      "best_cv_score": -149929.35269395783,
+      "test_mse": 132540.6471258566,
+      "test_rmse": 364.0613233039959,
+      "fit_time": 11155.412626504898,
+      "dataset": "cps88wages"
+    }
+  ],
+  "start_timestamp": "2026-05-05T02:27:07.490408",
+  "end_timestamp": "2026-05-05T05:33:05.893455",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/cps88wages/SeparatedALSRegressor/cps88wages_SeparatedALSRegressor_best.pkl"
+}

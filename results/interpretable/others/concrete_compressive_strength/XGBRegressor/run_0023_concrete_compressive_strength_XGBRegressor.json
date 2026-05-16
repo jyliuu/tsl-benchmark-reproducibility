@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "concrete_compressive_strength",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361237,
+    "name": "task_361237_concrete_compressive_strength",
+    "n_times_p": 9270.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 4.681098698259478,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 4.681098698259478,
+  "max_test_rmse": 4.681098698259478,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 92,
+        "learning_rate": 0.28769899451314823,
+        "max_depth": 2,
+        "subsample": 0.9852927588530044,
+        "colsample_bylevel": 0.8769961014915639,
+        "gamma": 0.07477602700465848,
+        "reg_alpha": 0.4281549268757538,
+        "reg_lambda": 0.0883355743641289
+      },
+      "fixed_params": {},
+      "best_cv_score": -23.138308629518722,
+      "test_mse": 21.91268502284658,
+      "test_rmse": 4.681098698259478,
+      "fit_time": 59.70251798629761,
+      "dataset": "concrete_compressive_strength"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:07:21.185093",
+  "end_timestamp": "2026-01-16T21:08:20.991173",
+  "fitted_model_path": "data/cluster_results/interpretable/others/concrete_compressive_strength/XGBRegressor/concrete_compressive_strength_XGBRegressor_best.json"
+}

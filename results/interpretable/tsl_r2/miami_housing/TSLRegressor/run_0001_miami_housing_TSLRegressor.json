@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "miami_housing",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361260,
+    "name": "task_361260_miami_housing",
+    "n_times_p": 222912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 94466.70852107681,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 94466.70852107681,
+  "max_test_rmse": 94466.70852107681,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 2.193312680493233e-06,
+        "decay": 0.43288071337635803,
+        "epochs": 2,
+        "min_interval_samples": 5,
+        "n_iter": 250,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.453561923263766,
+        "update_clamp": 26.810481864423636,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 2,
+        "colsample_bytree": 0.546965436161885
+      },
+      "fixed_params": {},
+      "best_cv_score": -9511600408.307669,
+      "test_mse": 8923959018.806086,
+      "test_rmse": 94466.70852107681,
+      "fit_time": 77989.57943940163,
+      "dataset": "miami_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:34:56.784031",
+  "end_timestamp": "2026-01-18T10:15:37.608179",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/miami_housing/TSLRegressor/miami_housing_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/miami_housing/TSLRegressor/miami_housing_TSLRegressor_best.sqlite"
+}

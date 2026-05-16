@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "QSAR_fish_toxicity",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361621,
+    "name": "task_361621_QSAR_fish_toxicity",
+    "n_times_p": 6356.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.9794571104368864,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.9794571104368864,
+  "max_test_rmse": 0.9794571104368864,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 366,
+        "max_depth": 17,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.32132451494037306
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.7109238824544101,
+      "test_mse": 0.9593362311853753,
+      "test_rmse": 0.9794571104368864,
+      "fit_time": 2301.7264885902405,
+      "dataset": "QSAR_fish_toxicity"
+    }
+  ],
+  "start_timestamp": "2026-01-16T17:42:49.564908",
+  "end_timestamp": "2026-01-16T18:21:12.077247",
+  "fitted_model_path": "data/cluster_results/blackbox/others/QSAR_fish_toxicity/RandomForestRegressor/QSAR_fish_toxicity_RandomForestRegressor_best.pkl"
+}

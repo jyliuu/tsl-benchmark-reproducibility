@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "socmob",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361264,
+    "name": "task_361264_socmob",
+    "n_times_p": 6936.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 17.647065405297653,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 17.647065405297653,
+  "max_test_rmse": 17.647065405297653,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 980,
+        "learning_rate": 0.21021269900087589,
+        "max_depth": 3,
+        "subsample": 0.960124315405677,
+        "colsample_bylevel": 0.6627406036157336,
+        "gamma": 0.011883090333906816,
+        "reg_alpha": 9.28674813462914,
+        "reg_lambda": 1.2277689957552398
+      },
+      "fixed_params": {},
+      "best_cv_score": -165.65721063521147,
+      "test_mse": 311.41891741885325,
+      "test_rmse": 17.647065405297653,
+      "fit_time": 194.1088352203369,
+      "dataset": "socmob"
+    }
+  ],
+  "start_timestamp": "2026-01-16T18:21:48.748331",
+  "end_timestamp": "2026-01-16T18:25:03.289439",
+  "fitted_model_path": "data/cluster_results/blackbox/others/socmob/XGBRegressor/socmob_XGBRegressor_best.json"
+}

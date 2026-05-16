@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "fifa",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361272,
+    "name": "task_361272_fifa",
+    "n_times_p": 556162.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 9227.060424019264,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 9227.060424019264,
+  "max_test_rmse": 9227.060424019264,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 79,
+        "learning_rate": 0.17154013890101935,
+        "max_depth": 2,
+        "subsample": 0.9791822848250177,
+        "colsample_bylevel": 0.6750954960261726,
+        "gamma": 0.012470661503708333,
+        "reg_alpha": 0.04126186761037583,
+        "reg_lambda": 0.5877902108755195
+      },
+      "fixed_params": {},
+      "best_cv_score": -80798407.32766338,
+      "test_mse": 85138644.06850258,
+      "test_rmse": 9227.060424019264,
+      "fit_time": 107.24211359024048,
+      "dataset": "fifa"
+    }
+  ],
+  "start_timestamp": "2026-01-17T14:34:58.078317",
+  "end_timestamp": "2026-01-17T14:36:45.568183",
+  "fitted_model_path": "data/cluster_results/interpretable/others/fifa/XGBRegressor/fifa_XGBRegressor_best.json"
+}

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "cps88wages",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361261,
+    "name": "task_361261_cps88wages",
+    "n_times_p": 197085.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 365.71865084509903,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 365.71865084509903,
+  "max_test_rmse": 365.71865084509903,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 455,
+        "max_depth": 9,
+        "min_samples_split": 3,
+        "min_samples_leaf": 9,
+        "max_features": 0.5728585559093404
+      },
+      "fixed_params": {},
+      "best_cv_score": -150930.9516227809,
+      "test_mse": 133750.13157595944,
+      "test_rmse": 365.71865084509903,
+      "fit_time": 3069.4891850948334,
+      "dataset": "cps88wages"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:25.735630",
+  "end_timestamp": "2026-01-17T13:26:36.644659",
+  "fitted_model_path": "data/cluster_results/blackbox/others/cps88wages/RandomForestRegressor/cps88wages_RandomForestRegressor_best.pkl"
+}

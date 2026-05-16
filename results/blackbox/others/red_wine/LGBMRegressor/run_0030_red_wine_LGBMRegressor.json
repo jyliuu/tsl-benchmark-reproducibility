@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "red_wine",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361250,
+    "name": "task_361250_red_wine",
+    "n_times_p": 19188.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.5690066105278219,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.5690066105278219,
+  "max_test_rmse": 0.5690066105278219,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 477,
+        "learning_rate": 0.019765506494741205,
+        "num_leaves": 70,
+        "max_depth": 9,
+        "min_child_samples": 27,
+        "subsample": 0.9406747516080703,
+        "reg_alpha": 0.2624561374277915,
+        "reg_lambda": 6.302196034477342
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.36625141537797085,
+      "test_mse": 0.3237685228243604,
+      "test_rmse": 0.5690066105278219,
+      "fit_time": 249.64126825332642,
+      "dataset": "red_wine"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:04:49.742143",
+  "end_timestamp": "2026-01-16T19:08:59.926482",
+  "fitted_model_path": "data/cluster_results/blackbox/others/red_wine/LGBMRegressor/red_wine_LGBMRegressor_best.txt"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "wave_energy",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361253,
+    "name": "task_361253_wave_energy",
+    "n_times_p": 3528000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 9656.973346631898,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 9656.973346631898,
+  "max_test_rmse": 9656.973346631898,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 995,
+        "learning_rate": 0.2955472299329213,
+        "num_leaves": 125,
+        "max_depth": 3,
+        "min_child_samples": 27,
+        "subsample": 0.5220929561566133,
+        "reg_alpha": 1.8909682585659575,
+        "reg_lambda": 6.217999903659757
+      },
+      "fixed_params": {},
+      "best_cv_score": -96926291.52243532,
+      "test_mse": 93257134.21755886,
+      "test_rmse": 9656.973346631898,
+      "fit_time": 5478.1024923324585,
+      "dataset": "wave_energy"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:59:57.056244",
+  "end_timestamp": "2026-01-17T14:31:23.060335",
+  "fitted_model_path": "data/cluster_results/blackbox/others/wave_energy/LGBMRegressor/wave_energy_LGBMRegressor_best.txt"
+}

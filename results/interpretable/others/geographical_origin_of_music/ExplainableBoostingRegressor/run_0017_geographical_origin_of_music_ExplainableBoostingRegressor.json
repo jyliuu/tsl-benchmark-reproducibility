@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "geographical_origin_of_music",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361243,
+    "name": "task_361243_geographical_origin_of_music",
+    "n_times_p": 123903.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 15.694270255130634,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 15.694270255130634,
+  "max_test_rmse": 15.694270255130634,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.0146386508055559,
+        "max_bins": 114,
+        "min_samples_leaf": 105,
+        "max_rounds": 453,
+        "outer_bags": 13,
+        "smoothing_rounds": 45,
+        "interactions": 18,
+        "max_interaction_bins": 44
+      },
+      "fixed_params": {},
+      "best_cv_score": -260.19000739530077,
+      "test_mse": 246.31011884107818,
+      "test_rmse": 15.694270255130634,
+      "fit_time": 76355.48654127121,
+      "dataset": "geographical_origin_of_music"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:41.942853",
+  "end_timestamp": "2026-01-20T07:51:30.019549",
+  "fitted_model_path": "data/cluster_results/interpretable/others/geographical_origin_of_music/ExplainableBoostingRegressor/geographical_origin_of_music_ExplainableBoostingRegressor_best.pkl"
+}

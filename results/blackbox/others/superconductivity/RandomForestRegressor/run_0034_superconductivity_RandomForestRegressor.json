@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "superconductivity",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361242,
+    "name": "task_361242_superconductivity",
+    "n_times_p": 1743566.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 8.913317667308357,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 8.913317667308357,
+  "max_test_rmse": 8.913317667308357,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 929,
+        "max_depth": 19,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.36739829930498
+      },
+      "fixed_params": {},
+      "best_cv_score": -89.4035865615786,
+      "test_mse": 79.4472318383513,
+      "test_rmse": 8.913317667308357,
+      "fit_time": 80418.61543822289,
+      "dataset": "superconductivity"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:53:55.275899",
+  "end_timestamp": "2026-01-18T11:15:14.249049",
+  "fitted_model_path": "data/cluster_results/blackbox/others/superconductivity/RandomForestRegressor/superconductivity_RandomForestRegressor_best.pkl"
+}

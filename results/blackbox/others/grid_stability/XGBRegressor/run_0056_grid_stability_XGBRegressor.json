@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "grid_stability",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361251,
+    "name": "task_361251_grid_stability",
+    "n_times_p": 130000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.009519922571020157,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.009519922571020157,
+  "max_test_rmse": 0.009519922571020157,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 732,
+        "learning_rate": 0.029432893840936763,
+        "max_depth": 6,
+        "subsample": 0.7199196399677805,
+        "colsample_bylevel": 0.7168178221856728,
+        "gamma": 0.0010177571976050749,
+        "reg_alpha": 0.0031271861259893523,
+        "reg_lambda": 1.0242898819398503
+      },
+      "fixed_params": {},
+      "best_cv_score": -8.601927142068045e-05,
+      "test_mse": 9.062892575821904e-05,
+      "test_rmse": 0.009519922571020157,
+      "fit_time": 247.38044953346252,
+      "dataset": "grid_stability"
+    }
+  ],
+  "start_timestamp": "2026-01-16T20:17:50.078574",
+  "end_timestamp": "2026-01-16T20:21:58.313129",
+  "fitted_model_path": "data/cluster_results/blackbox/others/grid_stability/XGBRegressor/grid_stability_XGBRegressor_best.json"
+}

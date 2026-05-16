@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "physiochemical_protein",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361241,
+    "name": "task_361241_physiochemical_protein",
+    "n_times_p": 457300.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 4.804716087040511,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 4.804716087040511,
+  "max_test_rmse": 4.804716087040511,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 2,
+        "degree": 6,
+        "basis": "tent",
+        "ridge": 1.3340598399273213e-07,
+        "smoothness": 3.7272759091820773,
+        "max_sweeps": 43,
+        "tol": 2.9867695073755725e-10,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree"
+      },
+      "fixed_params": {},
+      "best_cv_score": -22.5531182985871,
+      "test_mse": 23.085296677065877,
+      "test_rmse": 4.804716087040511,
+      "fit_time": 22530.1388092041,
+      "dataset": "physiochemical_protein"
+    }
+  ],
+  "start_timestamp": "2026-05-04T21:49:19.467704",
+  "end_timestamp": "2026-05-05T04:05:17.929874",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/physiochemical_protein/SeparatedALSRegressor/physiochemical_protein_SeparatedALSRegressor_best.pkl"
+}

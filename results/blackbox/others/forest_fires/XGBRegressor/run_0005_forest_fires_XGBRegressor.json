@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "forest_fires",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361618,
+    "name": "task_361618_forest_fires",
+    "n_times_p": 6721.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 108.63468017562647,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 108.63468017562647,
+  "max_test_rmse": 108.63468017562647,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 108,
+        "learning_rate": 0.011718052737127367,
+        "max_depth": 3,
+        "subsample": 0.5108480065190718,
+        "colsample_bylevel": 0.5859660097719204,
+        "gamma": 0.016720018597991767,
+        "reg_alpha": 0.0023317626971663826,
+        "reg_lambda": 8.50261754188257
+      },
+      "fixed_params": {},
+      "best_cv_score": -2104.1821727307024,
+      "test_mse": 11801.49373686065,
+      "test_rmse": 108.63468017562647,
+      "fit_time": 114.32373905181885,
+      "dataset": "forest_fires"
+    }
+  ],
+  "start_timestamp": "2026-01-16T17:48:50.040965",
+  "end_timestamp": "2026-01-16T17:50:44.517546",
+  "fitted_model_path": "data/cluster_results/blackbox/others/forest_fires/XGBRegressor/forest_fires_XGBRegressor_best.json"
+}

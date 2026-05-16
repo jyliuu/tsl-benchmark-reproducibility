@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "brazilian_houses",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361267,
+    "name": "task_361267_brazilian_houses",
+    "n_times_p": 106920.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2528.9472193537044,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2528.9472193537044,
+  "max_test_rmse": 2528.9472193537044,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 91,
+        "learning_rate": 0.2664733653002323,
+        "max_depth": 1,
+        "subsample": 0.6024598470436284,
+        "colsample_bylevel": 0.678045156360174,
+        "gamma": 1.5797864108558568,
+        "reg_alpha": 0.02287331170950805,
+        "reg_lambda": 0.036702571360759696
+      },
+      "fixed_params": {},
+      "best_cv_score": -27672503.955022126,
+      "test_mse": 6395574.038276834,
+      "test_rmse": 2528.9472193537044,
+      "fit_time": 57.102842569351196,
+      "dataset": "brazilian_houses"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:55:22.161551",
+  "end_timestamp": "2026-01-16T21:56:19.474737",
+  "fitted_model_path": "data/cluster_results/interpretable/others/brazilian_houses/XGBRegressor/brazilian_houses_XGBRegressor_best.json"
+}

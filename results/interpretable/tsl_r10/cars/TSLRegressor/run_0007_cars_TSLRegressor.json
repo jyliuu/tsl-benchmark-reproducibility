@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "cars",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361622,
+    "name": "task_361622_cars",
+    "n_times_p": 14472.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2167.445637086304,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2167.445637086304,
+  "max_test_rmse": 2167.445637086304,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.5485441990684974,
+        "decay": 0.7034247550077072,
+        "epochs": 7,
+        "min_interval_samples": 3,
+        "n_iter": 18,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.31283772684831324,
+        "update_clamp": 5.21733282815717,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 2,
+        "colsample_bytree": 0.462096777141943
+      },
+      "fixed_params": {},
+      "best_cv_score": -4329258.412391521,
+      "test_mse": 4697820.589724455,
+      "test_rmse": 2167.445637086304,
+      "fit_time": 4660.516672134399,
+      "dataset": "cars"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:23:48.192227",
+  "end_timestamp": "2026-01-16T17:41:30.368007",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/cars/TSLRegressor/cars_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/cars/TSLRegressor/cars_TSLRegressor_best.sqlite"
+}

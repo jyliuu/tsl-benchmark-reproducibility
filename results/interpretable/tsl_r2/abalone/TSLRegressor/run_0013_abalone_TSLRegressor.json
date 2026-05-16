@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "abalone",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361234,
+    "name": "task_361234_abalone",
+    "n_times_p": 37593.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.241525102772269,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.241525102772269,
+  "max_test_rmse": 2.241525102772269,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 1.3335656508939162e-05,
+        "decay": 0.2248194948079132,
+        "epochs": 2,
+        "min_interval_samples": 4,
+        "n_iter": 44,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.5566893335167058,
+        "update_clamp": 29.532018011737655,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 3,
+        "colsample_bytree": 0.8690333182405833
+      },
+      "fixed_params": {},
+      "best_cv_score": -4.665393971896693,
+      "test_mse": 5.024434786358231,
+      "test_rmse": 2.241525102772269,
+      "fit_time": 4497.983469009399,
+      "dataset": "abalone"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:15:54.532874",
+  "end_timestamp": "2026-01-16T17:30:55.335848",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/abalone/TSLRegressor/abalone_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/abalone/TSLRegressor/abalone_TSLRegressor_best.sqlite"
+}

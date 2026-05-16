@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "health_insurance",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361269,
+    "name": "task_361269_health_insurance",
+    "n_times_p": 267264.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 14.455173699336182,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 14.455173699336182,
+  "max_test_rmse": 14.455173699336182,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 236,
+        "learning_rate": 0.026942063029645844,
+        "num_leaves": 39,
+        "max_depth": 5,
+        "min_child_samples": 26,
+        "subsample": 0.5446244564132995,
+        "reg_alpha": 6.46951977230473,
+        "reg_lambda": 2.945688809112461
+      },
+      "fixed_params": {},
+      "best_cv_score": -208.11033547887536,
+      "test_mse": 208.95204667798046,
+      "test_rmse": 14.455173699336182,
+      "fit_time": 1077.8847334384918,
+      "dataset": "health_insurance"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:24.266141",
+  "end_timestamp": "2026-01-17T12:53:22.755321",
+  "fitted_model_path": "data/cluster_results/blackbox/others/health_insurance/LGBMRegressor/health_insurance_LGBMRegressor_best.txt"
+}

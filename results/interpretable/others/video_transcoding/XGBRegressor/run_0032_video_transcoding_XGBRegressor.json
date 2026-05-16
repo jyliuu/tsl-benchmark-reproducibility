@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "video_transcoding",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361252,
+    "name": "task_361252_video_transcoding",
+    "n_times_p": 1306896.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 6.489369720388651,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 6.489369720388651,
+  "max_test_rmse": 6.489369720388651,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 93,
+        "learning_rate": 0.29978392534036036,
+        "max_depth": 2,
+        "subsample": 0.6286538124425378,
+        "colsample_bylevel": 0.8139446837018094,
+        "gamma": 11.06195617024784,
+        "reg_alpha": 33.86825087561575,
+        "reg_lambda": 0.545923997481011
+      },
+      "fixed_params": {},
+      "best_cv_score": -42.70700729555055,
+      "test_mse": 42.11191936789707,
+      "test_rmse": 6.489369720388651,
+      "fit_time": 191.01986479759216,
+      "dataset": "video_transcoding"
+    }
+  ],
+  "start_timestamp": "2026-01-17T14:42:55.901483",
+  "end_timestamp": "2026-01-17T14:46:07.901791",
+  "fitted_model_path": "data/cluster_results/interpretable/others/video_transcoding/XGBRegressor/video_transcoding_XGBRegressor_best.json"
+}

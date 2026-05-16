@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "kin8nm",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361258,
+    "name": "task_361258_kin8nm",
+    "n_times_p": 73728.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.16706529173750348,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.16706529173750348,
+  "max_test_rmse": 0.16706529173750348,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.046687405631865256,
+        "max_bins": 140,
+        "min_samples_leaf": 180,
+        "max_rounds": 320,
+        "outer_bags": 19,
+        "smoothing_rounds": 255,
+        "interactions": 20,
+        "max_interaction_bins": 30
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.026497034024998874,
+      "test_mse": 0.02791081170333715,
+      "test_rmse": 0.16706529173750348,
+      "fit_time": 24715.219343185425,
+      "dataset": "kin8nm"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:41.942669",
+  "end_timestamp": "2026-01-19T17:30:47.797139",
+  "fitted_model_path": "data/cluster_results/interpretable/others/kin8nm/ExplainableBoostingRegressor/kin8nm_ExplainableBoostingRegressor_best.pkl"
+}

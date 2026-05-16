@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "QSAR_fish_toxicity",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361621,
+    "name": "task_361621_QSAR_fish_toxicity",
+    "n_times_p": 6356.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.9912520401428749,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.9912520401428749,
+  "max_test_rmse": 0.9912520401428749,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 482,
+        "learning_rate": 0.0689901102751575,
+        "num_leaves": 32,
+        "max_depth": 4,
+        "min_child_samples": 14,
+        "subsample": 0.7869074046535647,
+        "reg_alpha": 0.2735763368915033,
+        "reg_lambda": 6.293035726284753
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.7087291556400096,
+      "test_mse": 0.9825806070874118,
+      "test_rmse": 0.9912520401428749,
+      "fit_time": 272.26252913475037,
+      "dataset": "QSAR_fish_toxicity"
+    }
+  ],
+  "start_timestamp": "2026-01-16T17:41:50.856854",
+  "end_timestamp": "2026-01-16T17:46:23.418020",
+  "fitted_model_path": "data/cluster_results/blackbox/others/QSAR_fish_toxicity/LGBMRegressor/QSAR_fish_toxicity_LGBMRegressor_best.txt"
+}

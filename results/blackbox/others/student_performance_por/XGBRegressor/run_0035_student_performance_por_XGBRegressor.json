@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "student_performance_por",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361619,
+    "name": "task_361619_student_performance_por",
+    "n_times_p": 20119.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.720985236039943,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.720985236039943,
+  "max_test_rmse": 2.720985236039943,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 332,
+        "learning_rate": 0.01635634700556529,
+        "max_depth": 6,
+        "subsample": 0.5765102157868447,
+        "colsample_bylevel": 0.5304279976085678,
+        "gamma": 1.0186450177626598,
+        "reg_alpha": 8.047841723187439,
+        "reg_lambda": 2.7206474757897965
+      },
+      "fixed_params": {},
+      "best_cv_score": -6.903790870913658,
+      "test_mse": 7.4037606547473445,
+      "test_rmse": 2.720985236039943,
+      "fit_time": 156.09840512275696,
+      "dataset": "student_performance_por"
+    }
+  ],
+  "start_timestamp": "2026-01-16T19:13:20.611364",
+  "end_timestamp": "2026-01-16T19:15:57.142129",
+  "fitted_model_path": "data/cluster_results/blackbox/others/student_performance_por/XGBRegressor/student_performance_por_XGBRegressor_best.json"
+}

@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "solar_flare",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361244,
+    "name": "task_361244_solar_flare",
+    "n_times_p": 11726.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.8145004544888226,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.8145004544888226,
+  "max_test_rmse": 0.8145004544888226,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 2.06697034230433e-05,
+        "decay": 0.7036570340068984,
+        "epochs": 1,
+        "min_interval_samples": 53,
+        "n_iter": 14,
+        "refinement_strategy": "huber",
+        "similarity_threshold": 0.40566540701239395,
+        "update_clamp": 18.324987678374196,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 500,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 14,
+        "colsample_bytree": 0.7283685535924656
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.5854951326331825,
+      "test_mse": 0.6634109903624986,
+      "test_rmse": 0.8145004544888226,
+      "fit_time": 1062.7642049789429,
+      "dataset": "solar_flare"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:23:50.073057",
+  "end_timestamp": "2026-01-16T16:41:33.247436",
+  "fitted_model_path": "data/cluster_results/blackbox/mpf/solar_flare/TSLRegressor/solar_flare_TSLRegressor_best.bin; data/cluster_results/blackbox/mpf/solar_flare/TSLRegressor/solar_flare_TSLRegressor_best.sqlite"
+}

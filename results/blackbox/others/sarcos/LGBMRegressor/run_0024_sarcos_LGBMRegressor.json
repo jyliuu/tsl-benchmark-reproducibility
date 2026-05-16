@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "sarcos",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361254,
+    "name": "task_361254_sarcos",
+    "n_times_p": 1076526.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.3577660623973746,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.3577660623973746,
+  "max_test_rmse": 2.3577660623973746,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 960,
+        "learning_rate": 0.0882912462928368,
+        "num_leaves": 116,
+        "max_depth": 9,
+        "min_child_samples": 22,
+        "subsample": 0.7891796332192195,
+        "reg_alpha": 6.565688681496763,
+        "reg_lambda": 4.0823171309033075
+      },
+      "fixed_params": {},
+      "best_cv_score": -5.7810479336544365,
+      "test_mse": 5.55906080499282,
+      "test_rmse": 2.3577660623973746,
+      "fit_time": 11364.776809215546,
+      "dataset": "sarcos"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:41:55.856848",
+  "end_timestamp": "2026-01-17T15:51:30.152936",
+  "fitted_model_path": "data/cluster_results/blackbox/others/sarcos/LGBMRegressor/sarcos_LGBMRegressor_best.txt"
+}

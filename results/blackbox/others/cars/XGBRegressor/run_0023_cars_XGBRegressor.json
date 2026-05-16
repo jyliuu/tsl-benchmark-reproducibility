@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "cars",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361622,
+    "name": "task_361622_cars",
+    "n_times_p": 14472.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2118.8971220380045,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2118.8971220380045,
+  "max_test_rmse": 2118.8971220380045,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 604,
+        "learning_rate": 0.022079259929631438,
+        "max_depth": 4,
+        "subsample": 0.9361183252587394,
+        "colsample_bylevel": 0.5470411302453057,
+        "gamma": 0.049649279658581846,
+        "reg_alpha": 0.02405641732768623,
+        "reg_lambda": 0.14750749355975468
+      },
+      "fixed_params": {},
+      "best_cv_score": -4451824.513025884,
+      "test_mse": 4489725.013780938,
+      "test_rmse": 2118.8971220380045,
+      "fit_time": 167.5351312160492,
+      "dataset": "cars"
+    }
+  ],
+  "start_timestamp": "2026-01-16T18:48:21.828521",
+  "end_timestamp": "2026-01-16T18:51:09.708478",
+  "fitted_model_path": "data/cluster_results/blackbox/others/cars/XGBRegressor/cars_XGBRegressor_best.json"
+}

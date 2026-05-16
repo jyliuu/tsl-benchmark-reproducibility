@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "health_insurance",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361269,
+    "name": "task_361269_health_insurance",
+    "n_times_p": 267264.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 14.537825732436847,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 14.537825732436847,
+  "max_test_rmse": 14.537825732436847,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 4,
+        "degree": 6,
+        "basis": "monomial",
+        "ridge": 3.832788698874138e-05,
+        "smoothness": 1.7298885451906518,
+        "max_sweeps": 67,
+        "tol": 2.6776689983145305e-10,
+        "n_init": 1,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree2"
+      },
+      "fixed_params": {},
+      "best_cv_score": -208.34585892531567,
+      "test_mse": 211.34837702670293,
+      "test_rmse": 14.537825732436847,
+      "fit_time": 19889.570954561234,
+      "dataset": "health_insurance"
+    }
+  ],
+  "start_timestamp": "2026-05-05T03:18:07.585272",
+  "end_timestamp": "2026-05-05T08:49:47.208888",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/health_insurance/SeparatedALSRegressor/health_insurance_SeparatedALSRegressor_best.pkl"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "airfoil_self_noise",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361235,
+    "name": "task_361235_airfoil_self_noise",
+    "n_times_p": 9018.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.834959771832884,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.834959771832884,
+  "max_test_rmse": 2.834959771832884,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 99,
+        "learning_rate": 0.29902294998237716,
+        "num_leaves": 42,
+        "max_depth": 2,
+        "min_child_samples": 27,
+        "subsample": 0.3060757599258701,
+        "reg_alpha": 0.2877689625711627,
+        "reg_lambda": 0.3359772986573061
+      },
+      "fixed_params": {},
+      "best_cv_score": -7.3893126847473685,
+      "test_mse": 8.036996907910757,
+      "test_rmse": 2.834959771832884,
+      "fit_time": 44.04905152320862,
+      "dataset": "airfoil_self_noise"
+    }
+  ],
+  "start_timestamp": "2026-01-16T21:05:21.402821",
+  "end_timestamp": "2026-01-16T21:06:05.543301",
+  "fitted_model_path": "data/cluster_results/interpretable/others/airfoil_self_noise/LGBMRegressor/airfoil_self_noise_LGBMRegressor_best.txt"
+}

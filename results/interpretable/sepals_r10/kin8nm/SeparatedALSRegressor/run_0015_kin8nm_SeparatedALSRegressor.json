@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "kin8nm",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361258,
+    "name": "task_361258_kin8nm",
+    "n_times_p": 73728.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.083541771705979,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.083541771705979,
+  "max_test_rmse": 0.083541771705979,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 10,
+        "degree": 9,
+        "basis": "monomial",
+        "ridge": 1.4408702051764646e-06,
+        "smoothness": 8.434349360379375e-05,
+        "max_sweeps": 92,
+        "tol": 3.8001380923789776e-05,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree2"
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.006664151649950119,
+      "test_mse": 0.006979227619773912,
+      "test_rmse": 0.083541771705979,
+      "fit_time": 57272.88302111626,
+      "dataset": "kin8nm"
+    }
+  ],
+  "start_timestamp": "2026-05-08T12:51:29.427058",
+  "end_timestamp": "2026-05-09T04:46:06.423304",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/kin8nm/SeparatedALSRegressor/kin8nm_SeparatedALSRegressor_best.pkl"
+}

@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "airfoil_self_noise",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361235,
+    "name": "task_361235_airfoil_self_noise",
+    "n_times_p": 9018.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 1.7563882712779226,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 1.7563882712779226,
+  "max_test_rmse": 1.7563882712779226,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 397,
+        "max_depth": 18,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.7947130521398653
+      },
+      "fixed_params": {},
+      "best_cv_score": -3.3539978573577356,
+      "test_mse": 3.0848997594826497,
+      "test_rmse": 1.7563882712779226,
+      "fit_time": 1925.4339118003845,
+      "dataset": "airfoil_self_noise"
+    }
+  ],
+  "start_timestamp": "2026-01-16T18:25:18.656745",
+  "end_timestamp": "2026-01-16T18:57:24.936497",
+  "fitted_model_path": "data/cluster_results/blackbox/others/airfoil_self_noise/RandomForestRegressor/airfoil_self_noise_RandomForestRegressor_best.pkl"
+}

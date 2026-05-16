@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "forest_fires",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361618,
+    "name": "task_361618_forest_fires",
+    "n_times_p": 6721.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 97.27349426404476,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 97.27349426404476,
+  "max_test_rmse": 97.27349426404476,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 1,
+        "degree": 9,
+        "basis": "tent",
+        "ridge": 2.9592163696415428e-08,
+        "smoothness": 9.514482759953417,
+        "max_sweeps": 23,
+        "tol": 1.6365490309894395e-09,
+        "n_init": 5,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree"
+      },
+      "fixed_params": {},
+      "best_cv_score": -2625.0743004658784,
+      "test_mse": 9462.132686337149,
+      "test_rmse": 97.27349426404476,
+      "fit_time": 41440.65655660629,
+      "dataset": "forest_fires"
+    }
+  ],
+  "start_timestamp": "2026-05-02T17:26:08.279888",
+  "end_timestamp": "2026-05-03T04:57:01.084727",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_10_ctr23/forest_fires/SeparatedALSRegressor/forest_fires_SeparatedALSRegressor_best.pkl"
+}

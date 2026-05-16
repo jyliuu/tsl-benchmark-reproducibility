@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "solar_flare",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361244,
+    "name": "task_361244_solar_flare",
+    "n_times_p": 11726.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.803735788493109,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.803735788493109,
+  "max_test_rmse": 0.803735788493109,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.01810920729475164,
+        "max_bins": 199,
+        "min_samples_leaf": 79,
+        "max_rounds": 144,
+        "outer_bags": 11,
+        "smoothing_rounds": 30,
+        "interactions": 8,
+        "max_interaction_bins": 23
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.5755293397244794,
+      "test_mse": 0.6459912177046396,
+      "test_rmse": 0.803735788493109,
+      "fit_time": 6597.733153104782,
+      "dataset": "solar_flare"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:44.303654",
+  "end_timestamp": "2026-01-19T12:28:50.866402",
+  "fitted_model_path": "data/cluster_results/interpretable/others/solar_flare/ExplainableBoostingRegressor/solar_flare_ExplainableBoostingRegressor_best.pkl"
+}

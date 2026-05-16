@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "miami_housing",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361260,
+    "name": "task_361260_miami_housing",
+    "n_times_p": 222912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 83011.79942966276,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 83011.79942966276,
+  "max_test_rmse": 83011.79942966276,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 922,
+        "learning_rate": 0.1627178579018405,
+        "num_leaves": 76,
+        "max_depth": 3,
+        "min_child_samples": 6,
+        "subsample": 0.8957161054636533,
+        "reg_alpha": 7.930379599481296,
+        "reg_lambda": 1.6238582791281257
+      },
+      "fixed_params": {},
+      "best_cv_score": -7201561039.398753,
+      "test_mse": 6890958844.550558,
+      "test_rmse": 83011.79942966276,
+      "fit_time": 1448.6653697490692,
+      "dataset": "miami_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:25.737381",
+  "end_timestamp": "2026-01-17T12:59:34.959289",
+  "fitted_model_path": "data/cluster_results/blackbox/others/miami_housing/LGBMRegressor/miami_housing_LGBMRegressor_best.txt"
+}

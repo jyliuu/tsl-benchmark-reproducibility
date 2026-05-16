@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "superconductivity",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361242,
+    "name": "task_361242_superconductivity",
+    "n_times_p": 1743566.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 11.2418775683818,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 11.2418775683818,
+  "max_test_rmse": 11.2418775683818,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04913841860252145,
+        "max_bins": 236,
+        "min_samples_leaf": 38,
+        "max_rounds": 485,
+        "outer_bags": 15,
+        "smoothing_rounds": 2,
+        "interactions": 20,
+        "max_interaction_bins": 50
+      },
+      "fixed_params": {},
+      "best_cv_score": -131.51232594358282,
+      "test_mse": 126.3798112624859,
+      "test_rmse": 11.2418775683818,
+      "fit_time": 141704.15443825722,
+      "dataset": "superconductivity"
+    }
+  ],
+  "start_timestamp": "2026-01-17T16:05:57.157575",
+  "end_timestamp": "2026-01-19T07:28:36.699383",
+  "fitted_model_path": "data/cluster_results/interpretable/others/superconductivity/ExplainableBoostingRegressor/superconductivity_ExplainableBoostingRegressor_best.pkl"
+}

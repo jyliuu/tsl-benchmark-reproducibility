@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "diamonds",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361257,
+    "name": "task_361257_diamonds",
+    "n_times_p": 539400.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 542.9755503869941,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 542.9755503869941,
+  "max_test_rmse": 542.9755503869941,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 798,
+        "max_depth": 16,
+        "min_samples_split": 4,
+        "min_samples_leaf": 1,
+        "max_features": 0.7989381245555005
+      },
+      "fixed_params": {},
+      "best_cv_score": -299602.3316154047,
+      "test_mse": 294822.4483180592,
+      "test_rmse": 542.9755503869941,
+      "fit_time": 21329.39526438713,
+      "dataset": "diamonds"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:25.237815",
+  "end_timestamp": "2026-01-17T18:31:17.067633",
+  "fitted_model_path": "data/cluster_results/blackbox/others/diamonds/RandomForestRegressor/diamonds_RandomForestRegressor_best.pkl"
+}

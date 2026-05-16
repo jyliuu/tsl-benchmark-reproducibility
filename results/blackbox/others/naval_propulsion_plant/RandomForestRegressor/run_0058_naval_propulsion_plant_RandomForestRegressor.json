@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "naval_propulsion_plant",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361247,
+    "name": "task_361247_naval_propulsion_plant",
+    "n_times_p": 179010.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.0009894948961804645,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.0009894948961804645,
+  "max_test_rmse": 0.0009894948961804645,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 314,
+        "max_depth": 19,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.7983466221074514
+      },
+      "fixed_params": {},
+      "best_cv_score": -1.3177303490952054e-06,
+      "test_mse": 9.791001495671884e-07,
+      "test_rmse": 0.0009894948961804645,
+      "fit_time": 2625.750463962555,
+      "dataset": "naval_propulsion_plant"
+    }
+  ],
+  "start_timestamp": "2026-01-16T20:22:21.467486",
+  "end_timestamp": "2026-01-16T21:06:08.827424",
+  "fitted_model_path": "data/cluster_results/blackbox/others/naval_propulsion_plant/RandomForestRegressor/naval_propulsion_plant_RandomForestRegressor_best.pkl"
+}

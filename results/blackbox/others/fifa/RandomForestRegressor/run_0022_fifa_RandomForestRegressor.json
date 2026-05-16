@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "fifa",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361272,
+    "name": "task_361272_fifa",
+    "n_times_p": 556162.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 9232.86278900532,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 9232.86278900532,
+  "max_test_rmse": 9232.86278900532,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 864,
+        "max_depth": 15,
+        "min_samples_split": 5,
+        "min_samples_leaf": 4,
+        "max_features": 0.7173034808470298
+      },
+      "fixed_params": {},
+      "best_cv_score": -81477957.97522803,
+      "test_mse": 85245755.2805991,
+      "test_rmse": 9232.86278900532,
+      "fit_time": 31476.381727933884,
+      "dataset": "fifa"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:56.452143",
+  "end_timestamp": "2026-01-17T21:20:52.259113",
+  "fitted_model_path": "data/cluster_results/blackbox/others/fifa/RandomForestRegressor/fifa_RandomForestRegressor_best.pkl"
+}

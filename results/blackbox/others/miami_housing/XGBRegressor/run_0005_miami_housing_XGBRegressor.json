@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "miami_housing",
+  "model": "XGBRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361260,
+    "name": "task_361260_miami_housing",
+    "n_times_p": 222912.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 82325.08609928947,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 82325.08609928947,
+  "max_test_rmse": 82325.08609928947,
+  "results": [
+    {
+      "model": "XGBRegressor",
+      "best_params": {
+        "n_estimators": 999,
+        "learning_rate": 0.08054849403605474,
+        "max_depth": 4,
+        "subsample": 0.8023447888423125,
+        "colsample_bylevel": 0.59481404803598,
+        "gamma": 0.002704785643452957,
+        "reg_alpha": 0.0023521763758696714,
+        "reg_lambda": 0.08828639755333412
+      },
+      "fixed_params": {},
+      "best_cv_score": -6926640375.304815,
+      "test_mse": 6777419801.255425,
+      "test_rmse": 82325.08609928947,
+      "fit_time": 1102.4380052089691,
+      "dataset": "miami_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:24.269403",
+  "end_timestamp": "2026-01-17T12:53:47.918133",
+  "fitted_model_path": "data/cluster_results/blackbox/others/miami_housing/XGBRegressor/miami_housing_XGBRegressor_best.json"
+}

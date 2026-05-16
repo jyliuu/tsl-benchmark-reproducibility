@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "wave_energy",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361253,
+    "name": "task_361253_wave_energy",
+    "n_times_p": 3528000.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 97216.22812161538,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 97216.22812161538,
+  "max_test_rmse": 97216.22812161538,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 631,
+        "max_depth": 2,
+        "min_samples_split": 4,
+        "min_samples_leaf": 7,
+        "max_features": 0.34777295314728335
+      },
+      "fixed_params": {},
+      "best_cv_score": -9478275856.427233,
+      "test_mse": 9450995010.19396,
+      "test_rmse": 97216.22812161538,
+      "fit_time": 34984.58378696442,
+      "dataset": "wave_energy"
+    }
+  ],
+  "start_timestamp": "2026-01-17T14:57:59.294849",
+  "end_timestamp": "2026-01-18T00:41:24.142711",
+  "fitted_model_path": "data/cluster_results/interpretable/others/wave_energy/RandomForestRegressor/wave_energy_RandomForestRegressor_best.pkl"
+}

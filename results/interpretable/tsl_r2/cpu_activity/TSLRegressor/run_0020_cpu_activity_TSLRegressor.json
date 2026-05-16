@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "dataset": "cpu_activity",
+  "model": "TSLRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361256,
+    "name": "task_361256_cpu_activity",
+    "n_times_p": 180224.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.5686180680917583,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.5686180680917583,
+  "max_test_rmse": 2.5686180680917583,
+  "results": [
+    {
+      "model": "TSLRegressor",
+      "best_params": {
+        "alpha": 0.0012957808796263,
+        "decay": 0.957830027700183,
+        "epochs": 2,
+        "min_interval_samples": 7,
+        "n_iter": 239,
+        "refinement_strategy": "l2",
+        "similarity_threshold": 0.8880029101165793,
+        "update_clamp": 26.358001998736913,
+        "bagged": true,
+        "complexity_penalty": 0,
+        "min_split_loss": 0,
+        "n_trees": 200,
+        "prior_sample_size": 0,
+        "split_strategy": "random",
+        "tilt_rho": 0,
+        "tilt_tau": 0,
+        "split_try": 8,
+        "colsample_bytree": 0.3812333064309986
+      },
+      "fixed_params": {},
+      "best_cv_score": -5.284931481318986,
+      "test_mse": 6.597798779727437,
+      "test_rmse": 2.5686180680917583,
+      "fit_time": 68759.32360887527,
+      "dataset": "cpu_activity"
+    }
+  ],
+  "start_timestamp": "2026-01-16T16:16:20.488174",
+  "end_timestamp": "2026-01-17T11:23:19.941335",
+  "fitted_model_path": "data/cluster_results/interpretable/mpf/cpu_activity/TSLRegressor/cpu_activity_TSLRegressor_best.bin; data/cluster_results/interpretable/mpf/cpu_activity/TSLRegressor/cpu_activity_TSLRegressor_best.sqlite"
+}

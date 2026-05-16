@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "cps88wages",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361261,
+    "name": "task_361261_cps88wages",
+    "n_times_p": 197085.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 365.39988256783226,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 365.39988256783226,
+  "max_test_rmse": 365.39988256783226,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 97,
+        "learning_rate": 0.1446040995424272,
+        "num_leaves": 26,
+        "max_depth": 2,
+        "min_child_samples": 19,
+        "subsample": 0.3799161640086429,
+        "reg_alpha": 0.006707509955863812,
+        "reg_lambda": 0.17732277455379974
+      },
+      "fixed_params": {},
+      "best_cv_score": -150625.4983150452,
+      "test_mse": 133517.07418058562,
+      "test_rmse": 365.39988256783226,
+      "fit_time": 85.68461179733276,
+      "dataset": "cps88wages"
+    }
+  ],
+  "start_timestamp": "2026-01-17T13:26:57.312138",
+  "end_timestamp": "2026-01-17T13:28:23.248565",
+  "fitted_model_path": "data/cluster_results/interpretable/others/cps88wages/LGBMRegressor/cps88wages_LGBMRegressor_best.txt"
+}

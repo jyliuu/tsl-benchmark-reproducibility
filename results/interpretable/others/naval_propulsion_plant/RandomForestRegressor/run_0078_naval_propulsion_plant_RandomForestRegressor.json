@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "naval_propulsion_plant",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361247,
+    "name": "task_361247_naval_propulsion_plant",
+    "n_times_p": 179010.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 0.01359768839737855,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 0.01359768839737855,
+  "max_test_rmse": 0.01359768839737855,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 100,
+        "max_depth": 2,
+        "min_samples_split": 5,
+        "min_samples_leaf": 3,
+        "max_features": 0.4099275650789779
+      },
+      "fixed_params": {},
+      "best_cv_score": -0.00018436093397348503,
+      "test_mse": 0.00018489712975220323,
+      "test_rmse": 0.01359768839737855,
+      "fit_time": 1442.861157655716,
+      "dataset": "naval_propulsion_plant"
+    }
+  ],
+  "start_timestamp": "2026-01-16T22:03:52.095810",
+  "end_timestamp": "2026-01-16T22:27:55.394616",
+  "fitted_model_path": "data/cluster_results/interpretable/others/naval_propulsion_plant/RandomForestRegressor/naval_propulsion_plant_RandomForestRegressor_best.pkl"
+}

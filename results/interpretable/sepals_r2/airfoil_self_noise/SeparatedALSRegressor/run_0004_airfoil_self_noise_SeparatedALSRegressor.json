@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "dataset": "airfoil_self_noise",
+  "model": "SeparatedALSRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361235,
+    "name": "task_361235_airfoil_self_noise",
+    "n_times_p": 9018.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 2.3128714449359604,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 2.3128714449359604,
+  "max_test_rmse": 2.3128714449359604,
+  "results": [
+    {
+      "model": "SeparatedALSRegressor",
+      "best_params": {
+        "rank": 2,
+        "degree": 6,
+        "basis": "tent",
+        "ridge": 5.0240854770275114e-12,
+        "smoothness": 6.364821704864088e-08,
+        "max_sweeps": 86,
+        "tol": 1.4494093587219306e-08,
+        "n_init": 4,
+        "refit_scales": true,
+        "fit_intercept": false,
+        "penalty_kind": "degree2"
+      },
+      "fixed_params": {},
+      "best_cv_score": -5.595817339183782,
+      "test_mse": 5.349374320800158,
+      "test_rmse": 2.3128714449359604,
+      "fit_time": 14406.17185664177,
+      "dataset": "airfoil_self_noise"
+    }
+  ],
+  "start_timestamp": "2026-05-02T11:14:45.884770",
+  "end_timestamp": "2026-05-02T15:14:54.241770",
+  "fitted_model_path": "data/cluster_results/interpretable/sepals_rank_le_2_ctr23/airfoil_self_noise/SeparatedALSRegressor/airfoil_self_noise_SeparatedALSRegressor_best.pkl"
+}

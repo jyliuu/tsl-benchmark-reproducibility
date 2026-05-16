@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "forest_fires",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361618,
+    "name": "task_361618_forest_fires",
+    "n_times_p": 6721.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 108.51796463744549,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 108.51796463744549,
+  "max_test_rmse": 108.51796463744549,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.03418571341798799,
+        "max_bins": 94,
+        "min_samples_leaf": 178,
+        "max_rounds": 225,
+        "outer_bags": 5,
+        "smoothing_rounds": 98,
+        "interactions": 11,
+        "max_interaction_bins": 37
+      },
+      "fixed_params": {},
+      "best_cv_score": -2083.9307243500575,
+      "test_mse": 11776.148649053868,
+      "test_rmse": 108.51796463744549,
+      "fit_time": 12852.4763007164,
+      "dataset": "forest_fires"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:43.293962",
+  "end_timestamp": "2026-01-19T14:13:06.100649",
+  "fitted_model_path": "data/cluster_results/interpretable/others/forest_fires/ExplainableBoostingRegressor/forest_fires_ExplainableBoostingRegressor_best.pkl"
+}

@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "socmob",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361264,
+    "name": "task_361264_socmob",
+    "n_times_p": 6936.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 20.453832682175133,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 20.453832682175133,
+  "max_test_rmse": 20.453832682175133,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 754,
+        "learning_rate": 0.25053226784275906,
+        "num_leaves": 114,
+        "max_depth": 3,
+        "min_child_samples": 5,
+        "subsample": 0.623615192678653,
+        "reg_alpha": 2.0423816249888818,
+        "reg_lambda": 7.8524590948778705
+      },
+      "fixed_params": {},
+      "best_cv_score": -206.94556166844595,
+      "test_mse": 418.35927139041553,
+      "test_rmse": 20.453832682175133,
+      "fit_time": 246.34575748443604,
+      "dataset": "socmob"
+    }
+  ],
+  "start_timestamp": "2026-01-16T17:58:51.070090",
+  "end_timestamp": "2026-01-16T18:02:57.740095",
+  "fitted_model_path": "data/cluster_results/blackbox/others/socmob/LGBMRegressor/socmob_LGBMRegressor_best.txt"
+}

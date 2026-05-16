@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "brazilian_houses",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361267,
+    "name": "task_361267_brazilian_houses",
+    "n_times_p": 106920.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 3327.290862080255,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 3327.290862080255,
+  "max_test_rmse": 3327.290862080255,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.007449289477501896,
+        "max_bins": 245,
+        "min_samples_leaf": 10,
+        "max_rounds": 425,
+        "outer_bags": 14,
+        "smoothing_rounds": 0,
+        "interactions": 5,
+        "max_interaction_bins": 34
+      },
+      "fixed_params": {},
+      "best_cv_score": -274987589.0956638,
+      "test_mse": 11070864.480882768,
+      "test_rmse": 3327.290862080255,
+      "fit_time": 13852.320650339127,
+      "dataset": "brazilian_houses"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:47.084422",
+  "end_timestamp": "2026-01-19T14:29:44.436801",
+  "fitted_model_path": "data/cluster_results/interpretable/others/brazilian_houses/ExplainableBoostingRegressor/brazilian_houses_ExplainableBoostingRegressor_best.pkl"
+}

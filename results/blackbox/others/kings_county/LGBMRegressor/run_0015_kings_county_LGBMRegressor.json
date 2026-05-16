@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "kings_county",
+  "model": "LGBMRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361266,
+    "name": "task_361266_kings_county",
+    "n_times_p": 475486.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 130414.64529803747,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 130414.64529803747,
+  "max_test_rmse": 130414.64529803747,
+  "results": [
+    {
+      "model": "LGBMRegressor",
+      "best_params": {
+        "n_estimators": 835,
+        "learning_rate": 0.1125028811467594,
+        "num_leaves": 70,
+        "max_depth": 4,
+        "min_child_samples": 5,
+        "subsample": 0.7996842217703709,
+        "reg_alpha": 7.731768077031956,
+        "reg_lambda": 4.044136152223318
+      },
+      "fixed_params": {},
+      "best_cv_score": -11959011624.955952,
+      "test_mse": 17007979708.212927,
+      "test_rmse": 130414.64529803747,
+      "fit_time": 2039.4588236808777,
+      "dataset": "kings_county"
+    }
+  ],
+  "start_timestamp": "2026-01-17T12:35:25.429385",
+  "end_timestamp": "2026-01-17T13:09:29.053835",
+  "fitted_model_path": "data/cluster_results/blackbox/others/kings_county/LGBMRegressor/kings_county_LGBMRegressor_best.txt"
+}

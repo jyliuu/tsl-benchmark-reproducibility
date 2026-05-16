@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "dataset": "california_housing",
+  "model": "RandomForestRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361255,
+    "name": "task_361255_california_housing",
+    "n_times_p": 185760.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 49047.19055695293,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 49047.19055695293,
+  "max_test_rmse": 49047.19055695293,
+  "results": [
+    {
+      "model": "RandomForestRegressor",
+      "best_params": {
+        "n_estimators": 784,
+        "max_depth": 19,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": 0.6594422267473351
+      },
+      "fixed_params": {},
+      "best_cv_score": -2371818809.2016973,
+      "test_mse": 2405626901.530053,
+      "test_rmse": 49047.19055695293,
+      "fit_time": 4959.150417327881,
+      "dataset": "california_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-16T20:42:22.007369",
+  "end_timestamp": "2026-01-16T22:05:04.639900",
+  "fitted_model_path": "data/cluster_results/blackbox/others/california_housing/RandomForestRegressor/california_housing_RandomForestRegressor_best.pkl"
+}

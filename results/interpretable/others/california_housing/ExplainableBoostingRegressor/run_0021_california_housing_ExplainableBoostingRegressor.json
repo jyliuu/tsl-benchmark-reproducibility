@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "dataset": "california_housing",
+  "model": "ExplainableBoostingRegressor",
+  "dataset_config": {
+    "type": "openml_task",
+    "task_id": 361255,
+    "name": "task_361255_california_housing",
+    "n_times_p": 185760.0
+  },
+  "n_folds": 1,
+  "mean_test_rmse": 48866.28172638498,
+  "std_test_rmse": 0.0,
+  "min_test_rmse": 48866.28172638498,
+  "max_test_rmse": 48866.28172638498,
+  "results": [
+    {
+      "model": "ExplainableBoostingRegressor",
+      "best_params": {
+        "learning_rate": 0.04208083492914826,
+        "max_bins": 116,
+        "min_samples_leaf": 23,
+        "max_rounds": 493,
+        "outer_bags": 19,
+        "smoothing_rounds": 345,
+        "interactions": 20,
+        "max_interaction_bins": 55
+      },
+      "fixed_params": {},
+      "best_cv_score": -2360690126.9376917,
+      "test_mse": 2387913489.7624264,
+      "test_rmse": 48866.28172638498,
+      "fit_time": 39767.052441358566,
+      "dataset": "california_housing"
+    }
+  ],
+  "start_timestamp": "2026-01-19T10:38:41.884310",
+  "end_timestamp": "2026-01-19T21:42:07.684466",
+  "fitted_model_path": "data/cluster_results/interpretable/others/california_housing/ExplainableBoostingRegressor/california_housing_ExplainableBoostingRegressor_best.pkl"
+}
