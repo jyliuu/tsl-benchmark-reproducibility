@@ -26,7 +26,7 @@ RUN_IDS=${3:-}
 
 CPUS="${CPUS:-4}"
 MEM="${MEM:-16G}"
-TIME="${TIME:-24:00:00}"
+TIME="${TIME:-}"                      # unset -> no --time line (use the partition default)
 PARTITION="${PARTITION:-}"
 ACCOUNT="${ACCOUNT:-}"
 PYTHON="${PYTHON:-python}"
@@ -41,6 +41,7 @@ ABS_OUTPUT=$(abspath "$OUTPUT_DIR")
 OPT_DIRECTIVES=""
 [ -n "$PARTITION" ] && OPT_DIRECTIVES+="#SBATCH --partition=$PARTITION"$'\n'
 [ -n "$ACCOUNT" ]   && OPT_DIRECTIVES+="#SBATCH --account=$ACCOUNT"$'\n'
+[ -n "$TIME" ]      && OPT_DIRECTIVES+="#SBATCH --time=$TIME"$'\n'
 
 TOTAL_RUNS=$($PYTHON -c "import json; print(json.load(open('$ABS_CONFIG'))['metadata']['total_runs'])")
 ARRAY_LIMIT=$((TOTAL_RUNS - 1))
@@ -58,7 +59,6 @@ submit_array() {
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --mem=$MEM
-#SBATCH --time=$TIME
 #SBATCH --requeue
 #SBATCH --open-mode=append
 ${OPT_DIRECTIVES}#SBATCH --output=$ABS_OUTPUT/logs/job_%A_%a.out
