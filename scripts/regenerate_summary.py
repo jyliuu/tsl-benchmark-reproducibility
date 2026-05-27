@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -207,10 +208,22 @@ def render_summary(
     bucket: Dict[Tuple[int, str, str], List[float]],
     out_stream,
 ) -> None:
-    # Per-(dataset, column) mean across runs.
+    # Per-(dataset, column) mean RMSE across repeated random splits, plus the
+    # standard error of the mean *MSE* (SE = std(MSEs) / sqrt(n_seeds)). With a
+    # single run (n=1) the SE is undefined and we display the bare RMSE.
     rmse_by_ds: Dict[int, Dict[Tuple[str, str], float]] = defaultdict(dict)
+    se_by_ds:   Dict[int, Dict[Tuple[str, str], Optional[float]]] = defaultdict(dict)
     for (task_id, group, column_label), values in bucket.items():
-        rmse_by_ds[task_id][(group, column_label)] = sum(values) / len(values)
+        n = len(values)
+        mean_rmse = sum(values) / n
+        rmse_by_ds[task_id][(group, column_label)] = mean_rmse
+        if n >= 2:
+            mses = [r * r for r in values]
+            mean_mse = sum(mses) / n
+            std_mse = math.sqrt(sum((m - mean_mse) ** 2 for m in mses) / n)  # population std
+            se_by_ds[task_id][(group, column_label)] = std_mse / math.sqrt(n)
+        else:
+            se_by_ds[task_id][(group, column_label)] = None
 
     # Sort datasets by n×p (paper's display order) with unknowns to the end.
     rows = []
@@ -219,10 +232,13 @@ def render_summary(
         rows.append({**ds, "n_times_p": np_prod})
     rows.sort(key=lambda r: (r["n_times_p"] is None, r["n_times_p"] or 0))
 
-    # Column widths.
+    # Column widths. Widen when any cell carries a mean±SE pair so the
+    # "0.1234±0.0123 (**)" form stays aligned.
+    has_se = any(se is not None for d in se_by_ds.values() for se in d.values())
     model_col_width = max(
         16,
         max(len(c) for c in INTERP_COLUMN_ORDER + BLACKBOX_COLUMN_ORDER),
+        32 if has_se else 0,
     )
     dataset_col_width = 50
     interp_width  = len(INTERP_COLUMN_ORDER)  * (model_col_width + 1) - 1
@@ -305,7 +321,11 @@ def render_summary(
                 cells_interp.append("✗")
             else:
                 marker = rmse_markers.get(v, "")
-                cells_interp.append(f"{v:.4f} {marker}".strip())
+                se = se_by_ds[ds["task_id"]].get(("interpretable", col))
+                if se is not None:
+                    cells_interp.append(f"{v:.4f}±{se:.4f} {marker}".strip())
+                else:
+                    cells_interp.append(f"{v:.4f} {marker}".strip())
                 if within_window:
                     g = interp_marks.get(v)
                     if g == "best":   interp_rank[col]["best"]   += 1
@@ -325,7 +345,11 @@ def render_summary(
                 cells_bb.append("✗")
             else:
                 marker = rmse_markers.get(v, "")
-                cells_bb.append(f"{v:.4f} {marker}".strip())
+                se = se_by_ds[ds["task_id"]].get(("blackbox", col))
+                if se is not None:
+                    cells_bb.append(f"{v:.4f}±{se:.4f} {marker}".strip())
+                else:
+                    cells_bb.append(f"{v:.4f} {marker}".strip())
                 if within_window:
                     g = bb_marks.get(v)
                     if g == "best":   bb_rank[col]["best"]   += 1

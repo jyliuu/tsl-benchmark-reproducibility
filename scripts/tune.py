@@ -4,17 +4,20 @@ Tune one (dataset, model) pair with the search space from the paper appendix.
 
 Usage:
 
-    python scripts/tune.py --model TSL_R2 --task-id 361234
+    python scripts/tune.py --model TSL_R2 --task-id 361234 --n-outer-trials 5
 
-This writes a single ``run_<id>_<dataset>_<model>.json`` and an Optuna
-JournalStorage ``.log`` into the appropriate ``results/`` subdirectory, in the
-exact layout consumed by ``scripts/regenerate_summary.py``.
+For each outer trial this writes a ``run_seed<seed>_<dataset>_<model>.json`` and
+an Optuna JournalStorage ``run...seed<seed>.log`` into the appropriate
+``results/`` subdirectory, in the exact layout consumed by
+``scripts/regenerate_summary.py``.
 
-Protocol (matches paper appendix):
-  - 80/20 train/test split, random_state=42
-  - Optuna TPE sampler with 200 trials
-  - 10-fold CV on the train split (minimising MSE)
-  - Best config is refit on the full train split, evaluated once on test
+Protocol (matches paper appendix, with repeated random splits):
+  - Repeat the outer 80/20 split N times; split seeds are range(N) = [0..N-1]
+    (``--n-outer-trials N``; default N=1, i.e. one tuning session on seed 0)
+  - Per outer trial: an independent Optuna TPE study with 200 trials
+  - 10-fold CV on that split's train set (minimising MSE)
+  - Best config is refit on the full train split, evaluated once on that test
+  - Result files are never deleted, so interrupted runs resume per seed
 """
 
 from __future__ import annotations
@@ -184,7 +187,6 @@ def load_task(task_id: int):
     import openml
     import pandas as pd
     from sklearn.compose import ColumnTransformer
-    from sklearn.model_selection import train_test_split
     from category_encoders import TargetEncoder
 
     task = openml.tasks.get_task(task_id)
@@ -204,8 +206,7 @@ def load_task(task_id: int):
     if hasattr(X_proc, "toarray"): X_proc = X_proc.toarray()
     y_arr = y.astype(float).values
 
-    X_tr, X_te, y_tr, y_te = train_test_split(X_proc, y_arr, test_size=0.2, random_state=42)
-    return ds.name, X_tr, X_te, y_tr, y_te
+    return ds.name, X_proc, y_arr
 
 
 # ---------------------------------------------------------------------------
@@ -227,24 +228,36 @@ def _swallow_rust_panics(objective):
     return wrapped
 
 
-def tune(model_key: str, task_id: int, output_root: Path, n_trials: int = 200) -> None:
+def run_seed(model_key: str, task_id: int, seed: int, output_root: Path,
+             dataset_name: str, X_proc, y_arr, n_trials: int = 200) -> dict:
+    """Run ONE (model, dataset, seed) outer trial.
+
+    Splits the preprocessed data 80/20 with ``random_state=seed``, runs a full,
+    resumable Optuna study (its own per-seed ``.log``), refits the best config on
+    the train split, evaluates once on the test split, and writes
+    ``run_seed{seed}_{dataset}_{model}.json``. Never deletes any prior file, so an
+    interrupted run resumes: a finished seed skips HPO, a half-done seed resumes
+    mid-search. Returns the written record dict.
+    """
     import optuna
     from optuna.storages.journal import JournalFileBackend
-    from sklearn.model_selection import cross_val_score
+    from sklearn.model_selection import cross_val_score, train_test_split
     from sklearn.metrics import mean_squared_error
 
     category, variant, model_class_name = CATEGORY_DIR[model_key]
     optuna.logging.set_verbosity(optuna.logging.WARNING)
 
-    dataset_name, X_tr, X_te, y_tr, y_te = load_task(task_id)
     out_dir = output_root / category / variant / dataset_name / model_class_name
     out_dir.mkdir(parents=True, exist_ok=True)
-    log_path = out_dir / f"{dataset_name}_{model_class_name}.log"
 
+    X_tr, X_te, y_tr, y_te = train_test_split(
+        X_proc, y_arr, test_size=0.2, random_state=seed)
+
+    log_path = out_dir / f"{dataset_name}_{model_class_name}_seed{seed}.log"
     storage = optuna.storages.JournalStorage(JournalFileBackend(str(log_path)))
-    sampler = optuna.samplers.TPESampler(seed=42, multivariate=True, group=True)
+    sampler = optuna.samplers.TPESampler(seed=seed, multivariate=True, group=True)
     study = optuna.create_study(
-        study_name=f"{model_class_name}_simple",
+        study_name=f"{model_class_name}_seed{seed}",
         storage=storage,
         sampler=sampler,
         direction="minimize",
@@ -263,9 +276,9 @@ def tune(model_key: str, task_id: int, output_root: Path, n_trials: int = 200) -
         start = dt.datetime.now()
         study.optimize(_swallow_rust_panics(objective), n_trials=remaining,
                        catch=(ValueError,))
-        print(f"  optimized in {(dt.datetime.now() - start)}", flush=True)
+        print(f"  seed={seed} optimized in {(dt.datetime.now() - start)}", flush=True)
 
-    # Refit best on full train, evaluate on test
+    # Refit best on full train, evaluate on this seed's test split.
     best = study.best_params
     est = make_estimator(model_key, sample_params_from_best(model_key, best))
     est.fit(X_tr, y_tr)
@@ -273,16 +286,11 @@ def tune(model_key: str, task_id: int, output_root: Path, n_trials: int = 200) -
     test_mse = float(mean_squared_error(y_te, pred))
     test_rmse = float(np.sqrt(test_mse))
 
-    # One canonical run JSON per (dataset, model) cell. Clean any prior
-    # cluster-named run_*.json before writing, so regenerate_summary.py (which
-    # averages every run_*.json it finds in the leaf dir) doesn't blend the new
-    # result with stale ones.
-    for prior in out_dir.glob(f"run_*_{dataset_name}_{model_class_name}.json"):
-        prior.unlink()
     record = {
         "success": True,
         "dataset": dataset_name,
         "model": model_class_name,
+        "split_seed": seed,
         "dataset_config": {"type": "openml_task", "task_id": task_id, "name": dataset_name},
         "n_folds": 1,
         "mean_test_rmse": test_rmse,
@@ -298,10 +306,22 @@ def tune(model_key: str, task_id: int, output_root: Path, n_trials: int = 200) -
         "start_timestamp": None,
         "end_timestamp": dt.datetime.now(dt.timezone.utc).isoformat(),
     }
-    out_path = out_dir / f"run_0000_{dataset_name}_{model_class_name}.json"
+    out_path = out_dir / f"run_seed{seed}_{dataset_name}_{model_class_name}.json"
     with open(out_path, "w") as f:
         json.dump(record, f, indent=2, default=str)
-    print(f"  wrote {out_path}  (test RMSE = {test_rmse:.4f})", flush=True)
+    print(f"  wrote {out_path}  (seed={seed}, test RMSE = {test_rmse:.4f})", flush=True)
+    return record
+
+
+def tune(model_key: str, task_id: int, output_root: Path, n_trials: int = 200,
+         n_outer_trials: int = 1) -> None:
+    """Local (non-cluster) driver: load the dataset once, then run each outer
+    trial sequentially. For massive parallelism, use the cluster scripts, which
+    dispatch one ``run_seed`` per (model, dataset, seed) as a separate job."""
+    dataset_name, X_proc, y_arr = load_task(task_id)
+    for seed in range(n_outer_trials):
+        run_seed(model_key, task_id, seed, output_root, dataset_name, X_proc, y_arr,
+                 n_trials=n_trials)
 
 
 def sample_params_from_best(model_key: str, best: dict) -> dict:
@@ -330,10 +350,15 @@ def main() -> None:
     p.add_argument("--task-id", type=int, required=True,
                    help="OpenML task ID (e.g. 361266 for kings_county; see CTR23_DATASETS in regenerate_summary.py)")
     p.add_argument("--results-root", type=Path, default=results_default)
-    p.add_argument("--n-trials", type=int, default=200)
+    p.add_argument("--n-trials", type=int, default=200,
+                   help="Optuna HPO trials per outer trial (inner search budget).")
+    p.add_argument("--n-outer-trials", type=int, default=1, metavar="N",
+                   help="Number of repeated 80/20 splits. Split seeds are range(N) = [0..N-1]. "
+                        "Full HPO runs per outer trial. N=1 (default) is one tuning session (seed 0).")
     args = p.parse_args()
 
-    tune(args.model, args.task_id, args.results_root, n_trials=args.n_trials)
+    tune(args.model, args.task_id, args.results_root, n_trials=args.n_trials,
+         n_outer_trials=args.n_outer_trials)
 
 
 if __name__ == "__main__":
