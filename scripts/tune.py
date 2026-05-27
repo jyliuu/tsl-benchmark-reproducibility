@@ -160,12 +160,8 @@ def sample_params(model_key: str, trial) -> dict:
     elif model_key in ("SepALS_r2", "SepALS_r10"):
         p["rank"]          = trial.suggest_int("rank", 1, 2 if model_key == "SepALS_r2" else 10)
         p["degree"]        = trial.suggest_int("degree", 2, 10)
-        p["basis"]         = trial.suggest_categorical("basis", ["tent", "monomial"])
-        # penalty_kind is conditional on basis (tent uses tent_level; monomial uses degree/degree2)
-        if p["basis"] == "tent":
-            p["penalty_kind"] = "tent_level"
-        else:
-            p["penalty_kind"] = trial.suggest_categorical("penalty_kind", ["degree", "degree2"])
+        p["basis"]         = trial.suggest_categorical("basis", ["legendre", "monomial"])
+        p["penalty_kind"]  = trial.suggest_categorical("penalty_kind", ["degree", "degree2"])
         p["ridge"]         = trial.suggest_float("ridge", 1e-12, 1e-2, log=True)
         p["smoothness"]    = trial.suggest_float("smoothness", 1e-10, 10.0, log=True)
         p["max_sweeps"]    = trial.suggest_int("max_sweeps", 10, 100)
@@ -317,8 +313,6 @@ def sample_params_from_best(model_key: str, best: dict) -> dict:
         out["bagged"]         = True
         out["split_strategy"] = "random"
     elif model_key in ("SepALS_r2", "SepALS_r10"):
-        if out.get("basis") == "tent":
-            out["penalty_kind"] = "tent_level"
         out["refit_scales"] = True
     return out
 
