@@ -46,6 +46,18 @@ OPT_DIRECTIVES=""
 TOTAL_RUNS=$($PYTHON -c "import json; print(json.load(open('$ABS_CONFIG'))['metadata']['total_runs'])")
 ARRAY_LIMIT=$((TOTAL_RUNS - 1))
 
+# Collapse a sorted, unique list of ints (stdin, one per line) into a compact
+# SLURM array spec with ranges, e.g. "0 1 2 5" -> "0-2,5". A bare comma list of
+# thousands of ids overflows sbatch's spec-length limit; ranges stay short.
+compress_ranges() {
+    awk '
+        NR==1 { s=$1; p=$1; next }
+        $1==p+1 { p=$1; next }
+        { printf "%s%s", (c++?",":""), (s==p?s:s"-"p); s=$1; p=$1 }
+        END { if (NR) printf "%s%s", (c++?",":""), (s==p?s:s"-"p) }
+    '
+}
+
 # Emit a SLURM array submission for the given array spec (e.g. "0-41" or "3,7,9").
 submit_array() {
     local array_spec=$1
@@ -187,7 +199,7 @@ if [ -d "$ABS_OUTPUT" ]; then
         # Dedup + sort.
         IFS=$'\n' requeue=($(printf '%s\n' "${requeue[@]}" | sort -n | uniq)); unset IFS
         echo "Requeuing ${#requeue[@]} runs (${n_failed} failed, rest missing/incomplete)."
-        array_spec=$(IFS=','; echo "${requeue[*]}")
+        array_spec=$(printf '%s\n' "${requeue[@]}" | compress_ranges)
         cp -n "$ABS_CONFIG" "$ABS_OUTPUT/$(basename "$ABS_CONFIG")" 2>/dev/null || true
         submit_array "$array_spec"
         echo "Resubmitted: $array_spec"
