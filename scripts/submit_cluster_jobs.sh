@@ -30,6 +30,7 @@ TIME="${TIME:-24:00:00}"
 PARTITION="${PARTITION:-}"
 ACCOUNT="${ACCOUNT:-}"
 PYTHON="${PYTHON:-python}"
+MAX_CONCURRENT="${MAX_CONCURRENT:-}"  # cap simultaneously running array tasks (appends %N)
 
 CURRENT_DIR=$(pwd)
 abspath() { case "$1" in /*) printf '%s' "$1" ;; *) printf '%s' "$CURRENT_DIR/$1" ;; esac; }
@@ -47,6 +48,7 @@ ARRAY_LIMIT=$((TOTAL_RUNS - 1))
 # Emit a SLURM array submission for the given array spec (e.g. "0-41" or "3,7,9").
 submit_array() {
     local array_spec=$1
+    [ -n "$MAX_CONCURRENT" ] && array_spec="${array_spec}%${MAX_CONCURRENT}"
     mkdir -p "$ABS_OUTPUT/logs"
     sbatch <<EOT
 #!/bin/bash
@@ -57,6 +59,8 @@ submit_array() {
 #SBATCH --nodes=1
 #SBATCH --mem=$MEM
 #SBATCH --time=$TIME
+#SBATCH --requeue
+#SBATCH --open-mode=append
 ${OPT_DIRECTIVES}#SBATCH --output=$ABS_OUTPUT/logs/job_%A_%a.out
 #SBATCH --error=$ABS_OUTPUT/logs/job_%A_%a.err
 

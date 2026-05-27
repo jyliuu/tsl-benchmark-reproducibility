@@ -130,12 +130,20 @@ python scripts/generate_cluster_config.py --n-outer-trials 5 --output cluster_co
 
 # 2. Submit the array; $SLURM_ARRAY_TASK_ID indexes directly into config["runs"].
 #    Resources are env-overridable; PARTITION/ACCOUNT emit their #SBATCH line only if set.
-CPUS=8 MEM=32G TIME=24:00:00 PARTITION=batch \
+#    MAX_CONCURRENT caps simultaneously running tasks (appends %N to the array spec).
+CPUS=8 MEM=32G TIME=24:00:00 PARTITION=batch MAX_CONCURRENT=64 \
   bash scripts/submit_cluster_jobs.sh cluster_config.json results
 
 # 3. Rebuild the table (mean ± SE across seeds).
 python scripts/regenerate_summary.py --results-dir results
 ```
+
+Jobs are submitted with `--requeue` and `--open-mode=append`, so a preempted
+task is automatically requeued and resumes from its own per-seed Optuna `.log`
+(only an in-flight trial is redone). For very large sweeps, mind your cluster's
+`MaxArraySize` (`scontrol show config | grep MaxArraySize`) and submit in
+index-range chunks via the optional 3rd argument, e.g.
+`bash scripts/submit_cluster_jobs.sh cluster_config.json results 0-999`.
 
 Re-running step 2 against an existing `results/` directory **resumes**: it
 resubmits only runs without a result JSON (timed-out / OOM-killed / failed /
