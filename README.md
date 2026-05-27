@@ -21,20 +21,28 @@ tsl-benchmark-reproducibility/
 │       └── others/         <dataset>/{LGBMRegressor,RandomForestRegressor,XGBRegressor}/...
 └── scripts/
     ├── regenerate_summary.py              rebuild the table from results/
-    ├── tune.py                            tune one (dataset, model) cell
-    └── tune_all.sh                        loop tune.py over the 27 × 11 grid
+    ├── tune.py                            tune one (dataset, model) cell (all seeds)
+    ├── tune_all.sh                        local loop of tune.py over the 27 × 11 grid
+    ├── generate_cluster_config.py         enumerate (model, dataset, seed) runs → config
+    ├── run_cluster_experiment.py          run one (model, dataset, seed) from a config
+    └── submit_cluster_jobs.sh             SLURM array submit + resume/requeue
 ```
 
 ## What's inside `results/`
 
-Each `<dataset>/<ModelClass>/` directory contains two files:
+Each `<dataset>/<ModelClass>/` directory contains, **per outer-split seed**:
 
-- `run_<id>_<dataset>_<ModelClass>.json` — best-trial summary: `mean_test_rmse`
-  on the held-out test split, `best_params`, dataset metadata.
-- `<dataset>_<ModelClass>.log` — Optuna JournalStorage log (JSONL); contains
-  every trial's sampled parameters, value, and state. Re-openable with
-  `optuna.storages.JournalStorage(JournalFileBackend(path))` for full replay or
-  trial-level analysis.
+- `run_seed<seed>_<dataset>_<ModelClass>.json` — best-trial summary for that
+  seed's 80/20 split: `test_mse` / `test_rmse` on the held-out test split,
+  `best_params`, `split_seed`, dataset metadata. With repeated splits there is
+  one such file per seed (`run_seed0_…`, `run_seed1_…`, …).
+- `<dataset>_<ModelClass>_seed<seed>.log` — Optuna JournalStorage log (JSONL)
+  for that seed; contains every trial's sampled parameters, value, and state.
+  Re-openable with `optuna.storages.JournalStorage(JournalFileBackend(path))`
+  for full replay or trial-level analysis.
+
+(Older single-split bundles may instead contain `run_<id>_…json` /
+`<dataset>_<ModelClass>.log`; `regenerate_summary.py` reads both layouts.)
 
 Excluded from the bundle (regeneratable from `best_params`):
 
@@ -50,9 +58,13 @@ No external packages required for this step (Python ≥ 3.10 stdlib only):
 python scripts/regenerate_summary.py
 ```
 
-This walks `results/`, computes mean test RMSE per `(dataset, model)`, and
+This walks `results/`, aggregates the test RMSE per `(dataset, model)`, and
 writes `summary_interpretable_vs_blackbox.txt` — the table that the appendix's
 full-benchmark figure is derived from.
+
+When a cell has results from multiple outer-split seeds it is reported as
+`mean ± SE`, where `SE = std(test_MSEs) / sqrt(n_seeds)` (standard error of the
+mean MSE across seeds). A single-seed cell shows the bare RMSE.
 
 ## Re-run the tuning sweep
 
@@ -86,15 +98,51 @@ This re-tunes from scratch (or resumes a partially-complete Optuna study).
     bash scripts/tune_all.sh XGB_bb         # one model across all 27 datasets
     ```
 
-Each invocation:
-- Loads the OpenML task, applies an 80/20 train/test split with `random_state=42`.
+Each invocation, for every outer-split seed `0 … N-1` (where `N` =
+`--n-outer-trials`, default 1):
+- Loads the OpenML task, applies an 80/20 train/test split with `random_state=seed`.
 - Builds the paper-aligned search space inline in `tune.py`.
 - Runs Optuna TPE for 200 trials, minimising mean squared error under 10-fold CV on the training split.
 - Refits the best configuration on the full training split and evaluates once on the test split.
-- Writes the `run_*.json` + Optuna `.log` in the structure shown above.
+- Writes `run_seed<seed>_*.json` + the per-seed Optuna `.log` in the structure shown above.
 
 Because Optuna persists to disk via `JournalStorage`, an interrupted run picks
-up exactly where it left off on the next invocation.
+up exactly where it left off on the next invocation — per seed. Result files are
+never deleted, so finished seeds are kept and only outstanding work resumes.
+
+### Repeated random splits (recommended)
+
+A single 80/20 split is a noisy estimate. To repeat the outer split and obtain
+`mean ± SE`, set the number of outer trials (seeds become `0 … N-1`):
+
+```bash
+N_OUTER_TRIALS=5 bash scripts/tune_all.sh            # local, sequential
+```
+
+### Cluster execution (massively parallel)
+
+Each `(model, dataset, seed)` triple is an independent job, dispatched as one
+task of a SLURM **array job**. Three steps:
+
+```bash
+# 1. Enumerate every run into a flat config (one entry per model × dataset × seed).
+python scripts/generate_cluster_config.py --n-outer-trials 5 --output cluster_config.json
+
+# 2. Submit the array; $SLURM_ARRAY_TASK_ID indexes directly into config["runs"].
+#    Resources are env-overridable; PARTITION/ACCOUNT emit their #SBATCH line only if set.
+CPUS=8 MEM=32G TIME=24:00:00 PARTITION=batch \
+  bash scripts/submit_cluster_jobs.sh cluster_config.json results
+
+# 3. Rebuild the table (mean ± SE across seeds).
+python scripts/regenerate_summary.py --results-dir results
+```
+
+Re-running step 2 against an existing `results/` directory **resumes**: it
+resubmits only runs without a result JSON (timed-out / OOM-killed / failed /
+never-started — the SLURM logs are parsed to report which), and each requeued
+job continues from its own per-seed Optuna `.log`. The submit script is generic
+SLURM (no site-specific container, partition, or environment baked in); set
+`PYTHON`, `CPUS`, `MEM`, `TIME`, `PARTITION`, `ACCOUNT` as needed.
 
 ## Model keys (CLI ↔ paper table column)
 

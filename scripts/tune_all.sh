@@ -1,13 +1,20 @@
 #!/bin/bash
-# Sequentially tune every (model, dataset) cell of the paper's full benchmark
-# table. Resumes from any existing Optuna journal logs in results/ (each
-# tune.py invocation calls load_if_exists=True on the study).
+# Local (no-SLURM) driver: sequentially tune every (model, dataset) cell of the
+# paper's full benchmark table. Resumes from any existing per-seed Optuna journal
+# logs in results/ (each tune.py invocation calls load_if_exists=True).
+#
+# For massive parallelism (one job per model x dataset x seed), use the cluster
+# scripts instead: scripts/generate_cluster_config.py + scripts/submit_cluster_jobs.sh.
 #
 # Usage:
 #   bash scripts/tune_all.sh
 #
 # Or to tune one model across all datasets:
 #   bash scripts/tune_all.sh XGB_bb
+#
+# Repeated random splits (mean +/- SE in the summary): set N_OUTER_TRIALS to the
+# number of outer 80/20 splits; seeds are 0..N-1. Default 1 (single split, seed 0).
+#   N_OUTER_TRIALS=5 bash scripts/tune_all.sh
 
 set -e
 cd "$(dirname "$0")/.."
@@ -55,9 +62,12 @@ if [ $# -ge 1 ]; then
   MODELS=("$1")
 fi
 
+N_OUTER_TRIALS="${N_OUTER_TRIALS:-1}"
+
 for model in "${MODELS[@]}"; do
   for tid in "${TASK_IDS[@]}"; do
-    echo "=== model=${model}  task_id=${tid} ==="
-    python scripts/tune.py --model "$model" --task-id "$tid" || echo "  (failed, continuing)"
+    echo "=== model=${model}  task_id=${tid}  n_outer_trials=${N_OUTER_TRIALS} ==="
+    python scripts/tune.py --model "$model" --task-id "$tid" \
+      --n-outer-trials "$N_OUTER_TRIALS" || echo "  (failed, continuing)"
   done
 done
